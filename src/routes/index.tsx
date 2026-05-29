@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ELITESY — Propreté, Soft Facility & AMO" },
-      { name: "description", content: "Services premium aux entreprises : propreté, soft facility management et assistance à maîtrise d'ouvrage. L'exigence du détail." },
+      { name: "description", content: "Services premium aux entreprises : propreté, soft facility management et assistance à maîtrise d'ouvrage. L'excellence au service de vos bâtiments." },
       { property: "og:title", content: "ELITESY — Excellence en services aux entreprises" },
       { property: "og:description", content: "Propreté, Soft Facility et AMO pour les environnements professionnels exigeants." },
     ],
@@ -87,11 +87,13 @@ function Index() {
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               Services premium aux entreprises
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02]">
-              L'exigence
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] font-sans">
+              L'excellence au
+              <br />
+              service
               <br />
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
-                du détail.
+                de vos bâtiments.
               </span>
             </h1>
             <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
