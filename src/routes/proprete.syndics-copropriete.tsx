@@ -33,6 +33,7 @@ import staircaseImg from "@/assets/syndic-staircase.jpg";
 import parkingImg from "@/assets/syndic-parking.jpg";
 
 import binsImg from "@/assets/syndic-bins.jpg";
+import teamImg from "@/assets/elitesy-team.jpg";
 import glassImg from "@/assets/syndic-glass.jpg";
 import gardenImg from "@/assets/syndic-garden.jpg";
 import garden1Img from "@/assets/syndic-garden-3.jpg";
@@ -513,7 +514,7 @@ function SyndicsPage() {
             className="rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={glassImg} alt="Agent ELITESY entretenant l'entrée d'une copropriété" loading="lazy" width={1200} height={900} className="w-full h-[500px] object-cover" />
+            <img src={teamImg} alt="L'équipe ELITESY : agents en uniforme et dirigeants" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
           </motion.div>
           <div>
             <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>
