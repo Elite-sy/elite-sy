@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import heroImg from "@/assets/hero.jpg";
+import elitesyTeamImg from "@/assets/elitesy-team.jpg";
 import propreteImg from "@/assets/proprete.jpg";
 import softImg from "@/assets/soft-facility.jpg";
 import amoImg from "@/assets/amo.jpg";
@@ -217,7 +218,7 @@ function Index() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={heroImg} alt="" className="w-full h-[600px] object-cover" loading="lazy" width={1920} height={1280} />
+            <img src={elitesyTeamImg} alt="Équipe ELITESY" className="w-full h-[600px] object-cover" loading="lazy" width={1920} height={1280} />
           </motion.div>
         </div>
       </section>
