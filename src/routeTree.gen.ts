@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SoftFacilityRouteImport } from './routes/soft-facility'
 import { Route as PropreteRouteImport } from './routes/proprete'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SoftFacilityRoute = SoftFacilityRouteImport.update({
+  id: '/soft-facility',
+  path: '/soft-facility',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PropreteRoute = PropreteRouteImport.update({
   id: '/proprete',
   path: '/proprete',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/proprete': typeof PropreteRoute
+  '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/proprete': typeof PropreteRoute
+  '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/proprete': typeof PropreteRoute
+  '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/proprete'
+  fullPaths: '/' | '/proprete' | '/soft-facility'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/proprete'
-  id: '__root__' | '/' | '/proprete'
+  to: '/' | '/proprete' | '/soft-facility'
+  id: '__root__' | '/' | '/proprete' | '/soft-facility'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PropreteRoute: typeof PropreteRoute
+  SoftFacilityRoute: typeof SoftFacilityRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/soft-facility': {
+      id: '/soft-facility'
+      path: '/soft-facility'
+      fullPath: '/soft-facility'
+      preLoaderRoute: typeof SoftFacilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/proprete': {
       id: '/proprete'
       path: '/proprete'
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PropreteRoute: PropreteRoute,
+  SoftFacilityRoute: SoftFacilityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
