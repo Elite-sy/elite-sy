@@ -75,7 +75,7 @@ function SoftFacilityPage() {
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-32 w-full">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">Service · Soft Facility Management</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Service · Soft Facility Management</p>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05]">
               Services multiservices,
               <br />
@@ -104,7 +104,7 @@ function SoftFacilityPage() {
       {/* Intro */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-5xl px-6 lg:px-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">Notre conviction</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Notre conviction</p>
           <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-10">
             Un partenaire premium pour des services sur site qui dépassent vos attentes.
           </h2>
@@ -132,7 +132,7 @@ function SoftFacilityPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Nos prestations</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos prestations</p>
               <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Une gamme complète de services intégrés.</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
@@ -166,7 +166,7 @@ function SoftFacilityPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Nos secteurs</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos secteurs</p>
               <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Une expertise multisectorielle.</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
@@ -209,7 +209,7 @@ function SoftFacilityPage() {
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Pourquoi nous</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Pourquoi nous</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Une gestion intégrée, des résultats tangibles.</h2>
             <p className="text-muted-foreground leading-relaxed">
               Choisir ELITESY, c'est confier ses services support à un partenaire qui

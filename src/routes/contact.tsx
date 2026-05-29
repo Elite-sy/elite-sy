@@ -24,7 +24,7 @@ function Contact() {
         <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial)" }} />
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">Contact</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Contact</p>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">Parlons de votre projet.</h1>
             <p className="mt-8 text-lg text-muted-foreground max-w-lg leading-relaxed">
               Un échange de quinze minutes suffit pour comprendre vos enjeux.

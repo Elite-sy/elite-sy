@@ -135,7 +135,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Nos métiers</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos métiers</p>
               <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Trois expertises, une seule promesse.</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
@@ -187,7 +187,7 @@ function Index() {
       <section className="py-32 border-t border-border bg-card/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Pourquoi ELITESY</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Pourquoi ELITESY</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Une signature reconnue par les directions exigeantes.</h2>
             <p className="text-muted-foreground leading-relaxed mb-10">
               Depuis plus de quinze ans, nous accompagnons des sièges sociaux, des hôtels haut de gamme,
@@ -225,7 +225,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10 mb-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Secteurs</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Secteurs</p>
               <h2 className="text-3xl md:text-4xl font-bold max-w-xl">Des environnements aussi divers qu'exigeants.</h2>
             </div>
           </div>
@@ -241,7 +241,7 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 lg:px-10">
           <div className="rounded-sm border border-primary/30 p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial)" }} />
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">Prenons contact</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Prenons contact</p>
             <h2 className="text-4xl md:text-6xl font-bold">Élevons vos standards.</h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
               Un échange de quinze minutes suffit pour comprendre vos enjeux et bâtir une proposition.

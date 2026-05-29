@@ -155,7 +155,7 @@ export const Route = createFileRoute("/secteur/$slug")({
     <Layout>
       <section className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Secteur introuvable</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Secteur introuvable</p>
           <h1 className="text-4xl font-bold mb-6">Ce secteur n'existe pas.</h1>
           <Link to="/soft-facility" className="inline-flex items-center gap-2 text-primary">
             <ArrowLeft size={16} /> Retour aux secteurs
@@ -200,7 +200,7 @@ function SectorPage() {
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30">
                 <Icon className="text-primary" size={26} />
               </div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">Secteur</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Secteur</p>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05]">{sector.label}</h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">{sector.tagline}</p>
@@ -211,7 +211,7 @@ function SectorPage() {
       {/* Intro */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-4xl px-6 lg:px-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">Notre approche</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Notre approche</p>
           <p className="text-xl text-foreground/90 leading-relaxed">{detail.intro}</p>
         </div>
       </section>
@@ -220,7 +220,7 @@ function SectorPage() {
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Enjeux</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Enjeux</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Les défis propres à votre secteur.</h2>
             <p className="text-muted-foreground leading-relaxed">
               Nous bâtissons chaque dispositif autour des contraintes spécifiques de votre activité, avec des équipes formées et des protocoles éprouvés.
@@ -240,7 +240,7 @@ function SectorPage() {
       {/* Prestations */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Nos prestations</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos prestations</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-2xl">Ce que nous prenons en charge.</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {detail.prestations.map((p: { title: string; desc: string }, i: number) => (
@@ -264,7 +264,7 @@ function SectorPage() {
       {/* Other sectors */}
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Explorer</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Explorer</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Les autres secteurs.</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
             {sectors.filter((s) => s.slug !== sector.slug).map((s) => (
