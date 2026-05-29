@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://elite-sy.lovable.app/sitemap.xml
