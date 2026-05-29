@@ -21,9 +21,9 @@ export const Route = createFileRoute("/proprete")({
         { title: "Bureaux / tertiaire", description: "Entretien quotidien et hebdomadaire des bureaux, espaces communs, sanitaires et salles de réunion selon vos protocoles." },
         { title: "Syndics de copropriétés", description: "Entretien des parties communes, gestion des bacs roulants et interventions spécifiques pour les résidences." },
         { title: "Professionnels de santé", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
-        { title: "Professionnels du bâtiment", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
-        { title: "Surface de vente / Retail", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
-        { title: "Surface de vente / Retail", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
+        { title: "Professionnels du bâtiment", description: "​Nettoyage de chantier et entretien de base vie :\nremise en état pour réception et entretien régulier des espaces de vie (sanitaires, vestiaires, bureaux) garantissant propreté, hygiène et confort des équipes." },
+        { title: "Surface de vente / ERP", description: "​Entretien régulier des surfaces de vente et ERP :\ngarantie d’un environnement propre, sain et attractif, conforme aux exigences d’hygiène et à l’image de votre établissement." },
+        { title: "​Industrie", description: "​Entretien régulier des surfaces industrielles, entrepôts et plateformes logistiques :\ngarantie d’un environnement propre, sécurisé et conforme aux exigences d’hygiène, contribuant à la performance et à l’image de votre activité." },
       ]}
       process={[
         { step: "01", title: "Audit sur site", description: "Diagnostic complet de vos locaux, identification des points sensibles et co-construction du cahier des charges." },
