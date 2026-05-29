@@ -25,7 +25,7 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">{eyebrow}</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">{eyebrow}</p>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">{title}</h1>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">{description}</p>
             <div className="mt-10 flex gap-4">
@@ -74,7 +74,7 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-20">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Méthode</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Méthode</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-12">Notre approche</h2>
             <div className="space-y-8">
               {process.map((p) => (
@@ -89,7 +89,7 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
             </div>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Bénéfices</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Bénéfices</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-12">Ce que vous gagnez</h2>
             <ul className="space-y-4">
               {benefits.map((b) => (
