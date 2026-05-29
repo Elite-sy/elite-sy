@@ -227,7 +227,7 @@ function SectorPage() {
             </p>
           </div>
           <ul className="space-y-4">
-            {detail.challenges.map((c) => (
+            {detail.challenges.map((c: string) => (
               <li key={c} className="flex items-start gap-4 p-5 rounded-sm border border-border bg-background">
                 <Check className="text-primary mt-0.5 shrink-0" size={20} />
                 <span className="text-foreground/90">{c}</span>
@@ -243,7 +243,7 @@ function SectorPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Nos prestations</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-2xl">Ce que nous prenons en charge.</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {detail.prestations.map((p, i) => (
+            {detail.prestations.map((p: { title: string; desc: string }, i: number) => (
               <motion.div
                 key={p.title}
                 initial={{ opacity: 0, y: 20 }}
