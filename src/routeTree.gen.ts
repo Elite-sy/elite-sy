@@ -15,6 +15,7 @@ import { Route as PropreteRouteImport } from './routes/proprete'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AmoRouteImport } from './routes/amo'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PropreteIndexRouteImport } from './routes/proprete.index'
 import { Route as SecteurSlugRouteImport } from './routes/secteur.$slug'
 import { Route as PropreteSyndicsCoproprieteRouteImport } from './routes/proprete.syndics-copropriete'
 import { Route as PropreteSlugRouteImport } from './routes/proprete.$slug'
@@ -49,6 +50,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PropreteIndexRoute = PropreteIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PropreteRoute,
+} as any)
 const SecteurSlugRoute = SecteurSlugRouteImport.update({
   id: '/secteur/$slug',
   path: '/secteur/$slug',
@@ -76,17 +82,18 @@ export interface FileRoutesByFullPath {
   '/proprete/$slug': typeof PropreteSlugRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
+  '/proprete/': typeof PropreteIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/amo': typeof AmoRoute
   '/contact': typeof ContactRoute
-  '/proprete': typeof PropreteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
+  '/proprete': typeof PropreteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -99,6 +106,7 @@ export interface FileRoutesById {
   '/proprete/$slug': typeof PropreteSlugRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
+  '/proprete/': typeof PropreteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -112,17 +120,18 @@ export interface FileRouteTypes {
     | '/proprete/$slug'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
+    | '/proprete/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/amo'
     | '/contact'
-    | '/proprete'
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
+    | '/proprete'
   id:
     | '__root__'
     | '/'
@@ -134,6 +143,7 @@ export interface FileRouteTypes {
     | '/proprete/$slug'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
+    | '/proprete/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -190,6 +200,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/proprete/': {
+      id: '/proprete/'
+      path: '/'
+      fullPath: '/proprete/'
+      preLoaderRoute: typeof PropreteIndexRouteImport
+      parentRoute: typeof PropreteRoute
+    }
     '/secteur/$slug': {
       id: '/secteur/$slug'
       path: '/secteur/$slug'
@@ -217,11 +234,13 @@ declare module '@tanstack/react-router' {
 interface PropreteRouteChildren {
   PropreteSlugRoute: typeof PropreteSlugRoute
   PropreteSyndicsCoproprieteRoute: typeof PropreteSyndicsCoproprieteRoute
+  PropreteIndexRoute: typeof PropreteIndexRoute
 }
 
 const PropreteRouteChildren: PropreteRouteChildren = {
   PropreteSlugRoute: PropreteSlugRoute,
   PropreteSyndicsCoproprieteRoute: PropreteSyndicsCoproprieteRoute,
+  PropreteIndexRoute: PropreteIndexRoute,
 }
 
 const PropreteRouteWithChildren = PropreteRoute._addFileChildren(
@@ -240,3 +259,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
