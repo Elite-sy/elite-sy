@@ -171,7 +171,7 @@ export const Route = createFileRoute("/proprete/$slug")({
 });
 
 function ClientPage() {
-  const { client, slug } = Route.useLoaderData();
+  const { client, slug } = Route.useLoaderData() as { client: ClientDetail; slug: string };
   const Icon = client.icon;
   const others = Object.entries(clients).filter(([s]) => s !== slug);
 
