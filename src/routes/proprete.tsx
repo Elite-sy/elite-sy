@@ -18,9 +18,9 @@ export const Route = createFileRoute("/proprete")({
       description="Bureaux, sièges sociaux, hôtels haut de gamme, espaces premium : nous concevons des prestations de propreté sur-mesure, exécutées avec rigueur et discrétion. Nos équipes formées et nos protocoles certifiés garantissent un résultat irréprochable, jour après jour."
       image={img}
       features={[
-        { title: "Nettoyage bureaux tertiaire", description: "Entretien quotidien et hebdomadaire des bureaux, espaces communs, sanitaires et salles de réunion selon vos protocoles." },
-        { title: "Vitrerie & remise en état", description: "Vitres, façades intérieures, remises en état après travaux ou événementiel, traitements spécifiques des sols." },
-        { title: "Bionettoyage & hygiène", description: "Protocoles renforcés pour secteurs sensibles, désinfection certifiée, traçabilité complète des interventions." },
+        { title: "Bureaux / tertiaire", description: "Entretien quotidien et hebdomadaire des bureaux, espaces communs, sanitaires et salles de réunion selon vos protocoles." },
+        { title: "Syndics de copropriétés", description: "Entretien des parties communes, gestion des bacs roulants et interventions spécifiques pour les résidences." },
+        { title: "Professionnels de santé", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
       ]}
       process={[
         { step: "01", title: "Audit sur site", description: "Diagnostic complet de vos locaux, identification des points sensibles et co-construction du cahier des charges." },
