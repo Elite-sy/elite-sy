@@ -397,32 +397,34 @@ function SyndicsPage() {
               className="grid md:grid-cols-2 gap-0 border border-border rounded-sm overflow-hidden bg-background"
             >
               {current.images && current.images.length >= 2 ? (
-                <div className="grid grid-cols-2 gap-2 p-2 bg-card">
-                  {current.images.map((src, i) => (
-                    <div
-                      key={i}
-                      className="relative aspect-square overflow-hidden rounded-sm border border-border"
-                    >
-                      <img
-                        src={src}
-                        alt={`${current.label} — vue ${i + 1}`}
-                        loading="lazy"
-                        width={1024}
-                        height={1024}
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      />
-                    </div>
-                  ))}
+                <div className="flex items-center justify-center p-4 md:p-6 bg-card">
+                  <div className="grid grid-cols-2 gap-3 w-full max-w-md mx-auto">
+                    {current.images.map((src, i) => (
+                      <div
+                        key={i}
+                        className="relative aspect-square overflow-hidden rounded-sm border border-border"
+                      >
+                        <img
+                          src={src}
+                          alt={`${current.label} — vue ${i + 1}`}
+                          loading="lazy"
+                          width={1024}
+                          height={1024}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 <div className="relative h-64 md:h-auto min-h-[320px]">
                   <img src={current.image} alt={current.label} loading="lazy" width={1200} height={900} className="absolute inset-0 w-full h-full object-cover" />
                 </div>
               )}
-              <div className="p-8 md:p-10 flex flex-col">
+              <div className="p-8 md:p-10 flex flex-col justify-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">{current.label}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6" style={{ whiteSpace: 'pre-line' }}>{current.description}</p>
-                <ul className="space-y-3 mt-auto">
+                <ul className="space-y-3 mt-6">
                   {current.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm">
                       <Check className="text-primary mt-0.5 shrink-0" size={16} />
