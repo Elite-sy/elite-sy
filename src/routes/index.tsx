@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles, Building2, ClipboardCheck, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
+import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import heroImg from "@/assets/hero.jpg";
 import propreteImg from "@/assets/proprete.jpg";
@@ -21,9 +21,33 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { to: "/proprete", icon: Sparkles, title: "Propreté", desc: "Prestations sur-mesure pour bureaux, sièges sociaux et environnements exigeants.", img: propreteImg },
-  { to: "/soft-facility", icon: Building2, title: "Soft Facility", desc: "Pilotage des services aux occupants : accueil, courrier, conciergerie, espaces verts.", img: softImg },
-  { to: "/amo", icon: ClipboardCheck, title: "AMO", desc: "Assistance à maîtrise d'ouvrage pour vos projets immobiliers et tertiaires.", img: amoImg },
+  {
+    to: "/proprete",
+    number: "1",
+    icon: SprayCan,
+    title: "Propreté",
+    subtitle: "Pour professionnels",
+    desc: "Des prestations de nettoyage sur-mesure pour des environnements propres, sains et accueillants.",
+    img: propreteImg,
+  },
+  {
+    to: "/soft-facility",
+    number: "2",
+    icon: Building2,
+    title: "Services du",
+    subtitle: "Soft Facility",
+    desc: "Gestion multiservices de vos bâtiments : maintenance, accueil, espaces verts, courrier, petits travaux… Nous simplifions votre quotidien.",
+    img: softImg,
+  },
+  {
+    to: "/amo",
+    number: "3",
+    icon: Users2,
+    title: "AMO",
+    subtitle: "Assistance à maître d'ouvrage",
+    desc: "Un accompagnement indépendant à chaque étape de votre projet pour sécuriser vos décisions et garantir la réussite.",
+    img: amoImg,
+  },
 ];
 
 const stats = [
@@ -131,11 +155,22 @@ function Index() {
                 <Link to={s.to} className="group block rounded-sm overflow-hidden border border-border bg-card hover:border-primary/60 transition h-full">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1600} height={1200} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
                   </div>
                   <div className="p-8">
-                    <s.icon className="text-primary mb-4" size={28} />
-                    <h3 className="text-2xl font-bold mb-3">{s.title}</h3>
+                    <div className="flex items-center gap-4 mb-5">
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30">
+                        <s.icon className="text-primary" size={24} />
+                      </div>
+                      <div className="flex items-baseline gap-3">
+                        <span className="font-display text-4xl font-bold text-foreground leading-none">{s.number}</span>
+                        <div>
+                          <h3 className="text-lg font-bold uppercase tracking-wider leading-tight">{s.title}</h3>
+                          <p className="text-xs uppercase tracking-[0.2em] text-primary mt-1">{s.subtitle}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-10 h-px bg-primary mb-5" />
                     <p className="text-sm text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                     <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
                       En savoir plus <ArrowRight size={14} />
