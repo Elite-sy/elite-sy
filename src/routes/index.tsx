@@ -45,7 +45,7 @@ const services = [
     number: "3",
     icon: Users2,
     title: "AMO",
-    subtitle: "Assistance à maître d'ouvrage",
+    subtitle: "Assistance à maîtrise d'ouvrage",
     desc: "Un accompagnement indépendant à chaque étape de votre projet pour sécuriser vos décisions et garantir la réussite.",
     img: amoImg,
   },
