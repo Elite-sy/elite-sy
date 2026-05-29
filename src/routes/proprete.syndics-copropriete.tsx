@@ -28,6 +28,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import hallImg from "@/assets/syndic-hall.jpg";
+import heroImg from "@/assets/syndic-hero.jpg";
 import staircaseImg from "@/assets/syndic-staircase.jpg";
 import parkingImg from "@/assets/syndic-parking.jpg";
 import binsImg from "@/assets/syndic-bins.jpg";
@@ -325,7 +326,7 @@ function SyndicsPage() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={hallImg} alt="Hall d'entrée d'une copropriété entretenu par ELITESY" width={1600} height={1100} className="w-full h-[500px] object-cover" />
+            <img src={heroImg} alt="Équipe ELITESY entretenant les parties communes d'une copropriété parisienne" width={1600} height={1120} className="w-full h-[500px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </motion.div>
         </div>
