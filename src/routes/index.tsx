@@ -27,15 +27,15 @@ const services = [
     icon: SprayCan,
     title: "Propreté",
     subtitle: "Pour professionnels",
-    desc: "Des prestations de nettoyage sur-mesure pour des environnements propres, sains et accueillants.",
+    desc: "Des prestations de nettoyage sur-mesure pour des environnements propres, sains et accueillants.\n\n",
     img: propreteImg,
   },
   {
     to: "/soft-facility",
     number: "2",
     icon: Building2,
-    title: "Services du",
-    subtitle: "Soft Facility",
+    title: "Soft Fm",
+    subtitle: "Facility management",
     desc: "Gestion multiservices de vos bâtiments : maintenance, accueil, espaces verts, courrier, petits travaux… Nous simplifions votre quotidien.",
     img: softImg,
   },
@@ -52,7 +52,7 @@ const services = [
 
 const stats = [
   { value: "15+", label: "Années d'expérience" },
-  { value: "200+", label: "Clients accompagnés" },
+  { value: "168+", label: "Clients accompagnés" },
   { value: "98%", label: "Taux de fidélisation" },
   { value: "24/7", label: "Disponibilité" },
 ];
