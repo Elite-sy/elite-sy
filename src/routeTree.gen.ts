@@ -15,6 +15,7 @@ import { Route as PropreteRouteImport } from './routes/proprete'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AmoRouteImport } from './routes/amo'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SecteurSlugRouteImport } from './routes/secteur.$slug'
 
 const SoftFacilityRoute = SoftFacilityRouteImport.update({
   id: '/soft-facility',
@@ -46,6 +47,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SecteurSlugRoute = SecteurSlugRouteImport.update({
+  id: '/secteur/$slug',
+  path: '/secteur/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/proprete': typeof PropreteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
+  '/secteur/$slug': typeof SecteurSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/proprete': typeof PropreteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
+  '/secteur/$slug': typeof SecteurSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/proprete': typeof PropreteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
+  '/secteur/$slug': typeof SecteurSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/proprete'
     | '/sitemap.xml'
     | '/soft-facility'
+    | '/secteur/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/proprete'
     | '/sitemap.xml'
     | '/soft-facility'
+    | '/secteur/$slug'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/proprete'
     | '/sitemap.xml'
     | '/soft-facility'
+    | '/secteur/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   PropreteRoute: typeof PropreteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SoftFacilityRoute: typeof SoftFacilityRoute
+  SecteurSlugRoute: typeof SecteurSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/secteur/$slug': {
+      id: '/secteur/$slug'
+      path: '/secteur/$slug'
+      fullPath: '/secteur/$slug'
+      preLoaderRoute: typeof SecteurSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,7 +182,18 @@ const rootRouteChildren: RootRouteChildren = {
   PropreteRoute: PropreteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SoftFacilityRoute: SoftFacilityRoute,
+  SecteurSlugRoute: SecteurSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
