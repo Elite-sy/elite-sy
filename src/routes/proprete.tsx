@@ -22,7 +22,7 @@ export const Route = createFileRoute("/proprete")({
         { title: "Syndics de copropriétés", description: "Entretien des parties communes, gestion des bacs roulants et interventions spécifiques pour les résidences." },
         { title: "Professionnels de santé", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
         { title: "Professionnels du bâtiment", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
-        { title: "Professionnels du bâtiment", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
+        { title: "Surface de vente / Retail", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
       ]}
       process={[
         { step: "01", title: "Audit sur site", description: "Diagnostic complet de vos locaux, identification des points sensibles et co-construction du cahier des charges." },
