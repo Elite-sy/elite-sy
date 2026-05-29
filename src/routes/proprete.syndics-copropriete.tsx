@@ -35,8 +35,8 @@ import parkingImg from "@/assets/syndic-parking.jpg";
 import binsImg from "@/assets/syndic-bins.jpg";
 import glassImg from "@/assets/syndic-glass.jpg";
 import gardenImg from "@/assets/syndic-garden.jpg";
-import garden1Img from "@/assets/syndic-garden-1.webp";
-import garden2Img from "@/assets/syndic-garden-2.webp";
+import garden1Img from "@/assets/syndic-garden-3.jpg";
+import garden2Img from "@/assets/syndic-garden-4.jpg";
 
 export const Route = createFileRoute("/proprete/syndics-copropriete")({
   head: () => ({
@@ -397,27 +397,22 @@ function SyndicsPage() {
               className="grid md:grid-cols-2 gap-0 border border-border rounded-sm overflow-hidden bg-background"
             >
               {current.images && current.images.length >= 2 ? (
-                <div className="relative h-64 md:h-auto min-h-[320px] grid grid-rows-2 gap-1 bg-border p-1">
-                  <div className="relative overflow-hidden rounded-sm">
-                    <img
-                      src={current.images[0]}
-                      alt={`${current.label} — tonte et entretien`}
-                      loading="lazy"
-                      width={1600}
-                      height={700}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
-                  <div className="relative overflow-hidden rounded-sm">
-                    <img
-                      src={current.images[1]}
-                      alt={`${current.label} — taille des végétaux`}
-                      loading="lazy"
-                      width={700}
-                      height={700}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                  </div>
+                <div className="grid grid-cols-2 gap-2 p-2 bg-card">
+                  {current.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="relative aspect-square overflow-hidden rounded-sm border border-border"
+                    >
+                      <img
+                        src={src}
+                        alt={`${current.label} — vue ${i + 1}`}
+                        loading="lazy"
+                        width={1024}
+                        height={1024}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
+                    </div>
+                  ))}
                 </div>
               ) : (
                 <div className="relative h-64 md:h-auto min-h-[320px]">
