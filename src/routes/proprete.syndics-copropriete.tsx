@@ -35,6 +35,8 @@ import parkingImg from "@/assets/syndic-parking.jpg";
 import binsImg from "@/assets/syndic-bins.jpg";
 import glassImg from "@/assets/syndic-glass.jpg";
 import gardenImg from "@/assets/syndic-garden.jpg";
+import garden1Img from "@/assets/syndic-garden-1.webp";
+import garden2Img from "@/assets/syndic-garden-2.webp";
 
 export const Route = createFileRoute("/proprete/syndics-copropriete")({
   head: () => ({
@@ -62,6 +64,7 @@ type Zone = {
   label: string;
   icon: LucideIcon;
   image: string;
+  images?: string[];
   description: string;
   bullets: string[];
 };
@@ -142,6 +145,7 @@ const zones: Zone[] = [
     label: "Espaces verts & abords",
     icon: Trees,
     image: gardenImg,
+    images: [garden1Img, garden2Img],
     description:
       "Des solutions d'entretien d'espaces verts professionnels pour un extérieur impeccable.\n\nVos espaces verts sont le reflet de votre image et, à ce titre, ils méritent d'être parfaitement entretenus et valorisés. Ils représentent 2 enjeux majeurs : l'esthétisme, vos bâtiments s'intègrent dans le paysage urbain ou rural, et la sécurité. Vos occupants et vos visiteurs doivent pouvoir accéder à votre site en toute sécurité, quelles que soient les conditions météo.\n\nELITESY vous propose un large panel de prestations. Celui-ci allant de la conception à l'aménagement et l'entretien de tous vos espaces verts : parcs, jardins, terrasses, patios… mais aussi décorations florales de façade et d'intérieur.\n\nAprès avoir réalisé un diagnostic de la gestion de vos espaces extérieurs, nos équipes expérimentées de Paysagistes, d'Architectes paysagistes, de Décorateurs et de Jardiniers construisent puis mettent en place un plan de gestion écologique et un bilan annuel de votre site.\n\nNos Agents d'espaces verts conjuguent créativité, savoir-faire et méthodologie pour vous garantir des espaces verts esthétiques. Ils sont également formés afin de respecter votre cahier des charges et votre budget.\n\nFaites confiance à ELITESY, entreprise d'entretien et aménagement des espaces verts.\n\nLe plan de gestion écologique que nous mettons en place sur chaque site que nous entretenons s'inscrit dans le cadre de notre démarche de Responsabilité Sociétale et se traduit par des actions concrètes visant à réduire l'utilisation de pesticides, protéger vos sols et valoriser vos déchets. À ce titre, nous nous engageons à utiliser des produits professionnels agréés et biodégradables pour l'entretien de vos espaces et à prendre des initiatives en faveur de la biodiversité.",
     bullets: [
