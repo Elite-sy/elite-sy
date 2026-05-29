@@ -304,7 +304,7 @@ function SyndicsPage() {
               <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Syndics de copropriétés</p>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
-              L'entretien de vos parties communes,<br />
+              L'entretien de vos immeubles,<br />
               <span className="text-primary">une exigence partagée.</span>
             </h1>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
