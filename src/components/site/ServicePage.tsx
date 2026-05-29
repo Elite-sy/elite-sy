@@ -8,7 +8,7 @@ export interface ServicePageProps {
   title: string;
   description: string;
   image: string;
-  features: { title: string; description: string }[];
+  features: { title: string; description: string; slug?: string }[];
   process: { step: string; title: string; description: string }[];
   benefits: string[];
 }
@@ -59,11 +59,24 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-8 border border-border rounded-sm bg-card hover:border-primary/50 transition"
+                className="group p-8 border border-border rounded-sm bg-card hover:border-primary/50 transition"
               >
-                <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
-                <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
+                {f.slug ? (
+                  <Link to="/proprete/$slug" params={{ slug: f.slug }} className="block">
+                    <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
+                    <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                      {f.title}
+                      <ArrowRight size={18} className="text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{f.description}</p>
+                  </Link>
+                ) : (
+                  <>
+                    <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
+                    <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{f.description}</p>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>
