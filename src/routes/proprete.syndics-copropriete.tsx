@@ -143,12 +143,12 @@ const zones: Zone[] = [
     icon: Trees,
     image: gardenImg,
     description:
-      "Trottoirs, cours intérieures et espaces verts : nous valorisons l'environnement immédiat de l'immeuble pour le confort des résidents.",
+      "Des solutions d'entretien d'espaces verts professionnels pour un extérieur impeccable.\n\nVos espaces verts sont le reflet de votre image et, à ce titre, ils méritent d'être parfaitement entretenus et valorisés. Ils représentent 2 enjeux majeurs : l'esthétisme, vos bâtiments s'intègrent dans le paysage urbain ou rural, et la sécurité. Vos occupants et vos visiteurs doivent pouvoir accéder à votre site en toute sécurité, quelles que soient les conditions météo.\n\nELITESY vous propose un large panel de prestations. Celui-ci allant de la conception à l'aménagement et l'entretien de tous vos espaces verts : parcs, jardins, terrasses, patios… mais aussi décorations florales de façade et d'intérieur.\n\nAprès avoir réalisé un diagnostic de la gestion de vos espaces extérieurs, nos équipes expérimentées de Paysagistes, d'Architectes paysagistes, de Décorateurs et de Jardiniers construisent puis mettent en place un plan de gestion écologique et un bilan annuel de votre site.\n\nNos Agents d'espaces verts conjuguent créativité, savoir-faire et méthodologie pour vous garantir des espaces verts esthétiques. Ils sont également formés afin de respecter votre cahier des charges et votre budget.\n\nFaites confiance à ELITESY, entreprise d'entretien et aménagement des espaces verts.\n\nLe plan de gestion écologique que nous mettons en place sur chaque site que nous entretenons s'inscrit dans le cadre de notre démarche de Responsabilité Sociétale et se traduit par des actions concrètes visant à réduire l'utilisation de pesticides, protéger vos sols et valoriser vos déchets. À ce titre, nous nous engageons à utiliser des produits professionnels agréés et biodégradables pour l'entretien de vos espaces et à prendre des initiatives en faveur de la biodiversité.",
     bullets: [
-      "Balayage des trottoirs et abords",
-      "Ramassage des déchets extérieurs",
-      "Entretien léger des espaces verts",
-      "Nettoyage des grilles et caniveaux",
+      "Conception et aménagement des espaces verts : engazonnement par semis ou placage, création de massifs, plantation de végétaux, mise en place d'arrosage automatique, installation de clôtures et de portails, ruches…",
+      "Entretien des espaces verts : arrosage, tonte, taille, désherbage, traitement phytosanitaire, ramassage de feuilles, plantation de plantes saisonnières, élagage, abattage…",
+      "Design floral intérieur : mise en place de bacs et plantes d'intérieur, aménagement végétal, décorations florales, arrosage, nettoyage, taille, tuteurage, traitement et renouvellement des plantes…",
+      "Opérations événementielles : conceptions florales sur-mesures : sapins et décors de Noël, illuminations, décors à thème, location de plantes…",
     ],
   },
 ];
