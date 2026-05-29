@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SoftFacilityRouteImport } from './routes/soft-facility'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PropreteRouteImport } from './routes/proprete'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AmoRouteImport } from './routes/amo'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const SoftFacilityRoute = SoftFacilityRouteImport.update({
   id: '/soft-facility',
   path: '/soft-facility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PropreteRoute = PropreteRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/amo': typeof AmoRoute
   '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/amo': typeof AmoRoute
   '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,34 @@ export interface FileRoutesById {
   '/amo': typeof AmoRoute
   '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/amo' | '/contact' | '/proprete' | '/soft-facility'
+  fullPaths:
+    | '/'
+    | '/amo'
+    | '/contact'
+    | '/proprete'
+    | '/sitemap.xml'
+    | '/soft-facility'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/amo' | '/contact' | '/proprete' | '/soft-facility'
-  id: '__root__' | '/' | '/amo' | '/contact' | '/proprete' | '/soft-facility'
+  to:
+    | '/'
+    | '/amo'
+    | '/contact'
+    | '/proprete'
+    | '/sitemap.xml'
+    | '/soft-facility'
+  id:
+    | '__root__'
+    | '/'
+    | '/amo'
+    | '/contact'
+    | '/proprete'
+    | '/sitemap.xml'
+    | '/soft-facility'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +104,7 @@ export interface RootRouteChildren {
   AmoRoute: typeof AmoRoute
   ContactRoute: typeof ContactRoute
   PropreteRoute: typeof PropreteRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SoftFacilityRoute: typeof SoftFacilityRoute
 }
 
@@ -86,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/soft-facility'
       fullPath: '/soft-facility'
       preLoaderRoute: typeof SoftFacilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/proprete': {
@@ -124,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   AmoRoute: AmoRoute,
   ContactRoute: ContactRoute,
   PropreteRoute: PropreteRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SoftFacilityRoute: SoftFacilityRoute,
 }
 export const routeTree = rootRouteImport
