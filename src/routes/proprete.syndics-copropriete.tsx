@@ -397,24 +397,22 @@ function SyndicsPage() {
               className="grid md:grid-cols-2 gap-0 border border-border rounded-sm overflow-hidden bg-background"
             >
               {current.images && current.images.length >= 2 ? (
-                <div className="flex items-center justify-center p-4 md:p-6 bg-card">
-                  <div className="grid grid-cols-2 gap-3 w-full max-w-md mx-auto">
-                    {current.images.map((src, i) => (
-                      <div
-                        key={i}
-                        className="relative aspect-square overflow-hidden rounded-sm border border-border"
-                      >
-                        <img
-                          src={src}
-                          alt={`${current.label} — vue ${i + 1}`}
-                          loading="lazy"
-                          width={1024}
-                          height={1024}
-                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex flex-col gap-4 p-4 md:p-6 bg-card h-full min-h-[480px]">
+                  {current.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="relative flex-1 min-h-0 overflow-hidden rounded-sm border border-border"
+                    >
+                      <img
+                        src={src}
+                        alt={`${current.label} — vue ${i + 1}`}
+                        loading="lazy"
+                        width={1024}
+                        height={1024}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
+                    </div>
+                  ))}
                 </div>
               ) : (
                 <div className="relative h-64 md:h-auto min-h-[320px]">
