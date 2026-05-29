@@ -1,0 +1,118 @@
+import { Link } from "@tanstack/react-router";
+import { motion } from "motion/react";
+import { Check, ArrowRight } from "lucide-react";
+import { Layout } from "./Layout";
+
+export interface ServicePageProps {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  features: { title: string; description: string }[];
+  process: { step: string; title: string; description: string }[];
+  benefits: string[];
+}
+
+export function ServicePage({ eyebrow, title, description, image, features, process, benefits }: ServicePageProps) {
+  return (
+    <Layout>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial)" }} />
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-24 grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">{eyebrow}</p>
+            <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">{title}</h1>
+            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">{description}</p>
+            <div className="mt-10 flex gap-4">
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
+                Demander un devis <ArrowRight size={16} />
+              </Link>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="relative rounded-sm overflow-hidden"
+            style={{ boxShadow: "var(--shadow-elegant)" }}
+          >
+            <img src={image} alt={title} className="w-full h-[500px] object-cover" loading="lazy" width={1600} height={1100} />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 max-w-2xl">Notre expertise</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((f, i) => (
+              <motion.div
+                key={f.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="p-8 border border-border rounded-sm bg-card hover:border-primary/50 transition"
+              >
+                <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
+                <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process & Benefits */}
+      <section className="py-24 border-t border-border bg-card/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Méthode</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Notre approche</h2>
+            <div className="space-y-8">
+              {process.map((p) => (
+                <div key={p.step} className="flex gap-6">
+                  <div className="font-display text-primary text-2xl font-bold w-12 shrink-0">{p.step}</div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">{p.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Bénéfices</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Ce que vous gagnez</h2>
+            <ul className="space-y-4">
+              {benefits.map((b) => (
+                <li key={b} className="flex items-start gap-4 p-4 rounded-sm border border-border bg-background">
+                  <Check className="text-primary mt-0.5 shrink-0" size={20} />
+                  <span className="text-foreground/90">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold">Prêt à passer à l'excellence ?</h2>
+          <p className="mt-6 text-muted-foreground text-lg">Échangeons sur vos besoins, sans engagement.</p>
+          <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
+            Nous contacter <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+    </Layout>
+  );
+}
