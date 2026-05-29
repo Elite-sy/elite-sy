@@ -31,6 +31,7 @@ import hallImg from "@/assets/syndic-hall.jpg";
 import heroImg from "@/assets/syndic-hero.jpg";
 import staircaseImg from "@/assets/syndic-staircase.jpg";
 import parkingImg from "@/assets/syndic-parking.jpg";
+import parkingSousImg from "@/assets/syndic-parking-sous.jpg";
 import binsImg from "@/assets/syndic-bins.jpg";
 import glassImg from "@/assets/syndic-glass.jpg";
 import gardenImg from "@/assets/syndic-garden.jpg";
@@ -148,6 +149,20 @@ const zones: Zone[] = [
       "Ramassage des déchets extérieurs",
       "Entretien léger des espaces verts",
       "Nettoyage des grilles et caniveaux",
+    ],
+  },
+  {
+    id: "parking-souterrain",
+    label: "Parking souterrain",
+    icon: Car,
+    image: parkingSousImg,
+    description:
+      "Entretien spécialisé des parkings souterrains : sols, marquages, pilliers et zones de circulation. Un environnement propre, sécurisé et bien éclairé pour les résidents.",
+    bullets: [
+      "Balayage mécanisé des niveaux et allées",
+      "Dégraissage et lavage haute pression ponctuels",
+      "Nettoyage des pilliers, murs et marquages au sol",
+      "Vidage des corbeilles et contrôle de l'éclairage",
     ],
   },
 ];
