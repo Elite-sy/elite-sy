@@ -218,7 +218,7 @@ function Index() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={heroImg} alt="" className="w-full h-[600px] object-cover" loading="lazy" width={1920} height={1280} />
+            <img src={elitesyTeamImg} alt="Équipe ELITESY" className="w-full h-[600px] object-cover" loading="lazy" width={1920} height={1280} />
           </motion.div>
         </div>
       </section>
