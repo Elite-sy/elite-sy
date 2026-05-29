@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AmoRouteImport } from './routes/amo'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SecteurSlugRouteImport } from './routes/secteur.$slug'
+import { Route as PropreteSyndicsCoproprieteRouteImport } from './routes/proprete.syndics-copropriete'
 import { Route as PropreteSlugRouteImport } from './routes/proprete.$slug'
 
 const SoftFacilityRoute = SoftFacilityRouteImport.update({
@@ -53,6 +54,12 @@ const SecteurSlugRoute = SecteurSlugRouteImport.update({
   path: '/secteur/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PropreteSyndicsCoproprieteRoute =
+  PropreteSyndicsCoproprieteRouteImport.update({
+    id: '/syndics-copropriete',
+    path: '/syndics-copropriete',
+    getParentRoute: () => PropreteRoute,
+  } as any)
 const PropreteSlugRoute = PropreteSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -67,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
+  '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +85,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
+  '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
 }
 export interface FileRoutesById {
@@ -88,6 +97,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
+  '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
+    | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +121,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
+    | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
   id:
     | '__root__'
@@ -120,6 +132,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
+    | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SecteurSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/proprete/syndics-copropriete': {
+      id: '/proprete/syndics-copropriete'
+      path: '/syndics-copropriete'
+      fullPath: '/proprete/syndics-copropriete'
+      preLoaderRoute: typeof PropreteSyndicsCoproprieteRouteImport
+      parentRoute: typeof PropreteRoute
+    }
     '/proprete/$slug': {
       id: '/proprete/$slug'
       path: '/$slug'
@@ -196,10 +216,12 @@ declare module '@tanstack/react-router' {
 
 interface PropreteRouteChildren {
   PropreteSlugRoute: typeof PropreteSlugRoute
+  PropreteSyndicsCoproprieteRoute: typeof PropreteSyndicsCoproprieteRoute
 }
 
 const PropreteRouteChildren: PropreteRouteChildren = {
   PropreteSlugRoute: PropreteSlugRoute,
+  PropreteSyndicsCoproprieteRoute: PropreteSyndicsCoproprieteRoute,
 }
 
 const PropreteRouteWithChildren = PropreteRoute._addFileChildren(
