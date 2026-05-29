@@ -396,9 +396,34 @@ function SyndicsPage() {
               transition={{ duration: 0.4 }}
               className="grid md:grid-cols-2 gap-0 border border-border rounded-sm overflow-hidden bg-background"
             >
-              <div className="relative h-64 md:h-auto min-h-[320px]">
-                <img src={current.image} alt={current.label} loading="lazy" width={1200} height={900} className="absolute inset-0 w-full h-full object-cover" />
-              </div>
+              {current.images && current.images.length >= 2 ? (
+                <div className="relative h-64 md:h-auto min-h-[320px] grid grid-rows-2 gap-1 bg-border p-1">
+                  <div className="relative overflow-hidden rounded-sm">
+                    <img
+                      src={current.images[0]}
+                      alt={`${current.label} — tonte et entretien`}
+                      loading="lazy"
+                      width={1600}
+                      height={700}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                  <div className="relative overflow-hidden rounded-sm">
+                    <img
+                      src={current.images[1]}
+                      alt={`${current.label} — taille des végétaux`}
+                      loading="lazy"
+                      width={700}
+                      height={700}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="relative h-64 md:h-auto min-h-[320px]">
+                  <img src={current.image} alt={current.label} loading="lazy" width={1200} height={900} className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+              )}
               <div className="p-8 md:p-10 flex flex-col">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">{current.label}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6" style={{ whiteSpace: 'pre-line' }}>{current.description}</p>
