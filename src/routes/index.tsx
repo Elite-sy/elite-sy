@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles, Building2, ClipboardCheck, Shield, Award, Users } from "lucide-react";
+import { ArrowRight, Sparkles, Building2, ClipboardCheck, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import heroImg from "@/assets/hero.jpg";
 import propreteImg from "@/assets/proprete.jpg";
@@ -31,6 +31,15 @@ const stats = [
   { value: "200+", label: "Clients accompagnés" },
   { value: "98%", label: "Taux de fidélisation" },
   { value: "24/7", label: "Disponibilité" },
+];
+
+const sectors = [
+  { icon: Briefcase, label: "Sièges sociaux" },
+  { icon: Hotel, label: "Hôtellerie de luxe" },
+  { icon: Landmark, label: "Institutions publiques" },
+  { icon: Stethoscope, label: "Santé & cliniques" },
+  { icon: GraduationCap, label: "Enseignement supérieur" },
+  { icon: Factory, label: "Industrie & logistique" },
 ];
 
 function Index() {
@@ -178,6 +187,22 @@ function Index() {
 
       {/* CTA */}
       <section className="py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 mb-24">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-4">Secteurs</p>
+              <h2 className="text-3xl md:text-4xl font-bold max-w-xl">Des environnements aussi divers qu'exigeants.</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {sectors.map((s) => (
+              <div key={s.label} className="p-6 border border-border rounded-sm bg-card/60 hover:border-primary/60 transition flex flex-col items-center text-center gap-3">
+                <s.icon className="text-primary" size={24} />
+                <span className="text-sm font-medium">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="mx-auto max-w-5xl px-6 lg:px-10">
           <div className="rounded-sm border border-primary/30 p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial)" }} />
