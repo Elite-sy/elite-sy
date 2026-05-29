@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SoftFacilityRouteImport } from './routes/soft-facility'
 import { Route as PropreteRouteImport } from './routes/proprete'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AmoRouteImport } from './routes/amo'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const SoftFacilityRoute = SoftFacilityRouteImport.update({
 const PropreteRoute = PropreteRouteImport.update({
   id: '/proprete',
   path: '/proprete',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AmoRoute = AmoRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/amo': typeof AmoRoute
+  '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRoute
   '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/amo': typeof AmoRoute
+  '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRoute
   '/soft-facility': typeof SoftFacilityRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/amo': typeof AmoRoute
+  '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRoute
   '/soft-facility': typeof SoftFacilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/amo' | '/proprete' | '/soft-facility'
+  fullPaths: '/' | '/amo' | '/contact' | '/proprete' | '/soft-facility'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/amo' | '/proprete' | '/soft-facility'
-  id: '__root__' | '/' | '/amo' | '/proprete' | '/soft-facility'
+  to: '/' | '/amo' | '/contact' | '/proprete' | '/soft-facility'
+  id: '__root__' | '/' | '/amo' | '/contact' | '/proprete' | '/soft-facility'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AmoRoute: typeof AmoRoute
+  ContactRoute: typeof ContactRoute
   PropreteRoute: typeof PropreteRoute
   SoftFacilityRoute: typeof SoftFacilityRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/proprete'
       fullPath: '/proprete'
       preLoaderRoute: typeof PropreteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/amo': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AmoRoute: AmoRoute,
+  ContactRoute: ContactRoute,
   PropreteRoute: PropreteRoute,
   SoftFacilityRoute: SoftFacilityRoute,
 }
