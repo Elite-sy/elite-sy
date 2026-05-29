@@ -396,8 +396,8 @@ function SyndicsPage() {
                 <img src={current.image} alt={current.label} loading="lazy" width={1200} height={900} className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="p-8 md:p-10 flex flex-col">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">{current.label}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">{current.description}</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">{current.label}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6" style={{ whiteSpace: 'pre-line' }}>{current.description}</p>
                 <ul className="space-y-3 mt-auto">
                   {current.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm">
