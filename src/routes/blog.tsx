@@ -2,16 +2,19 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { zodValidator, fallback } from "@tanstack/zod-adapter";
 import { z } from "zod";
 import { useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { getAllPostsForListing } from "@/data/blog";
+
+const POSTS_PER_PAGE = 12;
 
 const searchSchema = z.object({
   cat: fallback(z.string(), "Toutes").default("Toutes"),
   q: fallback(z.string(), "").default(""),
+  page: fallback(z.number().int().min(1), 1).default(1),
 });
 
-type BlogSearch = { cat: string; q: string };
+type BlogSearch = { cat: string; q: string; page: number };
 
 export const Route = createFileRoute("/blog")({
   validateSearch: zodValidator(searchSchema),
@@ -35,7 +38,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 function BlogIndex() {
-  const { cat, q } = Route.useSearch();
+  const { cat, q, page } = Route.useSearch();
   const navigate = Route.useNavigate();
   const [query, setQuery] = useState(q);
 
@@ -68,6 +71,18 @@ function BlogIndex() {
     });
   }, [posts, cat, q]);
 
+  const totalPages = useMemo(
+    () => Math.max(1, Math.ceil(filtered.length / POSTS_PER_PAGE)),
+    [filtered]
+  );
+
+  const safePage = Math.min(page, totalPages);
+
+  const paginated = useMemo(() => {
+    const start = (safePage - 1) * POSTS_PER_PAGE;
+    return filtered.slice(start, start + POSTS_PER_PAGE);
+  }, [filtered, safePage]);
+
   return (
     <Layout>
       {/* Hero */}
@@ -89,7 +104,7 @@ function BlogIndex() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              navigate({ search: (prev: BlogSearch) => ({ ...prev, q: query }) });
+              navigate({ search: (prev: BlogSearch) => ({ ...prev, q: query, page: 1 }) });
             }}
             className="mt-10 max-w-xl flex items-center gap-2 bg-background border border-border rounded-sm px-4 py-3 shadow-sm"
           >
@@ -106,7 +121,7 @@ function BlogIndex() {
                 type="button"
                 onClick={() => {
                   setQuery("");
-                  navigate({ search: (prev: BlogSearch) => ({ ...prev, q: "" }) });
+                  navigate({ search: (prev: BlogSearch) => ({ ...prev, q: "", page: 1 }) });
                 }}
                 className="text-xs text-muted-foreground hover:text-primary"
               >
@@ -126,7 +141,7 @@ function BlogIndex() {
               <Link
                 key={c}
                 to="/blog"
-                search={(prev: BlogSearch) => ({ ...prev, cat: c })}
+                search={(prev: BlogSearch) => ({ ...prev, cat: c, page: 1 })}
                 className={`shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium border transition-colors ${
                   active
                     ? "bg-primary text-primary-foreground border-primary"
@@ -165,88 +180,144 @@ function BlogIndex() {
             </p>
             <Link
               to="/blog"
-              search={{ cat: "Toutes", q: "" }}
+              search={{ cat: "Toutes", q: "", page: 1 }}
               className="inline-block mt-4 text-sm text-primary hover:underline"
             >
               Réinitialiser les filtres
             </Link>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filtered.map((p) => (
-              <article
-                key={p.slug}
-                className="group flex flex-col bg-card border border-border rounded-sm overflow-hidden hover:border-primary/50 transition-colors"
-              >
-                {p.hero ? (
-                  <div className="aspect-[16/10] overflow-hidden bg-muted">
-                    <img
-                      src={p.hero}
-                      alt={p.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-[16/10] bg-gradient-to-br from-muted to-muted/40 flex items-center justify-center">
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground">
-                      À paraître
-                    </span>
-                  </div>
-                )}
-                <div className="flex-1 p-6 flex flex-col">
-                  <div className="flex items-center gap-3 text-xs">
-                    <Link
-                      to="/blog"
-                      search={(prev: BlogSearch) => ({ ...prev, cat: p.category })}
-                      className="text-primary font-semibold tracking-wider uppercase hover:underline"
-                    >
-                      {p.category}
-                    </Link>
-                    <span className="text-muted-foreground">·</span>
-                    <time className="text-muted-foreground">
-                      {new Date(p.date).toLocaleDateString("fr-FR", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>
-                  </div>
-                  <h3 className="mt-3 font-display text-xl font-semibold text-foreground leading-snug">
-                    {p.status === "published" ? (
-                      <Link
-                        to="/blog/$slug"
-                        params={{ slug: p.slug }}
-                        className="hover:text-primary transition-colors"
-                      >
-                        {p.title}
-                      </Link>
-                    ) : (
-                      <span>{p.title}</span>
-                    )}
-                  </h3>
-                  <p className="mt-3 text-sm text-muted-foreground line-clamp-3 flex-1">
-                    {p.description}
-                  </p>
-                  <div className="mt-5">
-                    {p.status === "published" ? (
-                      <Link
-                        to="/blog/$slug"
-                        params={{ slug: p.slug }}
-                        className="text-xs font-semibold tracking-wider uppercase text-primary hover:underline"
-                      >
-                        Lire l'article →
-                      </Link>
-                    ) : (
-                      <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground">
-                        Bientôt en ligne
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginated.map((p) => (
+                <article
+                  key={p.slug}
+                  className="group flex flex-col bg-card border border-border rounded-sm overflow-hidden hover:border-primary/50 transition-colors"
+                >
+                  {p.hero ? (
+                    <div className="aspect-[16/10] overflow-hidden bg-muted">
+                      <img
+                        src={p.hero}
+                        alt={p.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-[16/10] bg-gradient-to-br from-muted to-muted/40 flex items-center justify-center">
+                      <span className="text-xs tracking-widest uppercase text-muted-foreground">
+                        À paraître
                       </span>
-                    )}
+                    </div>
+                  )}
+                  <div className="flex-1 p-6 flex flex-col">
+                    <div className="flex items-center gap-3 text-xs">
+                      <Link
+                        to="/blog"
+                        search={(prev: BlogSearch) => ({ ...prev, cat: p.category, page: 1 })}
+                        className="text-primary font-semibold tracking-wider uppercase hover:underline"
+                      >
+                        {p.category}
+                      </Link>
+                      <span className="text-muted-foreground">·</span>
+                      <time className="text-muted-foreground">
+                        {new Date(p.date).toLocaleDateString("fr-FR", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </time>
+                    </div>
+                    <h3 className="mt-3 font-display text-xl font-semibold text-foreground leading-snug">
+                      {p.status === "published" ? (
+                        <Link
+                          to="/blog/$slug"
+                          params={{ slug: p.slug }}
+                          className="hover:text-primary transition-colors"
+                        >
+                          {p.title}
+                        </Link>
+                      ) : (
+                        <span>{p.title}</span>
+                      )}
+                    </h3>
+                    <p className="mt-3 text-sm text-muted-foreground line-clamp-3 flex-1">
+                      {p.description}
+                    </p>
+                    <div className="mt-5">
+                      {p.status === "published" ? (
+                        <Link
+                          to="/blog/$slug"
+                          params={{ slug: p.slug }}
+                          className="text-xs font-semibold tracking-wider uppercase text-primary hover:underline"
+                        >
+                          Lire l'article →
+                        </Link>
+                      ) : (
+                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground">
+                          Bientôt en ligne
+                        </span>
+                      )}
+                    </div>
                   </div>
+                </article>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <nav className="mt-14 flex items-center justify-center gap-2">
+                <Link
+                  to="/blog"
+                  search={(prev: BlogSearch) => ({
+                    ...prev,
+                    page: Math.max(1, safePage - 1),
+                  })}
+                  className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-sm border transition-colors ${
+                    safePage === 1
+                      ? "pointer-events-none opacity-40 border-border text-muted-foreground"
+                      : "border-border text-foreground hover:border-primary hover:text-primary"
+                  }`}
+                >
+                  <ChevronLeft className="size-4" />
+                  Précédent
+                </Link>
+
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                    <Link
+                      key={n}
+                      to="/blog"
+                      search={(prev: BlogSearch) => ({ ...prev, page: n })}
+                      className={`inline-flex items-center justify-center w-9 h-9 text-sm font-medium rounded-sm border transition-colors ${
+                        n === safePage
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "border-border text-foreground hover:border-primary hover:text-primary"
+                      }`}
+                    >
+                      {n}
+                    </Link>
+                  ))}
                 </div>
-              </article>
-            ))}
-          </div>
+
+                <Link
+                  to="/blog"
+                  search={(prev: BlogSearch) => ({
+                    ...prev,
+                    page: Math.min(totalPages, safePage + 1),
+                  })}
+                  className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-sm border transition-colors ${
+                    safePage === totalPages
+                      ? "pointer-events-none opacity-40 border-border text-muted-foreground"
+                      : "border-border text-foreground hover:border-primary hover:text-primary"
+                  }`}
+                >
+                  Suivant
+                  <ChevronRight className="size-4" />
+                </Link>
+              </nav>
+            )}
+          </>
         )}
       </section>
 
