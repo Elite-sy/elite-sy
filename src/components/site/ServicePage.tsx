@@ -16,7 +16,7 @@ export interface ServicePageProps {
   title: string;
   description: string;
   image: string;
-  features: { title: string; description: string; slug?: string }[];
+  features?: { title: string; description: string; slug?: string }[];
   process: { step: string; title: string; description: string }[];
   benefits: string[];
   sectors?: SectorItem[];
