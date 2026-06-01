@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/qualipropre.jpg";
+import hero from "@/assets/blog/protocole-quotidien.jpg";
 
 export const post: Post = {
   slug: `certification-qualipropre`,

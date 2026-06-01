@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/monobrosse.jpg";
+import hero from "@/assets/blog/marbre.jpg";
 
 export const post: Post = {
   slug: `monobrosse-utilisation-types`,

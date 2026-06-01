@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/degraissant.jpg";
+import hero from "@/assets/blog/restaurant-fin-service.jpg";
 
 export const post: Post = {
   slug: `degraissant-cuisine-professionnelle`,

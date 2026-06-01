@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/dasri.jpg";
+import hero from "@/assets/blog/cabinet-medical.jpg";
 
 export const post: Post = {
   slug: `reglementation-dasri-officine`,

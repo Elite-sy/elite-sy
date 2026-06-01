@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/aspirateur-pro.jpg";
+import hero from "@/assets/blog/moquette-bureau.jpg";
 
 export const post: Post = {
   slug: `aspirateur-professionnel-criteres`,

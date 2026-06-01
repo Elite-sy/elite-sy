@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/dqo-pharmacie.jpg";
+import hero from "@/assets/blog/conformite-ars-pharmacie.jpg";
 
 export const post: Post = {
   slug: `demarche-qualite-officine-dqo`,

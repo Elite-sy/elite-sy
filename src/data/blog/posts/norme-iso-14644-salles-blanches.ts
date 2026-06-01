@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/salle-blanche.jpg";
+import hero from "@/assets/blog/bionettoyage-hospitalier.jpg";
 
 export const post: Post = {
   slug: `norme-iso-14644-salles-blanches`,

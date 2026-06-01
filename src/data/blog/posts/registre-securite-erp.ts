@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/registre-securite.jpg";
+import hero from "@/assets/blog/fin-chantier.jpg";
 
 export const post: Post = {
   slug: `registre-securite-erp`,

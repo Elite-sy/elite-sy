@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/materiel-electrique.jpg";
+import hero from "@/assets/blog/autolaveuse.jpg";
 
 export const post: Post = {
   slug: `materiel-nettoyage-electrique-vs-thermique`,

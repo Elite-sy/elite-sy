@@ -1,5 +1,5 @@
 import type { Post } from "../types";
-import hero from "@/assets/blog/en14476.jpg";
+import hero from "@/assets/blog/ph-produits.jpg";
 
 export const post: Post = {
   slug: `norme-en-14476-virucide`,
