@@ -57,40 +57,42 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
       </section>
 
       {/* Features */}
-      <section className="py-24 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 max-w-2xl">Notre expertise</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((f, i) => (
-              <motion.div
-                key={f.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group p-8 border border-border rounded-sm bg-card hover:border-primary/50 transition"
-              >
-                {f.slug ? (
-                  <Link to="/proprete/$slug" params={{ slug: f.slug }} className="block">
-                    <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
-                    <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                      {f.title}
-                      <ArrowRight size={18} className="text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{f.description}</p>
-                  </Link>
-                ) : (
-                  <>
-                    <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
-                    <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{f.description}</p>
-                  </>
-                )}
-              </motion.div>
-            ))}
+      {features && features.length > 0 && (
+        <section className="py-24 border-t border-border">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 max-w-2xl">Notre expertise</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {features.map((f, i) => (
+                <motion.div
+                  key={f.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="group p-8 border border-border rounded-sm bg-card hover:border-primary/50 transition"
+                >
+                  {f.slug ? (
+                    <Link to="/proprete/$slug" params={{ slug: f.slug }} className="block">
+                      <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
+                      <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                        {f.title}
+                        <ArrowRight size={18} className="text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{f.description}</p>
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="text-primary font-display text-3xl font-bold mb-4">0{i + 1}</div>
+                      <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{f.description}</p>
+                    </>
+                  )}
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Sectors */}
       {sectors && sectors.length > 0 && (
