@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SoftFacilityRouteImport } from './routes/soft-facility'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PropreteRouteImport } from './routes/proprete'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AmoRouteImport } from './routes/amo'
@@ -40,6 +41,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const PropreteRoute = PropreteRouteImport.update({
   id: '/proprete',
   path: '/proprete',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/amo': typeof AmoRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/proprete': typeof PropreteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/amo': typeof AmoRoute
   '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -157,6 +165,7 @@ export interface FileRoutesById {
   '/amo': typeof AmoRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/proprete': typeof PropreteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/amo'
     | '/blog'
     | '/contact'
+    | '/mentions-legales'
     | '/proprete'
     | '/sitemap.xml'
     | '/soft-facility'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/'
     | '/amo'
     | '/contact'
+    | '/mentions-legales'
     | '/sitemap.xml'
     | '/soft-facility'
     | '/blog/$slug'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '/amo'
     | '/blog'
     | '/contact'
+    | '/mentions-legales'
     | '/proprete'
     | '/sitemap.xml'
     | '/soft-facility'
@@ -234,6 +246,7 @@ export interface RootRouteChildren {
   AmoRoute: typeof AmoRoute
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
   PropreteRoute: typeof PropreteRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SoftFacilityRoute: typeof SoftFacilityRoute
@@ -262,6 +275,13 @@ declare module '@tanstack/react-router' {
       path: '/proprete'
       fullPath: '/proprete'
       preLoaderRoute: typeof PropreteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -404,6 +424,7 @@ const rootRouteChildren: RootRouteChildren = {
   AmoRoute: AmoRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
   PropreteRoute: PropreteRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SoftFacilityRoute: SoftFacilityRoute,
