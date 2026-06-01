@@ -40,6 +40,35 @@ import { post as coworking } from "./posts/entretien-espace-coworking";
 import { post as showroom } from "./posts/nettoyage-showroom-flagship";
 import { post as hotelChambre } from "./posts/nettoyage-hotel-chambre-protocole";
 import { post as restoFinService } from "./posts/nettoyage-restaurant-fin-service";
+import { post as boulangerie } from "./posts/nettoyage-boulangerie-patisserie";
+import { post as laboAnalyses } from "./posts/nettoyage-laboratoire-analyses";
+import { post as ecoleMat } from "./posts/nettoyage-ecole-maternelle-primaire";
+import { post as collegeLycee } from "./posts/nettoyage-college-lycee";
+import { post as museeGalerie } from "./posts/nettoyage-musee-galerie";
+import { post as salleSpectacle } from "./posts/nettoyage-salle-spectacle";
+import { post as iso14644 } from "./posts/norme-iso-14644-salles-blanches";
+import { post as dqo } from "./posts/demarche-qualite-officine-dqo";
+import { post as qualipropre } from "./posts/certification-qualipropre";
+import { post as dasri } from "./posts/reglementation-dasri-officine";
+import { post as duerp } from "./posts/evaluation-risques-document-unique-nettoyage";
+import { post as en14476 } from "./posts/norme-en-14476-virucide";
+import { post as biocides } from "./posts/reglementation-produits-biocides";
+import { post as accessibilite } from "./posts/accessibilite-erp-entretien";
+import { post as registreSec } from "./posts/registre-securite-erp";
+import { post as cov } from "./posts/reduction-cov-air-interieur";
+import { post as zeroPlastique } from "./posts/nettoyage-zero-plastique-bureau";
+import { post as elecVsTherm } from "./posts/materiel-nettoyage-electrique-vs-thermique";
+import { post as monobrosse } from "./posts/monobrosse-utilisation-types";
+import { post as aspirateur } from "./posts/aspirateur-professionnel-criteres";
+import { post as chariot } from "./posts/chariot-de-menage-organisation";
+import { post as dilution } from "./posts/dilution-produits-detergents";
+import { post as detartrant } from "./posts/detartrant-sanitaires-choisir";
+import { post as degraissant } from "./posts/degraissant-cuisine-professionnelle";
+import { post as poignees } from "./posts/desinfection-poignees-portes";
+import { post as cuisineBureau } from "./posts/garder-cuisine-bureau-propre";
+import { post as frequence } from "./posts/frequence-nettoyage-bureaux-recommandee";
+import { post as jourVsSoir } from "./posts/nettoyage-jour-vs-soir-avantages";
+import { post as etudeCasParis } from "./posts/etude-cas-siege-tertiaire-paris";
 
 export const publishedPosts: Post[] = [
   vitres,
@@ -83,62 +112,41 @@ export const publishedPosts: Post[] = [
   showroom,
   hotelChambre,
   restoFinService,
+  boulangerie,
+  laboAnalyses,
+  ecoleMat,
+  collegeLycee,
+  museeGalerie,
+  salleSpectacle,
+  iso14644,
+  dqo,
+  qualipropre,
+  dasri,
+  duerp,
+  en14476,
+  biocides,
+  accessibilite,
+  registreSec,
+  cov,
+  zeroPlastique,
+  elecVsTherm,
+  monobrosse,
+  aspirateur,
+  chariot,
+  dilution,
+  detartrant,
+  degraissant,
+  poignees,
+  cuisineBureau,
+  frequence,
+  jourVsSoir,
+  etudeCasParis,
 ].sort(
   (a, b) => b.date.localeCompare(a.date),
 );
 
 export const plannedPosts: PlannedPost[] = [
-  // nettoyage-ete-locaux-professionnels → publié
-  // eliminer-odeurs-climatisation-bureau → publié
-  // nettoyage-frigo-bureau-protocole → publié
-  // 20 articles vague 4 → publiés
-  // protocole-nettoyage-bureaux-quotidien → publié
-  // nettoyage-fin-chantier-livraison → publié
-  // remise-en-etat-locaux-vacants → publié
-  // nettoyage-vitres-grande-hauteur → publié
-  // entretien-moquette-bureaux → publié
-  // 10 articles secteurs vague 4 → publiés
-  { slug: "nettoyage-boulangerie-patisserie", title: "Nettoyage d'une boulangerie-pâtisserie", description: "Laminoir, fournil et vitrines : hygiène et conformité DDPP.", category: "Guides Pratiques", date: "2025-09-15" },
-  { slug: "nettoyage-laboratoire-analyses", title: "Nettoyage d'un laboratoire d'analyses", description: "Paillasses, hottes et gestion DASRI dans le respect des protocoles biologiques.", category: "Guides Pratiques", date: "2025-09-08" },
-  // nettoyage-cabinet-medical-protocole → publié
-  // nettoyage-creche-protocole → publié
-  { slug: "nettoyage-ecole-maternelle-primaire", title: "Nettoyage d'une école maternelle et primaire", description: "Sanitaires, réfectoire et salles de classe : la méthode hors temps scolaire.", category: "Guides Pratiques", date: "2025-08-18" },
-  { slug: "nettoyage-college-lycee", title: "Nettoyage d'un collège ou d'un lycée", description: "Volumes, flux et internat : organiser un entretien de qualité constante.", category: "Guides Pratiques", date: "2025-08-11" },
-  { slug: "nettoyage-musee-galerie", title: "Nettoyage d'un musée ou d'une galerie d'art", description: "Préserver les œuvres, encadrer les agents et gérer les vitrines.", category: "Guides Pratiques", date: "2025-08-04" },
-  { slug: "nettoyage-salle-spectacle", title: "Nettoyage d'une salle de spectacle", description: "Interventions en flux tendu entre deux représentations.", category: "Guides Pratiques", date: "2025-07-28" },
-  // bionettoyage-hospitalier-protocole → publié
-  { slug: "norme-iso-14644-salles-blanches", title: "Norme ISO 14644 : ce qu'il faut savoir sur les salles blanches", description: "Classes ISO 5 à 8, contrôles particulaires et méthode de bionettoyage.", category: "Normes & réglementations", date: "2025-07-14" },
-  // conformite-ars-officine-pharmacie → publié
-  { slug: "demarche-qualite-officine-dqo", title: "La Démarche Qualité Officine (DQO) et l'hygiène", description: "Intégrer le protocole de nettoyage à votre démarche qualité.", category: "Normes & réglementations", date: "2025-06-30" },
-  { slug: "certification-qualipropre", title: "La certification Qualipropre : à quoi elle engage", description: "Le référentiel qualité de la profession propreté décrypté.", category: "Normes & réglementations", date: "2025-06-23" },
-  { slug: "reglementation-dasri-officine", title: "Gestion des DASRI en officine et cabinet médical", description: "Tri, conditionnement, traçabilité et filières d'élimination.", category: "Normes & réglementations", date: "2025-06-16" },
-  { slug: "evaluation-risques-document-unique-nettoyage", title: "Document unique et évaluation des risques pour le nettoyage", description: "Obligations employeur, TMS et exposition chimique : ce qu'il faut documenter.", category: "Normes & réglementations", date: "2025-06-09" },
-  { slug: "norme-en-14476-virucide", title: "La norme EN 14476 : que garantit-elle vraiment ?", description: "Comprendre les tests d'efficacité virucide et les temps de contact.", category: "Normes & réglementations", date: "2025-06-02" },
-  { slug: "reglementation-produits-biocides", title: "La réglementation des produits biocides en France", description: "Autorisations, étiquetage et obligations de l'utilisateur professionnel.", category: "Normes & réglementations", date: "2025-05-26" },
-  { slug: "accessibilite-erp-entretien", title: "Accessibilité ERP : l'entretien des équipements PMR", description: "Cheminements, sanitaires accessibles et signalétique au quotidien.", category: "Normes & réglementations", date: "2025-05-19" },
-  { slug: "registre-securite-erp", title: "Le registre de sécurité ERP : que doit-on y trouver ?", description: "Documents obligatoires, périodicité et lien avec le contrat de nettoyage.", category: "Normes & réglementations", date: "2025-05-12" },
-  // nettoyage-vapeur-sans-produit → publié
-  // microfibre-vs-lavette-jetable → publié
-  // eau-pure-osmosee-nettoyage-vitres → publié
-  { slug: "reduction-cov-air-interieur", title: "Réduire les COV pour améliorer l'air intérieur", description: "Choix des produits, ventilation et bonnes pratiques au quotidien.", category: "Écologie & environnement", date: "2025-04-14" },
-  // ecolabel-europeen-explication → publié
-  { slug: "nettoyage-zero-plastique-bureau", title: "Vers un nettoyage zéro plastique au bureau", description: "Recharges, contenants en verre et fournitures réutilisables.", category: "Écologie & environnement", date: "2025-03-31" },
-  { slug: "materiel-nettoyage-electrique-vs-thermique", title: "Matériel de nettoyage : électrique ou thermique ?", description: "Bruit, émissions et coût d'usage : faire le bon choix selon le site.", category: "Écologie & environnement", date: "2025-03-24" },
-  // choisir-autolaveuse-bureaux → publié
-  { slug: "monobrosse-utilisation-types", title: "La monobrosse : usages, types et bons réflexes", description: "Basse, haute ou ultra-haute vitesse — choisir la bonne machine.", category: "Produits & techniques", date: "2025-03-10" },
-  { slug: "aspirateur-professionnel-criteres", title: "Choisir un aspirateur professionnel : les vrais critères", description: "Filtration HEPA, niveau sonore, dépression et débit d'air.", category: "Produits & techniques", date: "2025-03-03" },
-  { slug: "chariot-de-menage-organisation", title: "Organiser un chariot de ménage professionnel", description: "Code couleur, ergonomie et productivité sur le terrain.", category: "Produits & techniques", date: "2025-02-24" },
-  // code-couleur-microfibres → publié
-  { slug: "dilution-produits-detergents", title: "Dilution des produits détergents : les bons dosages", description: "Centrales murales, doseurs et règles de calcul à connaître.", category: "Produits & techniques", date: "2025-02-10" },
-  // ph-produit-nettoyage-quel-choisir → publié
-  { slug: "detartrant-sanitaires-choisir", title: "Choisir un détartrant pour sanitaires professionnels", description: "Force, compatibilité matériaux et précautions d'usage.", category: "Produits & techniques", date: "2025-01-27" },
-  { slug: "degraissant-cuisine-professionnelle", title: "Dégraissant pour cuisine professionnelle : guide d'achat", description: "Hottes, sols, plans : sélectionner les bons produits par zone.", category: "Produits & techniques", date: "2025-01-20" },
-  { slug: "desinfection-poignees-portes", title: "Désinfection des poignées de porte : la routine qui change tout", description: "Fréquence, produits et organisation en période épidémique.", category: "Conseils d'entretien", date: "2025-01-13" },
-  { slug: "garder-cuisine-bureau-propre", title: "Garder la cuisine du bureau propre entre deux passages", description: "Règles simples à afficher pour l'équipe et bons réflexes.", category: "Conseils d'entretien", date: "2025-01-06" },
-  // combien-coute-nettoyage-bureaux-m2 → publié
-  { slug: "frequence-nettoyage-bureaux-recommandee", title: "Quelle fréquence de nettoyage pour des bureaux ?", description: "Quotidien, 3 fois par semaine, hebdomadaire — comment décider.", category: "FAQ", date: "2024-12-23" },
-  { slug: "nettoyage-jour-vs-soir-avantages", title: "Nettoyage de jour ou de soir : avantages et inconvénients", description: "Coût, visibilité, qualité perçue : le débat tranché.", category: "FAQ", date: "2024-12-16" },
-  { slug: "etude-cas-siege-tertiaire-paris", title: "Étude de cas : reprise du nettoyage d'un siège tertiaire à Paris", description: "12 000 m², 80 collaborateurs ELITESY, gains de qualité mesurés.", category: "Études de cas", date: "2024-12-09" },
+  // Tous les articles planifiés ont été publiés (70/70).
 ];
 
 export function getPostBySlug(slug: string): Post | undefined {
