@@ -42,6 +42,23 @@ export const Route = createFileRoute("/soft-facility")({
       { property: "og:title", content: "Soft Facility (FM) — ELITESY" },
       { property: "og:description", content: "Partenaire premium des services sur site. Une approche multi-sectorielle, des équipes intégrées, une qualité mesurée." },
       { property: "og:image", content: "/og-soft-facility.jpg" },
+      { property: "og:url", content: "https://elite-sy.lovable.app/soft-facility" },
+    ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/soft-facility" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Soft Facility Management (FM)",
+          provider: { "@type": "Organization", name: "ELITESY" },
+          areaServed: "Paris, Île-de-France, France",
+          url: "https://elite-sy.lovable.app/soft-facility",
+          description:
+            "Pilotage multiservices : accueil, courrier, espaces verts, gestion des déchets, logistique sur site, maintenance légère.",
+        }),
+      },
     ],
   }),
   component: SoftFacilityPage,

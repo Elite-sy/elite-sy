@@ -147,6 +147,7 @@ export const Route = createFileRoute("/soft-facility_/$slug")({
     if (!loaderData) return { meta: [] };
     const service = services[loaderData.slug];
     if (!service) return { meta: [] };
+    const url = `https://elite-sy.lovable.app/soft-facility_/${loaderData.slug}`;
     return {
       meta: [
         { title: `${service.label} — Soft Facility | ELITESY` },
@@ -154,7 +155,9 @@ export const Route = createFileRoute("/soft-facility_/$slug")({
         { property: "og:title", content: `Soft Facility · ${service.label} — ELITESY` },
         { property: "og:description", content: service.tagline },
         { property: "og:image", content: service.img },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   notFoundComponent: () => (

@@ -267,13 +267,16 @@ export const Route = createFileRoute("/proprete/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [] };
     const { client } = loaderData;
+    const url = `https://elite-sy.lovable.app/proprete/${loaderData.slug}`;
     return {
       meta: [
         { title: `${client.label} — Propreté | ELITESY` },
         { name: "description", content: client.tagline },
         { property: "og:title", content: `Propreté · ${client.label} — ELITESY` },
         { property: "og:description", content: client.tagline },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   notFoundComponent: () => (

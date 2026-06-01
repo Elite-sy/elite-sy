@@ -55,7 +55,9 @@ export const Route = createFileRoute("/proprete/syndics-copropriete")({
           "Halls, escaliers, ascenseurs, locaux poubelles, parkings, espaces verts : un service rigoureux et traçable pour chaque copropriété.",
       },
       { property: "og:image", content: hallImg },
+      { property: "og:url", content: "https://elite-sy.lovable.app/proprete/syndics-copropriete" },
     ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/proprete/syndics-copropriete" }],
   }),
   component: SyndicsPage,
 });

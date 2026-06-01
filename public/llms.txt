@@ -1,0 +1,22 @@
+# ELITESY
+
+> ELITESY est une société de services premium aux entreprises basée à Paris, spécialisée dans la propreté professionnelle, le soft facility management (FM) et l'assistance à maîtrise d'ouvrage (AMO) pour les environnements professionnels exigeants.
+
+ELITESY accompagne sièges sociaux, hôtels haut de gamme, établissements de santé, sites pharmaceutiques, surfaces de vente et copropriétés à Paris, en Île-de-France et en France métropolitaine.
+
+## Pages
+
+- [Accueil](/): Présentation de l'entreprise et de ses trois métiers (Propreté, Soft Facility, AMO).
+- [Propreté](/proprete): Prestations de propreté haut de gamme par secteur d'activité.
+- [Propreté pharmaceutique](/proprete/pharmaceutique): Nettoyage en salles blanches et zones contrôlées.
+- [Propreté santé](/proprete/professionnels-sante): Bionettoyage hospitalier et établissements de soins.
+- [Propreté surfaces de vente / ERP](/proprete/surface-vente-erp): Entretien des points de vente et ERP.
+- [Propreté syndics & copropriétés](/proprete/syndics-copropriete): Entretien des parties communes.
+- [Soft Facility (FM)](/soft-facility): Services multiservices : accueil, courrier, espaces verts, déchets, logistique.
+- [AMO](/amo): Assistance à maîtrise d'ouvrage indépendante (rénovation, réhabilitation, construction).
+- [Expertise / Blog](/blog): Guides, normes, études de cas sur la propreté professionnelle.
+- [Contact](/contact): Demande de devis, coordonnées : contact@elitesy.fr.
+
+## Optional
+
+- [Plan du site](/sitemap.xml)

@@ -11,6 +11,23 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contactez ELITESY pour un devis personnalisé : propreté, soft facility (FM), AMO." },
       { property: "og:title", content: "Contact — ELITESY" },
       { property: "og:description", content: "Échangeons sur vos besoins en propreté, soft facility et AMO." },
+      { property: "og:url", content: "https://elite-sy.lovable.app/contact" },
+    ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "ELITESY",
+          email: "contact@elitesy.fr",
+          telephone: "+33-1-00-00-00-00",
+          url: "https://elite-sy.lovable.app/contact",
+          address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+          areaServed: "FR",
+        }),
+      },
     ],
   }),
   component: Contact,
@@ -77,8 +94,8 @@ function Contact() {
                   <Field label="Téléphone" name="tel" type="tel" />
                 </div>
                 <div>
-                  <label className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">Service</label>
-                  <select className="w-full bg-input border border-border rounded-sm px-4 py-3 text-foreground focus:border-primary focus:outline-none">
+                  <label htmlFor="contact-service" className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">Service</label>
+                  <select id="contact-service" name="service" className="w-full bg-input border border-border rounded-sm px-4 py-3 text-foreground focus:border-primary focus:outline-none">
                     <option>Propreté</option>
                     <option>Soft Facility (FM)</option>
                     <option>Assistance à Maîtrise d'Ouvrage</option>
@@ -86,8 +103,8 @@ function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">Message</label>
-                  <textarea rows={5} required className="w-full bg-input border border-border rounded-sm px-4 py-3 text-foreground focus:border-primary focus:outline-none resize-none" />
+                  <label htmlFor="contact-message" className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">Message</label>
+                  <textarea id="contact-message" name="message" rows={5} required className="w-full bg-input border border-border rounded-sm px-4 py-3 text-foreground focus:border-primary focus:outline-none resize-none" />
                 </div>
                 <button type="submit" className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
                   Envoyer la demande <Send size={16} />
@@ -102,10 +119,12 @@ function Contact() {
 }
 
 function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
+  const id = `field-${name}`;
   return (
     <div>
-      <label className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">{label}</label>
+      <label htmlFor={id} className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">{label}</label>
       <input
+        id={id}
         type={type}
         name={name}
         required={required}

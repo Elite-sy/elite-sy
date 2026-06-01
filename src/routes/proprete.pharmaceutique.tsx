@@ -52,7 +52,9 @@ export const Route = createFileRoute("/proprete/pharmaceutique")({
           "Protocole d'hygiène complet pour officines : espace de vente, comptoir & TPE, back-office, réfrigérateurs médicaments, sanitaires. Traçabilité prête pour inspection ARS.",
       },
       { property: "og:image", content: heroImg },
+      { property: "og:url", content: "https://elite-sy.lovable.app/proprete/pharmaceutique" },
     ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/proprete/pharmaceutique" }],
   }),
   component: PharmaceutiquePage,
 });
