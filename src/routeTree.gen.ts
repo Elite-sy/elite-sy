@@ -19,6 +19,7 @@ import { Route as PropreteIndexRouteImport } from './routes/proprete.index'
 import { Route as SoftFacilitySlugRouteImport } from './routes/soft-facility_.$slug'
 import { Route as SecteurSlugRouteImport } from './routes/secteur.$slug'
 import { Route as PropreteSyndicsCoproprieteRouteImport } from './routes/proprete.syndics-copropriete'
+import { Route as PropretePharmaceutiqueRouteImport } from './routes/proprete.pharmaceutique'
 import { Route as PropreteSlugRouteImport } from './routes/proprete.$slug'
 
 const SoftFacilityRoute = SoftFacilityRouteImport.update({
@@ -72,6 +73,11 @@ const PropreteSyndicsCoproprieteRoute =
     path: '/syndics-copropriete',
     getParentRoute: () => PropreteRoute,
   } as any)
+const PropretePharmaceutiqueRoute = PropretePharmaceutiqueRouteImport.update({
+  id: '/pharmaceutique',
+  path: '/pharmaceutique',
+  getParentRoute: () => PropreteRoute,
+} as any)
 const PropreteSlugRoute = PropreteSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
+  '/proprete/pharmaceutique': typeof PropretePharmaceutiqueRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
   '/soft-facility/$slug': typeof SoftFacilitySlugRoute
@@ -98,6 +105,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
+  '/proprete/pharmaceutique': typeof PropretePharmaceutiqueRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
   '/soft-facility/$slug': typeof SoftFacilitySlugRoute
@@ -112,6 +120,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/soft-facility': typeof SoftFacilityRoute
   '/proprete/$slug': typeof PropreteSlugRoute
+  '/proprete/pharmaceutique': typeof PropretePharmaceutiqueRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
   '/soft-facility_/$slug': typeof SoftFacilitySlugRoute
@@ -127,6 +136,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
+    | '/proprete/pharmaceutique'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
     | '/soft-facility/$slug'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
+    | '/proprete/pharmaceutique'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
     | '/soft-facility/$slug'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/soft-facility'
     | '/proprete/$slug'
+    | '/proprete/pharmaceutique'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
     | '/soft-facility_/$slug'
@@ -241,6 +253,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PropreteSyndicsCoproprieteRouteImport
       parentRoute: typeof PropreteRoute
     }
+    '/proprete/pharmaceutique': {
+      id: '/proprete/pharmaceutique'
+      path: '/pharmaceutique'
+      fullPath: '/proprete/pharmaceutique'
+      preLoaderRoute: typeof PropretePharmaceutiqueRouteImport
+      parentRoute: typeof PropreteRoute
+    }
     '/proprete/$slug': {
       id: '/proprete/$slug'
       path: '/$slug'
@@ -253,12 +272,14 @@ declare module '@tanstack/react-router' {
 
 interface PropreteRouteChildren {
   PropreteSlugRoute: typeof PropreteSlugRoute
+  PropretePharmaceutiqueRoute: typeof PropretePharmaceutiqueRoute
   PropreteSyndicsCoproprieteRoute: typeof PropreteSyndicsCoproprieteRoute
   PropreteIndexRoute: typeof PropreteIndexRoute
 }
 
 const PropreteRouteChildren: PropreteRouteChildren = {
   PropreteSlugRoute: PropreteSlugRoute,
+  PropretePharmaceutiqueRoute: PropretePharmaceutiqueRoute,
   PropreteSyndicsCoproprieteRoute: PropreteSyndicsCoproprieteRoute,
   PropreteIndexRoute: PropreteIndexRoute,
 }
@@ -280,3 +301,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
