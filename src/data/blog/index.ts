@@ -20,6 +20,26 @@ import { post as vapeur } from "./posts/nettoyage-vapeur-sans-produit";
 import { post as autolaveuse } from "./posts/choisir-autolaveuse-bureaux";
 import { post as ph } from "./posts/ph-produit-nettoyage-quel-choisir";
 import { post as coutM2 } from "./posts/combien-coute-nettoyage-bureaux-m2";
+import { post as ecranClavier } from "./posts/nettoyer-ecran-clavier-bureau";
+import { post as tapis } from "./posts/tapis-barrieres-hiver-sols";
+import { post as tachesCafe } from "./posts/taches-cafe-moquette-traiter";
+import { post as machineCafe } from "./posts/entretien-machine-cafe-bureau";
+import { post as aerer } from "./posts/aerer-bureaux-qualite-air";
+import { post as absent } from "./posts/agent-nettoyage-ne-vient-pas-que-faire";
+import { post as sanitaires } from "./posts/sanitaires-bureau-rester-impeccable";
+import { post as ecoPresta } from "./posts/demander-nettoyage-ecologique-prestataire";
+import { post as finChantier } from "./posts/nettoyage-fin-chantier-livraison";
+import { post as locauxVacants } from "./posts/remise-en-etat-locaux-vacants";
+import { post as marbre } from "./posts/decapage-cristallisation-marbre";
+import { post as cageEscalier } from "./posts/nettoyage-cage-escalier-immeuble";
+import { post as partiesCommunes } from "./posts/entretien-parties-communes-copropriete";
+import { post as parking } from "./posts/nettoyage-parking-souterrain";
+import { post as dechets } from "./posts/gestion-dechets-bureaux-tri";
+import { post as salleSport } from "./posts/nettoyage-salle-sport-entreprise";
+import { post as coworking } from "./posts/entretien-espace-coworking";
+import { post as showroom } from "./posts/nettoyage-showroom-flagship";
+import { post as hotelChambre } from "./posts/nettoyage-hotel-chambre-protocole";
+import { post as restoFinService } from "./posts/nettoyage-restaurant-fin-service";
 
 export const publishedPosts: Post[] = [
   vitres,
@@ -43,6 +63,26 @@ export const publishedPosts: Post[] = [
   autolaveuse,
   ph,
   coutM2,
+  ecranClavier,
+  tapis,
+  tachesCafe,
+  machineCafe,
+  aerer,
+  absent,
+  sanitaires,
+  ecoPresta,
+  finChantier,
+  locauxVacants,
+  marbre,
+  cageEscalier,
+  partiesCommunes,
+  parking,
+  dechets,
+  salleSport,
+  coworking,
+  showroom,
+  hotelChambre,
+  restoFinService,
 ].sort(
   (a, b) => b.date.localeCompare(a.date),
 );
@@ -51,29 +91,13 @@ export const plannedPosts: PlannedPost[] = [
   // nettoyage-ete-locaux-professionnels → publié
   // eliminer-odeurs-climatisation-bureau → publié
   // nettoyage-frigo-bureau-protocole → publié
-  { slug: "nettoyer-ecran-clavier-bureau", title: "Nettoyer écran et clavier sans abîmer son matériel", description: "Les bons produits, les bons gestes et la bonne fréquence pour préserver vos postes de travail.", category: "Conseils d'entretien", date: "2026-03-08" },
-  { slug: "tapis-barrieres-hiver-sols", title: "Protéger vos sols en hiver avec des tapis barrières", description: "Réduire les salissures, les glissades et les coûts de réfection grâce à un entretien préventif.", category: "Conseils d'entretien", date: "2026-02-28" },
-  { slug: "taches-cafe-moquette-traiter", title: "Taches de café sur moquette : solutions rapides", description: "Les bons gestes à appliquer vite, sans abîmer les fibres, et quand appeler un professionnel.", category: "Conseils d'entretien", date: "2026-02-20" },
-  { slug: "entretien-machine-cafe-bureau", title: "Entretien de la machine à café au bureau : le geste oublié", description: "Limiter bactéries, odeurs et pannes — méthode, fréquence et conseils pratiques.", category: "Conseils d'entretien", date: "2026-02-12" },
-  { slug: "aerer-bureaux-qualite-air", title: "Aérer ses bureaux pour améliorer la qualité de l'air", description: "Quand ouvrir, combien de temps et comment limiter CO2, COV et humidité.", category: "Conseils d'entretien", date: "2026-02-05" },
-  { slug: "agent-nettoyage-ne-vient-pas-que-faire", title: "Que faire si l'agent de nettoyage ne vient pas ?", description: "Réflexes immédiats, vérifications du contrat, preuves à conserver et solutions préventives.", category: "FAQ", date: "2026-01-28" },
-  { slug: "sanitaires-bureau-rester-impeccable", title: "5 astuces pour garder vos sanitaires impeccables au bureau", description: "Gestes simples pour des toilettes propres entre deux passages du prestataire.", category: "Conseils d'entretien", date: "2026-01-20" },
-  { slug: "demander-nettoyage-ecologique-prestataire", title: "Peut-on demander un nettoyage écologique à son prestataire ?", description: "Labels, clause dans le cahier des charges, conformité et coût : les réponses concrètes.", category: "FAQ", date: "2026-01-12" },
+  // 20 articles vague 4 → publiés
   // protocole-nettoyage-bureaux-quotidien → publié
-  { slug: "nettoyage-fin-chantier-livraison", title: "Nettoyage de fin de chantier avant livraison", description: "Étapes, matériel et points de contrôle pour livrer un bâtiment impeccable.", category: "Guides Pratiques", date: "2025-12-22" },
-  { slug: "remise-en-etat-locaux-vacants", title: "Remise en état de locaux vacants : méthode complète", description: "Décapage, vitrerie, sanitaires : préparer un local pour une nouvelle occupation.", category: "Guides Pratiques", date: "2025-12-15" },
+  // nettoyage-fin-chantier-livraison → publié
+  // remise-en-etat-locaux-vacants → publié
   // nettoyage-vitres-grande-hauteur → publié
   // entretien-moquette-bureaux → publié
-  { slug: "decapage-cristallisation-marbre", title: "Décapage et cristallisation du marbre", description: "Redonner brillance et protection à un sol en pierre naturelle.", category: "Guides Pratiques", date: "2025-11-24" },
-  { slug: "nettoyage-cage-escalier-immeuble", title: "Nettoyage d'une cage d'escalier en immeuble", description: "Méthode, fréquences et matériel pour un entretien efficace des parties communes.", category: "Guides Pratiques", date: "2025-11-17" },
-  { slug: "entretien-parties-communes-copropriete", title: "Entretien des parties communes en copropriété", description: "Cahier des charges type et points de vigilance pour syndics et gestionnaires.", category: "Guides Pratiques", date: "2025-11-10" },
-  { slug: "nettoyage-parking-souterrain", title: "Nettoyage d'un parking souterrain", description: "Balayage mécanisé, gestion des hydrocarbures et désodorisation.", category: "Guides Pratiques", date: "2025-11-03" },
-  { slug: "gestion-dechets-bureaux-tri", title: "Gestion des déchets de bureau et tri sélectif", description: "Mettre en place un dispositif de tri efficace et conforme au décret 5 flux.", category: "Guides Pratiques", date: "2025-10-27" },
-  { slug: "nettoyage-salle-sport-entreprise", title: "Nettoyage d'une salle de sport d'entreprise", description: "Hygiène des vestiaires, désinfection du matériel et qualité de l'air.", category: "Guides Pratiques", date: "2025-10-20" },
-  { slug: "entretien-espace-coworking", title: "Entretien d'un espace de coworking", description: "Hauts flux, surfaces partagées et perception des membres : la méthode.", category: "Guides Pratiques", date: "2025-10-13" },
-  { slug: "nettoyage-showroom-flagship", title: "Nettoyage d'un showroom et d'un flagship store", description: "Mise en valeur produit, vitrines et interventions en flux tendu.", category: "Guides Pratiques", date: "2025-10-06" },
-  { slug: "nettoyage-hotel-chambre-protocole", title: "Protocole de nettoyage d'une chambre d'hôtel", description: "Standards de propreté, ordre des opérations et contrôle qualité.", category: "Guides Pratiques", date: "2025-09-29" },
-  { slug: "nettoyage-restaurant-fin-service", title: "Nettoyage d'un restaurant en fin de service", description: "Cuisine, salle et sanitaires : la méthode pour finir vite et bien.", category: "Guides Pratiques", date: "2025-09-22" },
+  // 10 articles secteurs vague 4 → publiés
   { slug: "nettoyage-boulangerie-patisserie", title: "Nettoyage d'une boulangerie-pâtisserie", description: "Laminoir, fournil et vitrines : hygiène et conformité DDPP.", category: "Guides Pratiques", date: "2025-09-15" },
   { slug: "nettoyage-laboratoire-analyses", title: "Nettoyage d'un laboratoire d'analyses", description: "Paillasses, hottes et gestion DASRI dans le respect des protocoles biologiques.", category: "Guides Pratiques", date: "2025-09-08" },
   // nettoyage-cabinet-medical-protocole → publié
