@@ -478,36 +478,24 @@ function PharmaceutiquePage() {
 
       {/* Pourquoi nous */}
       <section className="py-24 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="rounded-sm overflow-hidden"
-            style={{ boxShadow: "var(--shadow-elegant)" }}
-          >
-            <img src={teamImg} alt="L'équipe ELITESY : agents formés au bionettoyage en officine de pharmacie" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
-          </motion.div>
-          <div>
-            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour votre officine.</h2>
-            <div className="space-y-6">
-              {engagements.map((e) => {
-                const Icon = e.icon;
-                return (
-                  <div key={e.title} className="flex gap-5 p-5 rounded-sm border border-border bg-card">
-                    <div className="w-12 h-12 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center shrink-0">
-                      <Icon className="text-primary" size={22} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">{e.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{e.text}</p>
-                    </div>
+        <div className="mx-auto max-w-4xl px-6 lg:px-10">
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour votre officine.</h2>
+          <div className="space-y-6">
+            {engagements.map((e) => {
+              const Icon = e.icon;
+              return (
+                <div key={e.title} className="flex gap-5 p-5 rounded-sm border border-border bg-card">
+                  <div className="w-12 h-12 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center shrink-0">
+                    <Icon className="text-primary" size={22} />
                   </div>
-                );
-              })}
-            </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">{e.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{e.text}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
