@@ -314,7 +314,7 @@ function ClientPage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial)" }} />
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-24">
+        <div className={`mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-24 ${client.heroImage ? "grid lg:grid-cols-2 gap-16 items-center" : ""}`}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
             <Link to="/proprete" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary mb-8 hover:gap-3 transition-all">
               <ArrowLeft size={14} /> Propreté
@@ -327,7 +327,24 @@ function ClientPage() {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05]">{client.label}</h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">{client.tagline}</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
+                Demander un devis <ArrowRight size={16} />
+              </Link>
+            </div>
           </motion.div>
+          {client.heroImage && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="relative rounded-sm overflow-hidden"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
+            >
+              <img src={client.heroImage} alt={client.label} className="w-full h-[500px] object-cover" width={1600} height={1100} />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -338,6 +355,53 @@ function ClientPage() {
           <p className="text-xl text-foreground/90 leading-relaxed">{client.intro}</p>
         </div>
       </section>
+
+      {/* Stats */}
+      {client.stats && client.stats.length > 0 && (
+        <section className="py-20 border-t border-border bg-card/40">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {client.stats.map((s) => (
+              <div key={s.label} className="text-center">
+                <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-3">{s.value}</div>
+                <div className="text-sm text-muted-foreground leading-relaxed">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Typologies */}
+      {client.typologies && client.typologies.length > 0 && (
+        <section className="py-24 border-t border-border">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Typologies de sites</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-2xl">Une réponse pour chaque environnement.</h2>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {client.typologies.map((t, i) => {
+                const TIcon = t.icon;
+                return (
+                  <motion.div
+                    key={t.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                    className="p-8 border border-border rounded-sm bg-card hover:border-primary/50 transition flex gap-5"
+                  >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30 shrink-0">
+                      <TIcon className="text-primary" size={22} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">{t.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Challenges */}
       <section className="py-24 border-t border-border bg-card/40">
@@ -359,6 +423,33 @@ function ClientPage() {
           </ul>
         </div>
       </section>
+
+      {/* Gallery */}
+      {client.gallery && client.gallery.length > 0 && (
+        <section className="py-24 border-t border-border">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">En images</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-2xl">L'exigence du détail.</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {client.gallery.map((g, i) => (
+                <motion.figure
+                  key={g.caption}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="group relative overflow-hidden rounded-sm border border-border"
+                >
+                  <img src={g.src} alt={g.caption} className="w-full h-80 object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1280} height={900} />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/70 to-transparent text-sm font-medium">
+                    {g.caption}
+                  </figcaption>
+                </motion.figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Prestations */}
       <section className="py-24 border-t border-border">
@@ -383,6 +474,81 @@ function ClientPage() {
           </div>
         </div>
       </section>
+
+      {/* Methodology */}
+      {client.methodology && client.methodology.length > 0 && (
+        <section className="py-24 border-t border-border bg-card/40">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Méthode</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-2xl">De l'audit au pilotage continu.</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {client.methodology.map((m, i) => (
+                <motion.div
+                  key={m.step}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className="p-6 border border-border rounded-sm bg-background"
+                >
+                  <div className="text-primary font-display text-2xl font-bold mb-3">{m.step}</div>
+                  <h3 className="font-semibold mb-2">{m.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Engagements */}
+      {client.engagements && client.engagements.length > 0 && (
+        <section className="py-24 border-t border-border">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
+            <div>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos engagements</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Ce sur quoi vous pouvez compter.</h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Au-delà de la prestation technique, nous nous engageons sur la relation, la traçabilité et l'amélioration continue de votre service.
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-2"><Clock size={16} className="text-primary" /> Réactivité &lt; 2 h</span>
+                <span className="inline-flex items-center gap-2"><Leaf size={16} className="text-primary" /> Écolabel</span>
+                <span className="inline-flex items-center gap-2"><ShieldCheck size={16} className="text-primary" /> RC pro</span>
+              </div>
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {client.engagements.map((e) => (
+                <li key={e} className="flex items-start gap-3 p-4 rounded-sm border border-border bg-card">
+                  <Check className="text-primary mt-0.5 shrink-0" size={18} />
+                  <span className="text-sm text-foreground/90">{e}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      {client.faq && client.faq.length > 0 && (
+        <section className="py-24 border-t border-border bg-card/40">
+          <div className="mx-auto max-w-4xl px-6 lg:px-10">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Questions fréquentes</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Ce que nos clients nous demandent.</h2>
+            <div className="space-y-4">
+              {client.faq.map((f) => (
+                <details key={f.q} className="group border border-border rounded-sm bg-background p-6 open:border-primary/50 transition">
+                  <summary className="cursor-pointer list-none flex items-center justify-between gap-6 font-semibold">
+                    <span>{f.q}</span>
+                    <span className="text-primary transition group-open:rotate-45 text-2xl leading-none">+</span>
+                  </summary>
+                  <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Other clients */}
       <section className="py-24 border-t border-border bg-card/40">
