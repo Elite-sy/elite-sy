@@ -32,9 +32,9 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 text-xs text-muted-foreground flex justify-between">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
           <span>© {new Date().getFullYear()} ELITESY. Tous droits réservés.</span>
-          <span>Mentions légales · Confidentialité</span>
+          <Link to="/mentions-legales" className="hover:text-primary transition-colors">Mentions légales · Confidentialité</Link>
         </div>
       </div>
     </footer>
