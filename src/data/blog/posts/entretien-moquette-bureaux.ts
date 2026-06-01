@@ -1,0 +1,58 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/moquette-bureau.jpg";
+
+export const post: Post = {
+  slug: "entretien-moquette-bureaux",
+  title: "Entretien des moquettes de bureaux : injection-extraction ou shampouinage ?",
+  description:
+    "Fréquences, méthodes, coûts et résultats : le guide ELITESY pour préserver vos textiles de sol et prolonger leur durée de vie.",
+  category: "Guides Pratiques",
+  date: "2025-12-01",
+  readingTime: 10,
+  hero,
+  heroAlt: "Machine d'injection-extraction en cours de nettoyage d'une moquette de bureau",
+  intro:
+    "Une moquette de bureau perd 30 % de son apparence dès la première année si elle n'est pas entretenue. Au bout de trois ans, elle est à remplacer. Avec un bon protocole, elle tient sept à dix ans en gardant un visuel correct. La différence se joue sur deux choix : la méthode et la fréquence. Décryptage.",
+  content: [
+    { type: "h2", text: "Pourquoi la moquette nécessite un soin spécifique" },
+    { type: "p", text: "Contrairement aux sols durs, la moquette piège la salissure dans la fibre. L'aspiration quotidienne ne retire que les particules de surface ; les corps gras, taches et acariens s'enracinent. Sans intervention périodique en profondeur, la moquette devient un réservoir d'allergènes et son apparence se dégrade définitivement." },
+    { type: "h2", text: "Les deux grandes méthodes professionnelles" },
+    { type: "h3", text: "L'injection-extraction — la référence en profondeur" },
+    { type: "p", text: "Une solution détergente à basse concentration est injectée sous pression dans la fibre, puis aspirée immédiatement avec la salissure dissoute. Avantage : nettoyage profond, élimination des allergènes, temps de séchage court (2 à 4 h). Inconvénient : matériel volumineux, intervention plus longue, coût supérieur." },
+    { type: "p", text: "C'est la méthode de référence pour un nettoyage périodique complet (1 à 2 fois par an selon le trafic)." },
+    { type: "h3", text: "Le shampouinage à mousse sèche — la méthode d'intervention rapide" },
+    { type: "p", text: "Application d'une mousse encapsulante par monobrosse, brossage, séchage et aspiration des résidus solidifiés. Avantages : séchage rapide (1 h), poursuite de l'activité possible, coût plus bas. Inconvénient : moins efficace en profondeur, à utiliser entre deux injections-extractions." },
+    { type: "h3", text: "La méthode bonnet — pour les retouches" },
+    { type: "p", text: "Un disque microfibre humidifié passe sur la moquette à l'aide d'une monobrosse. Très rapide mais purement cosmétique. À réserver aux retouches express avant un événement, jamais comme méthode principale." },
+    { type: "h2", text: "Quelle méthode pour quel besoin" },
+    { type: "ul", items: [
+      "Trafic intense (open-space, accueil) : injection-extraction tous les 6 mois + encapsulation tous les 3 mois",
+      "Trafic moyen (bureaux fermés) : injection-extraction annuelle + spot treatment tous les 2 mois",
+      "Salles de réunion : injection-extraction annuelle suffisante",
+      "Halls et zones de passage : encapsulation mensuelle si moquette sombre, sinon trimestrielle",
+    ]},
+    { type: "callout", text: "Une moquette traitée régulièrement coûte 0,4 €/m²/an d'entretien. Une moquette à remplacer coûte 35 à 70 €/m². Le calcul est vite fait — appelez ELITESY au 06 09 16 50 99 pour un diagnostic gratuit." },
+    { type: "h2", text: "Le traitement préventif au quotidien" },
+    { type: "h3", text: "Aspiration HEPA croisée — la base non négociable" },
+    { type: "p", text: "Trois conditions : aspirateur professionnel à filtration HEPA (sinon la fine poussière repart dans l'air), passage croisé pour redresser la fibre, fréquence quotidienne en trafic intense. Une moquette aspirée tous les jours conserve 90 % de son apparence à 3 ans." },
+    { type: "h3", text: "Tapis barrières — l'investissement le plus rentable" },
+    { type: "p", text: "Un tapis d'entrée de 6 mètres linéaires retient jusqu'à 80 % des salissures avant qu'elles n'atteignent la moquette intérieure. Coût initial 200 à 400 €, ROI inférieur à un an sur la prolongation de durée de vie." },
+    { type: "h3", text: "Traitement immédiat des taches" },
+    { type: "p", text: "Une tache de café traitée dans les 5 minutes est à 95 % réversible. Une tache de 24 h est à 50 %. Une tache d'une semaine est définitive. Tampon absorbant, eau froide, jamais frotter — le protocole de base doit être affiché en cuisine et auprès de l'accueil." },
+    { type: "h2", text: "Les erreurs qui détruisent une moquette" },
+    { type: "ul", items: [
+      "Détergent classique ménager : tensioactifs résiduels qui attirent la salissure",
+      "Eau chaude sans aspiration immédiate : moisissure dans la trame en 48 h",
+      "Frottage circulaire d'une tache : on enfonce et on déforme la fibre",
+      "Aspirateur sans filtration HEPA : on redistribue 30 % des allergènes",
+      "Décapage chimique destiné aux sols durs : destruction des fibres en une application",
+    ]},
+    { type: "h2", text: "Le coût comparé sur 7 ans" },
+    { type: "p", text: "Sur une moquette de 500 m² avec entretien quotidien correct + injection-extraction semestrielle : environ 2 500 € HT par an, soit 17 500 € sur 7 ans. Sans entretien sérieux : remplacement à 3-4 ans pour 22 500 € HT minimum, sans compter les jours d'indisponibilité. Le calcul économique est sans appel." },
+    { type: "h2", text: "Bilan environnemental" },
+    { type: "p", text: "Prolonger une moquette de 4 à 8 ans, c'est diviser par deux son empreinte carbone. Les méthodes d'encapsulation modernes utilisent 10 à 30 fois moins d'eau que l'injection-extraction classique. ELITESY privilégie ces produits écolabellisés pour ses interventions périodiques, sans concession sur la qualité." },
+    { type: "h2", text: "Conclusion : la moquette est un actif, pas une dépense" },
+    { type: "p", text: "Avec un protocole structuré, votre moquette devient un actif à long terme qui valorise vos locaux. Sans protocole, c'est une dépense récurrente cachée. ELITESY conçoit le plan d'entretien sur mesure de vos surfaces textiles, machines mobilisées et coûts prévisionnels inclus." },
+  ],
+  status: "published",
+};

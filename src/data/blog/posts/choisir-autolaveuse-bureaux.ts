@@ -1,0 +1,57 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/autolaveuse.jpg";
+
+export const post: Post = {
+  slug: "choisir-autolaveuse-bureaux",
+  title: "Comment choisir une autolaveuse pour des bureaux ?",
+  description:
+    "Largeur de travail, autonomie, manœuvrabilité, autoportée ou accompagnée : les critères ELITESY pour choisir la bonne autolaveuse.",
+  category: "Produits & techniques",
+  date: "2025-03-17",
+  readingTime: 10,
+  hero,
+  heroAlt: "Autolaveuse autoportée en intervention dans un large couloir de bureaux",
+  intro:
+    "Choisir une autolaveuse n'est pas un achat technique — c'est un choix d'organisation. La mauvaise machine multiplie le temps d'intervention par deux. La bonne machine transforme la rentabilité d'un site. Voici les sept critères qui comptent vraiment, dans l'ordre.",
+  content: [
+    { type: "h2", text: "Pourquoi une autolaveuse plutôt qu'un balai-frange" },
+    { type: "p", text: "À partir d'environ 400 m² de sols durs réguliers, l'autolaveuse devient plus rentable et plus efficace que la frange. Elle dose précisément la solution, frotte mécaniquement, aspire l'eau sale dans la même passe — le sol est propre et sec en une opération. Une autolaveuse accompagnée traite 600 à 1 200 m²/h, soit 3 à 5 fois la productivité d'une frange." },
+    { type: "h2", text: "Critère 1 — La surface à traiter par passage" },
+    { type: "ul", items: [
+      "Moins de 400 m² : autolaveuse compacte 35-40 cm (rendement ~600 m²/h)",
+      "400 à 1 500 m² : autolaveuse accompagnée 45-55 cm (rendement ~1 200 m²/h)",
+      "1 500 à 5 000 m² : autolaveuse accompagnée large 60-70 cm ou autoportée compacte",
+      "Plus de 5 000 m² : autoportée 75-110 cm (rendement 3 000 à 5 000 m²/h)",
+    ]},
+    { type: "h2", text: "Critère 2 — La configuration des locaux" },
+    { type: "p", text: "Couloirs droits et grands open-spaces favorisent les machines larges. Couloirs étroits, multiples portes, mobilier dense imposent une machine plus étroite et plus maniable, quitte à perdre en rendement théorique. La géométrie réelle du site prime sur la surface brute." },
+    { type: "p", text: "Test indispensable avant achat : faire venir la machine en démonstration sur site, parcourir les zones réelles, mesurer le temps. Aucun fournisseur sérieux ne refuse." },
+    { type: "h2", text: "Critère 3 — L'autonomie batterie" },
+    { type: "p", text: "Sur secteur, l'autonomie n'est pas un sujet — mais le câble limite drastiquement la manœuvrabilité. Sur batterie, viser 1,5 fois l'autonomie nécessaire pour absorber le vieillissement de la batterie (perte de 20 % à 2 ans). Une autolaveuse annoncée 90 minutes effective n'en tiendra que 60-70 après deux ans." },
+    { type: "h2", text: "Critère 4 — La capacité des cuves" },
+    { type: "p", text: "Cuve d'eau propre trop petite = arrêts fréquents = perte de productivité. Règle simple : 1 litre par m² traité en moyenne. Une cuve de 40 litres traite 4 000 m² entre deux remplissages, suffisante pour la plupart des sessions tertiaires." },
+    { type: "h2", text: "Critère 5 — Le niveau sonore" },
+    { type: "p", text: "Critique en nettoyage de jour. Viser moins de 65 dB(A) pour intervention en présence d'occupants, moins de 75 dB(A) pour intervention en début ou fin de journée. Les machines silencieuses coûtent 15 à 25 % plus cher — l'écart est justifié si le nettoyage de jour est envisagé." },
+    { type: "h2", text: "Critère 6 — La maintenance et le SAV" },
+    { type: "p", text: "Vérifier avant achat : disponibilité des pièces d'usure (brosses, raclettes, batterie) pour 7 ans minimum, délai d'intervention SAV contractuel, coût horaire main d'œuvre, formation des opérateurs incluse. Une machine moins chère à l'achat mais sans SAV efficace coûte plus en 5 ans." },
+    { type: "h2", text: "Critère 7 — L'ergonomie pour l'agent" },
+    { type: "p", text: "L'autolaveuse est utilisée par un humain pendant deux heures d'affilée. Poignée réglable, vibrations limitées, démarrage simple, vidange sans effort, accès aux filtres facile. Une machine inconfortable est mal utilisée, donc moins productive. Faire essayer par l'agent qui l'utilisera, pas par le donneur d'ordres." },
+    { type: "callout", text: "ELITESY conseille ses clients dans le choix matériel lors des audits initiaux — c'est inclus, jamais facturé. Contactez-nous au 06 09 16 50 99." },
+    { type: "h2", text: "Achat ou location ?" },
+    { type: "p", text: "L'achat est rentable au-delà de 4 ans d'utilisation continue sur un site stable. La location longue durée (36-60 mois) inclut maintenance et remplacement de batterie : préférable pour la plupart des prestataires car elle lisse les coûts et garantit la disponibilité." },
+    { type: "p", text: "Pour un donneur d'ordres qui souhaite équiper son site et faire intervenir le prestataire avec le matériel sur place : achat avec contrat de maintenance constructeur. Cela évite la double dépense (location prestataire + amortissement à venir)." },
+    { type: "h2", text: "Les pièges fréquents" },
+    { type: "ul", items: [
+      "Acheter trop grand 'pour avoir de la marge' : la machine ne passe pas partout, sous-utilisée",
+      "Acheter sur fiche technique sans essai : déception terrain garantie",
+      "Sous-estimer le coût des consommables (brosses, raclettes, produits)",
+      "Oublier la formation : machine mal utilisée, mal entretenue, durée de vie divisée par deux",
+      "Faire l'impasse sur la batterie de rechange : panne batterie = site immobilisé",
+    ]},
+    { type: "h2", text: "Calcul de ROI rapide" },
+    { type: "p", text: "Une autolaveuse à 4 500 € qui fait gagner 1 h par jour à 22 €/h coûte horaire = 22 × 220 jours = 4 840 € de gain annuel. ROI inférieur à 12 mois sur un site bien dimensionné. Au-delà, le gain est net chaque année — c'est l'un des investissements matériels les plus rentables du secteur." },
+    { type: "h2", text: "Conclusion : la machine au service de la méthode" },
+    { type: "p", text: "Une bonne autolaveuse ne remplace pas un bon protocole — elle le rend rentable. Choisir la bonne machine, c'est choisir l'organisation que l'on veut tenir dans la durée. ELITESY accompagne ses clients sur ce choix lors de chaque audit." },
+  ],
+  status: "published",
+};

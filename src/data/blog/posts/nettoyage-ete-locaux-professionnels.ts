@@ -1,0 +1,52 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/nettoyage-ete-bureaux.jpg";
+
+export const post: Post = {
+  slug: "nettoyage-ete-locaux-professionnels",
+  title: "Nettoyage d'été des locaux professionnels : remise en état avant la rentrée",
+  description:
+    "Sols, moquettes, sanitaires, VMC et climatisation : le planning, la méthode et les checkpoints d'un grand nettoyage estival réussi par ELITESY.",
+  category: "Guides Pratiques",
+  date: "2026-04-02",
+  readingTime: 10,
+  hero,
+  heroAlt: "Équipe de nettoyage professionnelle remettant à neuf un open-space lumineux en plein été",
+  intro:
+    "L'été est le seul moment de l'année où vos locaux respirent. Effectifs réduits, agendas allégés, accès facilités : c'est la fenêtre idéale pour intervenir là où l'entretien quotidien ne peut pas aller. À condition d'avoir un plan. Voici la méthode ELITESY pour livrer des locaux véritablement repartis à zéro le jour de la rentrée.",
+  content: [
+    { type: "h2", text: "Pourquoi un grand nettoyage d'été change tout" },
+    { type: "p", text: "L'entretien quotidien maintient un niveau de propreté constant, mais il ne traite jamais les zones difficiles : derrière les meubles lourds, sous les moquettes, au cœur des gaines de ventilation, dans les joints de carrelage des sanitaires. Au bout de douze mois, ces zones cumulent salissures, biofilm et allergènes. Un grand nettoyage estival redémarre le compteur." },
+    { type: "p", text: "L'effet est immédiat à la rentrée : air plus respirable, vitres parfaitement transparentes, moquette qui reprend sa couleur d'origine, sanitaires sans odeur résiduelle. Vos collaborateurs le perçoivent dès le premier matin, et vos visiteurs aussi." },
+    { type: "h2", text: "Le planning idéal sur quatre semaines" },
+    { type: "h3", text: "Semaine 1 — Diagnostic et préparation" },
+    { type: "p", text: "Visite contradictoire avec le prestataire, état des lieux photographique, identification des points noirs (taches profondes, joints noircis, vitrines en hauteur jamais traitées). Validation du planning d'intervention et des accès — badges, plages horaires, coupures réseau." },
+    { type: "h3", text: "Semaine 2 — Sols et textiles" },
+    { type: "p", text: "Décapage et remise en émulsion des sols thermoplastiques, cristallisation des sols pierre, injection-extraction des moquettes, shampouinage des tissus de fauteuils et cloisons acoustiques. C'est l'opération la plus longue et la plus odorante : profitez de la baisse d'effectifs." },
+    { type: "h3", text: "Semaine 3 — Air, vitrerie et hauteurs" },
+    { type: "p", text: "Nettoyage des bouches de VMC et grilles de soufflage de climatisation, dépoussiérage des plénums apparents, vitrerie intérieure et extérieure (perches eau pure jusqu'au R+3, nacelle au-delà), luminaires et faux plafonds." },
+    { type: "h3", text: "Semaine 4 — Sanitaires, points de contact, finitions" },
+    { type: "p", text: "Détartrage profond des sanitaires, joints brossés au monobrosse, désinfection complète des points de contact (poignées, interrupteurs, claviers d'accès), remise en place du mobilier et contrôle qualité final avec rapport photo." },
+    { type: "callout", text: "Anticipez : les meilleurs prestataires sont réservés dès mai-juin pour l'été. Pour planifier votre grand nettoyage estival, appelez ELITESY au 06 09 16 50 99." },
+    { type: "h2", text: "Les zones systématiquement oubliées" },
+    { type: "ul", items: [
+      "L'arrière des frigos et machines à café — biofilm et poussière compactée",
+      "Le dessous des bureaux et caissons mobiles — accumulation de poussière chargée en allergènes",
+      "Les grilles d'aération des sanitaires — première cause d'odeurs résiduelles",
+      "Le haut des armoires et des cloisons — invisible mais visible quand on s'assoit",
+      "Les contremarches d'escaliers et les plinthes — marqueurs immédiats de qualité perçue",
+      "L'intérieur des distributeurs de savon et essuie-mains — bactéries garanties",
+    ]},
+    { type: "h2", text: "Le matériel mobilisé" },
+    { type: "p", text: "Un grand nettoyage d'été n'est pas une version intensive du nettoyage quotidien : il mobilise un parc machine spécifique. Monobrosse basse vitesse pour le décapage, autolaveuse pour les grands volumes, injecteur-extracteur pour les textiles, perche eau pure pour la vitrerie haute, aspirateur HEPA pour les empoussièrements, vapeur sèche pour la désinfection sans chimie." },
+    { type: "p", text: "Un prestataire qui propose un grand nettoyage sans préciser le matériel utilisé propose en réalité un entretien intensifié — pas un grand nettoyage." },
+    { type: "h2", text: "Sécurité et organisation pendant l'intervention" },
+    { type: "p", text: "Le grand nettoyage utilise des produits plus concentrés et des procédés plus humides que la routine. Quatre règles non négociables : balisage des zones traitées, ventilation pendant et après application, port des EPI adaptés (lunettes, gants chimiques, masques selon produit), affichage des fiches de données de sécurité dans le local technique." },
+    { type: "p", text: "Si quelques collaborateurs restent sur site, communiquez le planning par avance : étages traités, horaires, sols mouillés, odeurs temporaires. La transparence évite les réclamations." },
+    { type: "h2", text: "Mesurer le résultat" },
+    { type: "p", text: "Un grand nettoyage doit se mesurer, sinon il n'est qu'une dépense. Les indicateurs simples à exiger en livrable : rapport photo avant/après par zone, mesures de luminosité des vitres (avant/après lecture luxmètre), test ATP-métrique sur dix points de contact représentatifs, retour qualité écrit du référent site signé." },
+    { type: "p", text: "Ces livrables documentent la valeur ajoutée de l'opération et servent de référence pour les années suivantes. Sans rapport, pas de comparaison possible." },
+    { type: "h2", text: "Conclusion : un investissement, pas une dépense" },
+    { type: "p", text: "Le grand nettoyage d'été représente entre 1,5 et 3 mois de coût d'entretien courant selon la surface. C'est l'investissement qui prolonge la durée de vie de vos revêtements, qui justifie un loyer premium et qui crée le différentiel de perception à la rentrée. ELITESY accompagne chaque année des dizaines de sites tertiaires sur cette opération clé." },
+  ],
+  status: "published",
+};

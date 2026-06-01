@@ -1,0 +1,63 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/ph-produits.jpg";
+
+export const post: Post = {
+  slug: "ph-produit-nettoyage-quel-choisir",
+  title: "pH d'un produit de nettoyage : lequel choisir et quand",
+  description:
+    "Acide, neutre, alcalin : comprendre les pH des produits de nettoyage professionnel et savoir adapter le produit au type de salissure.",
+  category: "Produits & techniques",
+  date: "2025-02-03",
+  readingTime: 9,
+  hero,
+  heroAlt: "Gamme de flacons de produits d'entretien professionnels classés par pH",
+  intro:
+    "Pourquoi un produit qui élimine parfaitement le calcaire ne dissout-il pas une trace de graisse ? Parce que ce n'est pas une question de marque, c'est une question de pH. Comprendre le pH d'un détergent, c'est le geste qui sépare le bricolage du professionnalisme. Voici le mode d'emploi.",
+  content: [
+    { type: "h2", text: "Le pH en deux minutes" },
+    { type: "p", text: "Le pH mesure l'acidité ou l'alcalinité d'une solution sur une échelle de 0 à 14. 7 est neutre (l'eau pure). En dessous de 7, c'est acide. Au-dessus, c'est alcalin (ou basique). Chaque famille de salissure réagit à un pH spécifique — c'est ce qui détermine le bon produit." },
+    { type: "h2", text: "Les acides : pH 0 à 6" },
+    { type: "p", text: "Les détergents acides dissolvent les salissures minérales : calcaire, tartre, rouille, dépôts de béton. Plus le pH est bas, plus l'action est forte — et plus le produit est dangereux." },
+    { type: "ul", items: [
+      "pH 0-2 (acides forts) : détartrants industriels, urinoirs très entartrés — port d'EPI strict",
+      "pH 2-4 : détartrants sanitaires standard, dérouilleurs",
+      "pH 4-6 : nettoyants vitres aux acides organiques, rénovants inox doux",
+    ]},
+    { type: "p", text: "Surfaces compatibles : céramique, faïence, inox (selon dilution), verre. Surfaces à proscrire : marbre, pierre calcaire, ciment teinté, métaux non protégés (le produit les attaque)." },
+    { type: "h2", text: "Les produits neutres : pH 6 à 8" },
+    { type: "p", text: "Le pH neutre est le réflexe par défaut. Compatible toutes surfaces, sans danger pour les utilisateurs (avec gants), efficace sur la salissure courante (poussière, traces de doigts, salissures hydrosolubles). C'est le produit du quotidien tertiaire." },
+    { type: "p", text: "Tous les sols sensibles (parquet, vinyl, PVC, marbre, pierres naturelles) demandent un nettoyant neutre. Un produit alcalin endommagerait l'émulsion ou attaquerait la pierre." },
+    { type: "h2", text: "Les alcalins : pH 8 à 14" },
+    { type: "p", text: "Les détergents alcalins dissolvent les salissures organiques : graisses cuisinées, huiles, protéines, traces biologiques. Plus le pH est haut, plus le pouvoir dégraissant est fort." },
+    { type: "ul", items: [
+      "pH 8-9 (alcalins doux) : nettoyants sols universels, dégraissants ménagers",
+      "pH 9-11 : dégraissants cuisine, hottes, sols ateliers",
+      "pH 11-13 : décapants émulsions, fours industriels — port d'EPI strict",
+      "pH 13-14 (alcalins forts) : produits décapants industriels, débouchage canalisations",
+    ]},
+    { type: "p", text: "Surfaces compatibles : carrelage, inox (selon dilution), béton, sols durs résistants. Surfaces à proscrire : aluminium (le pH alcalin l'oxyde), bois, certaines peintures." },
+    { type: "callout", text: "Une erreur de pH ruine en quelques secondes un revêtement coûteux. ELITESY forme tous ses agents à la lecture des étiquettes et au choix produit/surface — 06 09 16 50 99." },
+    { type: "h2", text: "Le tableau d'adéquation salissure / pH" },
+    { type: "ul", items: [
+      "Tache de café, thé, jus de fruit : pH alcalin doux (8-9)",
+      "Graisse cuisine, huile : pH alcalin (10-12)",
+      "Calcaire sur robinetterie : pH acide (2-4)",
+      "Tartre cuvette WC : pH acide fort (1-3)",
+      "Empreintes digitales sur inox : pH neutre ou acide doux",
+      "Salissure organique sur sol PVC : pH neutre (6-8) impérativement",
+      "Trace de béton sur sol après chantier : pH acide (3-5)",
+      "Sang, fluides biologiques : détergent-désinfectant pH neutre",
+    ]},
+    { type: "h2", text: "La règle du double pH : à ne jamais oublier" },
+    { type: "p", text: "Ne jamais mélanger acide et alcalin — réaction violente, projection, perte totale d'efficacité. Ne jamais appliquer un acide sans rinçage avant un alcalin (les résidus se neutralisent et inefficacent le second produit). Toujours rincer entre deux produits de pH opposé." },
+    { type: "p", text: "La règle absolue : Javel + détartrant = chlore gazeux toxique. Chaque année, des intoxications domestiques et professionnelles surviennent par méconnaissance de cette règle." },
+    { type: "h2", text: "Lire une étiquette : les pictogrammes pH" },
+    { type: "p", text: "Tout produit professionnel doit afficher le pH de la solution prête à l'emploi (et non du concentré, qui peut être 10 fois plus fort). Cherchez l'indication 'pH solution diluée à X%' sur l'étiquette ou la fiche technique. En l'absence d'indication claire, ne pas utiliser." },
+    { type: "p", text: "Les pictogrammes CLP (orange, losange) indiquent les dangers : irritant, corrosif. Plus le pH s'éloigne de 7, plus les pictogrammes sont sévères. C'est un raccourci visuel utile pour les agents." },
+    { type: "h2", text: "Le pH des produits écolabellisés" },
+    { type: "p", text: "L'Écolabel européen limite les pH extrêmes : pas plus de pH 12 en alcalin, pas moins de pH 2 en acide. C'est pourquoi certains détartrants très puissants ne sont pas écolabellisables. Pour 95 % des usages, l'écolabel suffit largement — les pH extrêmes ne sont nécessaires qu'en remise en état lourde." },
+    { type: "h2", text: "Conclusion : un seul critère, mais le bon" },
+    { type: "p", text: "Le pH résume en un chiffre l'essentiel d'un produit de nettoyage. Le bon réflexe avant chaque achat : vérifier le pH, vérifier la salissure visée, vérifier la compatibilité surface. ELITESY structure sa gamme produits autour de cette logique et la transmet à chaque agent." },
+  ],
+  status: "published",
+};

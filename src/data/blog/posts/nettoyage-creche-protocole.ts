@@ -1,0 +1,52 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/creche-nettoyage.jpg";
+
+export const post: Post = {
+  slug: "nettoyage-creche-protocole",
+  title: "Protocole de nettoyage d'une crèche : protéger les tout-petits sans sur-désinfecter",
+  description:
+    "Surfaces, jouets, sanitaires, dortoirs : la méthode ELITESY pour un nettoyage de crèche conforme PMI et respectueux du développement immunitaire des enfants.",
+  category: "Guides Pratiques",
+  date: "2025-08-25",
+  readingTime: 11,
+  hero,
+  heroAlt: "Salle de vie colorée d'une crèche avec jouets soigneusement rangés",
+  intro:
+    "En crèche, la propreté est une question de santé publique. Mais sur-désinfecter est aussi un risque : exposition aux COV, déséquilibre du microbiote des enfants, allergies. La règle d'or ? Nettoyer beaucoup, désinfecter juste ce qu'il faut, au bon endroit, avec les bons produits. Voici comment ELITESY structure ses interventions en multi-accueil.",
+  content: [
+    { type: "h2", text: "Le cadre réglementaire" },
+    { type: "p", text: "La crèche relève du Code de la santé publique et est contrôlée par la PMI (Protection maternelle et infantile). Le règlement de fonctionnement doit décrire le protocole d'entretien. La PMI peut exiger sa modification et contrôler son application lors des visites." },
+    { type: "p", text: "Les recommandations de référence sont celles du Haut Conseil de la santé publique (HCSP) sur les collectivités accueillant des enfants — elles privilégient le nettoyage avec détergent neutre, et réservent les désinfectants aux surfaces réellement à risque." },
+    { type: "h2", text: "La zonification d'une crèche" },
+    { type: "h3", text: "Sections de vie (0-12 mois, 12-24 mois, 2-3 ans)" },
+    { type: "p", text: "Sols, tables, chaises, jouets, tapis d'éveil. Nettoyage 1 à 2 fois par jour avec détergent neutre écolabellisé. Désinfection ciblée uniquement après contamination visible (selles, vomissements) selon protocole DDV (Désinfection en cas de vomissements/diarrhées)." },
+    { type: "h3", text: "Zone change et sanitaires enfants" },
+    { type: "p", text: "Bionettoyage après chaque utilisation pour les tables à langer, en fin de demi-journée pour les sanitaires enfants. Produit détergent-désinfectant compatible peau d'enfant, sans parfum agressif. Microfibre rouge dédiée, code couleur strict." },
+    { type: "h3", text: "Dortoirs" },
+    { type: "p", text: "Nettoyage après chaque sieste : sol, dessus des lits, points de contact. Aération obligatoire 15 minutes minimum. Literie changée hebdomadairement ou immédiatement en cas de souillure." },
+    { type: "h3", text: "Cuisine et biberonnerie" },
+    { type: "p", text: "Protocole HACCP strict, code couleur vert dédié, désinfection des plans de travail entre chaque préparation, lave-vaisselle à 65 °C minimum, séchage à l'air libre obligatoire (pas de torchon)." },
+    { type: "callout", text: "Vous gérez une crèche ? ELITESY propose un audit gratuit de votre protocole d'hygiène et la rédaction du document remis à la PMI. Contact : 06 09 16 50 99." },
+    { type: "h2", text: "Le cas particulier des jouets" },
+    { type: "p", text: "Les jouets sont les surfaces les plus manipulées et les plus portées à la bouche. Mais ce ne sont pas des surfaces de soin : ils ne doivent pas être désinfectés en routine." },
+    { type: "ul", items: [
+      "Jouets en plastique dur : nettoyage quotidien à l'eau savonneuse, rinçage, séchage à l'air libre",
+      "Jouets en tissu : machine à 60 °C hebdomadairement, retirés immédiatement après portage à la bouche d'un enfant malade",
+      "Jouets en bois : essuyage humide sans détergent, jamais immergés",
+      "Jouets piscine à balles : lavage hebdomadaire à 60 °C, rotation des stocks",
+      "Désinfection ponctuelle uniquement après portage à la bouche par un enfant symptomatique",
+    ]},
+    { type: "h2", text: "Pourquoi le 'tout-désinfectant' est contre-productif" },
+    { type: "p", text: "Plusieurs études (Inserm, ANSES) ont documenté l'effet délétère d'une exposition chronique aux désinfectants chez les jeunes enfants : développement d'asthme, sensibilisations cutanées, perturbations du microbiote intestinal en formation. Les recommandations 2021 du HCSP réaffirment : nettoyage à l'eau et au détergent en routine, désinfection ciblée et limitée." },
+    { type: "p", text: "Un prestataire qui propose une 'désinfection systématique de toutes les surfaces' ne connaît pas le milieu petite enfance. Méfiance." },
+    { type: "h2", text: "Le matériel et les produits" },
+    { type: "p", text: "Produits écolabel Européen privilégiés (REACH compatible petite enfance), détergent neutre pH 7, microfibres dédiées par zone, vapeur sèche pour les sols et tapis d'éveil (désinfection sans chimie), aspirateur HEPA obligatoire dans toutes les sections." },
+    { type: "h2", text: "Le protocole DDV (Diarrhée/Vomissement)" },
+    { type: "p", text: "C'est l'unique situation où une désinfection complète d'urgence se justifie. Protocole en 5 étapes : ramassage du déchet avec absorbant et gants, nettoyage mécanique, désinfection à l'eau de Javel diluée à 0,5 % (ou équivalent EN 14476), temps de contact 15 minutes, rinçage. La zone est interdite aux enfants pendant l'opération." },
+    { type: "h2", text: "Traçabilité et lien avec la direction" },
+    { type: "p", text: "Chaque vacation est tracée : zones, produits, agent, heure. Une réunion mensuelle prestataire/direction permet d'ajuster le protocole, traiter les remontées et préparer les visites PMI. ELITESY remet un rapport qualité mensuel à chaque direction de crèche cliente." },
+    { type: "h2", text: "Conclusion : la juste mesure protège les enfants" },
+    { type: "p", text: "Le nettoyage en crèche est un équilibre fin : assez pour éliminer les risques infectieux, pas trop pour préserver le développement immunitaire et la qualité de l'air. ELITESY accompagne les multi-accueils dans cette équation, avec des agents formés petite enfance et des protocoles validés PMI." },
+  ],
+  status: "published",
+};
