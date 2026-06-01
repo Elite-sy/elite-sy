@@ -122,6 +122,78 @@ const clients: Record<string, ClientDetail> = {
       { title: "Prestations périodiques", desc: "Nettoyage haute pression, dépoussiérage en hauteur, remise en état." },
     ],
   },
+  pharmaceutique: {
+    label: "Pharmaceutique",
+    tagline: "Salles blanches, bioproduction et environnements ultra-contrôlés.",
+    icon: FlaskConical,
+    intro:
+      "Salles blanches, laboratoires, bioproduction : la pharmaceutique exige des standards de propreté microbiologique extrêmement élevés. ELITESY déploie des équipes formées aux BPF et des protocoles validés pour vos environnements ZAC.",
+    challenges: [
+      "Conformité BPF, ISO 14644 et exigences GMP",
+      "Habillage spécifique, gestion des consommables stériles",
+      "Bionettoyage en flux validé, contrôles particulaires",
+      "Documentation complète et audits clients",
+    ],
+    prestations: [
+      { title: "Bionettoyage salles blanches", desc: "Classes ISO 5 à 8, protocoles validés, traçabilité complète." },
+      { title: "Entretien laboratoires", desc: "R&D, contrôle qualité, paillasses et environnements sensibles." },
+      { title: "Services périphériques", desc: "Zones logistiques, vestiaires, bureaux et locaux techniques." },
+    ],
+  },
+  construction: {
+    label: "Construction",
+    tagline: "Services support sur chantiers et sites de rénovation.",
+    icon: HardHat,
+    intro:
+      "Promoteurs, entreprises générales, artisans : ELITESY intervient sur vos chantiers pour la remise en état avant livraison et l'entretien régulier des bases vie. Des équipes mobiles, équipées et formées aux exigences des sites en activité.",
+    challenges: [
+      "Remise en état pour réception dans les délais",
+      "Coactivité avec les corps d'état et respect des PPSPS",
+      "Entretien continu des bases vie (sanitaires, vestiaires, bureaux)",
+      "Gestion des déchets et tri sélectif de chantier",
+    ],
+    prestations: [
+      { title: "Nettoyage de fin de chantier", desc: "Dépoussiérage complet, décollement des étiquettes, vitrerie, sols et sanitaires." },
+      { title: "Entretien de base vie", desc: "Sanitaires, vestiaires, réfectoires et bureaux de chantier au rythme adapté." },
+      { title: "Remise en état avant livraison", desc: "Préparation des locaux pour la visite de réception et la livraison au client final." },
+    ],
+  },
+  "education-collectivites": {
+    label: "Education & Collectivités",
+    tagline: "Entretien et maintenance des établissements publics et scolaires.",
+    icon: School,
+    intro:
+      "Écoles, collèges, lycées, universités, mairies, centres culturels : ELITESY assure la propreté des établissements publics avec des protocoles adaptés aux horaires scolaires et aux contraintes des collectivités.",
+    challenges: [
+      "Respect des horaires scolaires et des périodes de vacances",
+      "Sécurité et traçabilité dans les établissements sensibles",
+      "Gestion des espaces mutualisés et à fort trafic",
+      "Budgets maîtrisés et reporting transparent",
+    ],
+    prestations: [
+      { title: "Entretien des espaces scolaires", desc: "Classes, amphithéâtres, bibliothèques, salles de sport et espaces communs." },
+      { title: "Propreté des bâtiments publics", desc: "Mairies, centres culturels, espaces administratifs et réception du public." },
+      { title: "Interventions périodiques", desc: "Vitrerie, remise en état des sols, désinfection saisonnière." },
+    ],
+  },
+  hotellerie: {
+    label: "Hôtellerie",
+    tagline: "Services support aux hôtels et résidences pour un accueil parfait.",
+    icon: Hotel,
+    intro:
+      "Hôtels, résidences de tourisme, appart'hôtels : ELITESY accompagne les établissements hôteliers avec des prestations de propreté discrètes et rigoureuses, pour un confort optimal des hôtes et une image irréprochable.",
+    challenges: [
+      "Discrétion et rapidité d'intervention",
+      "Standards de propreté élevés pour l'image de marque",
+      "Gestion des pics d'activité et des événements",
+      "Coordination avec les équipes internes de l'établissement",
+    ],
+    prestations: [
+      { title: "Propreté des chambres & espaces communs", desc: "Entretien quotidien des chambres, halls, salons, restaurants et salles de réunion." },
+      { title: "Vitrerie & finitions", desc: "Surfaces vitrées, miroirs, parois et détails pour un éclat permanent." },
+      { title: "Services événementiels", desc: "Remise en état rapide avant et après réceptions, séminaires et cérémonies." },
+    ],
+  },
 };
 
 export const Route = createFileRoute("/proprete/$slug")({
