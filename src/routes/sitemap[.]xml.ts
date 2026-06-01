@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { publishedPosts } from "@/data/blog";
+import { sectors } from "./soft-facility";
+import { services as softFacilityServices } from "./soft-facility_.$slug";
 
 const BASE_URL = "https://elite-sy.lovable.app";
 
@@ -19,6 +21,16 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/amo", priority: "0.9", changefreq: "monthly" },
           { path: "/blog", priority: "0.8", changefreq: "weekly" },
           { path: "/contact", priority: "0.7", changefreq: "yearly" },
+          ...sectors.map((s) => ({
+            path: `/secteur/${s.slug}`,
+            priority: "0.7",
+            changefreq: "monthly",
+          })),
+          ...Object.keys(softFacilityServices).map((slug) => ({
+            path: `/soft-facility/${slug}`,
+            priority: "0.7",
+            changefreq: "monthly",
+          })),
           ...publishedPosts.map((p) => ({
             path: `/blog/${p.slug}`,
             priority: "0.6",
