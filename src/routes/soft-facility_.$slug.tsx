@@ -137,7 +137,7 @@ export const services: Record<string, ServiceDetail> = {
   },
 };
 
-export const Route = createFileRoute("/soft-facility/$slug")({
+export const Route = createFileRoute("/soft-facility_/$slug")({
   loader: ({ params }) => {
     const service = services[params.slug];
     if (!service) throw notFound();
