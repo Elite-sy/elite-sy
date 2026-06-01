@@ -1,0 +1,50 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/protocole-quotidien.jpg";
+
+export const post: Post = {
+  slug: "remise-en-etat-locaux-vacants",
+  title: "Remise en état de locaux vacants : méthode complète",
+  description:
+    "Décapage, vitrerie, sanitaires : préparer un local pour une nouvelle occupation et maximiser la valeur locative.",
+  category: "Guides Pratiques",
+  date: "2025-12-15",
+  readingTime: 10,
+  hero,
+  heroAlt: "Bureau remis à neuf, sols brillants et vitres impeccables, prêt à la relocation",
+  intro:
+    "Un local vacant se loue 25 à 40 % moins vite qu'un local prêt à occuper. La remise en état est l'investissement le plus rentable d'un bailleur. Mais elle ne s'improvise pas — voici la méthode ELITESY pour livrer un local impeccable et locatif rapidement.",
+  content: [
+    { type: "h2", text: "Le diagnostic préalable : indispensable" },
+    { type: "p", text: "Avant tout devis, visite contradictoire avec photo de chaque pièce, identification des défauts (traces, joints, sanitaires, sols), inventaire des équipements à conserver vs à remplacer, état des fluides. C'est ce diagnostic qui détermine le périmètre exact et évite les mauvaises surprises." },
+    { type: "h2", text: "Les grandes étapes" },
+    { type: "ol", items: [
+      "Évacuation du mobilier restant et tri (déchets / réutilisable / DEEE)",
+      "Dépoussiérage complet des surfaces hautes (plafonds, ventilation, luminaires)",
+      "Lavage des murs lessivables et traitement des taches ponctuelles",
+      "Bionettoyage et détartrage des sanitaires (cuvettes, urinoirs, lavabos, joints)",
+      "Décapage et remise en émulsion des sols thermoplastiques, cristallisation des sols pierre",
+      "Injection-extraction des moquettes ou dépose si état non récupérable",
+      "Vitrerie intérieure et extérieure (perches eau pure, nacelle si nécessaire)",
+      "Désinfection des points de contact et finitions",
+      "Contrôle qualité final avec rapport photo livré au bailleur",
+    ]},
+    { type: "h2", text: "Le piège de la sous-estimation" },
+    { type: "p", text: "La règle empirique : compter 8 à 15 €/m² HT pour une remise en état standard d'un local tertiaire occupé pendant 5 à 10 ans. En deçà, soit le périmètre est tronqué, soit la qualité sera décevante. Au-delà, ça peut se justifier (sanitaires à reprendre, sols très dégradés)." },
+    { type: "callout", text: "ELITESY remet aux bailleurs un dossier de livraison complet (avant/après, fiches techniques produits, certificat d'intervention). Devis sous 48 h — 06 09 16 50 99." },
+    { type: "h2", text: "Les zones à ne jamais négliger" },
+    { type: "p", text: "Trois zones font la différence sur la perception du futur locataire : l'entrée (premier coup d'œil — sols, vitres, plinthes), les sanitaires (test absolu de propreté — joints, cuvettes, odeurs), la cuisine ou office (graisses anciennes, électroménager, plans de travail). Si ces trois zones sont impeccables, le local est jugé bien tenu." },
+    { type: "h2", text: "Gestion des DEEE et mobilier abandonné" },
+    { type: "p", text: "Les anciens occupants laissent souvent du mobilier, des écrans, des câbles. Filière DEEE obligatoire pour l'électronique (bordereau de suivi), don ou revente pour le mobilier réutilisable, déchetterie professionnelle pour le reste. Tracer chaque évacuation — c'est exigible en cas de contrôle." },
+    { type: "h2", text: "Sanitaires : la zone la plus discriminante" },
+    { type: "p", text: "Détartrage complet des cuvettes (acide chlorhydrique dilué ou produit professionnel équivalent), brossage manuel des joints, remplacement des accessoires usés (porte-rouleau, distributeurs), vérification des chasses, joints silicone refaits si nécessaire. C'est le poste qui peut transformer un local moyen en local désirable." },
+    { type: "h2", text: "Vitres : ne pas oublier l'extérieur" },
+    { type: "p", text: "Un local locatif jugé sur ses vitres extérieures : la première chose qu'un visiteur voit. Perche eau pure jusqu'au R+3, nacelle au-delà. Coût additionnel mais ROI immédiat sur la perception." },
+    { type: "h2", text: "Sols : décaper ou conserver ?" },
+    { type: "p", text: "Sol PVC en bon état : décapage chimique + remise en émulsion (2 couches). Sol PVC très usé : remplacement à envisager. Moquette : injection-extraction si état correct, sinon dépose. Pierre naturelle : ponçage léger + cristallisation. Parquet : ponçage + vitrification. Chaque option a un coût et un effet visuel — c'est au bailleur d'arbitrer." },
+    { type: "h2", text: "Le délai réaliste" },
+    { type: "p", text: "Pour 500 m² : 4 à 6 jours ouvrés en équipe dédiée. Pour 2 000 m² : 10 à 15 jours. Ces délais incluent les temps de séchage incompressibles (24 à 48 h après émulsion). Inutile de pousser un prestataire à raccourcir — qualité dégradée garantie." },
+    { type: "h2", text: "Conclusion : un investissement, pas une charge" },
+    { type: "p", text: "Chaque mois de vacance évité représente plusieurs milliers d'euros de loyer. La remise en état est l'un des rares investissements dont le ROI se mesure en semaines. ELITESY intervient pour bailleurs, foncières et property managers sur l'ensemble de l'Île-de-France." },
+  ],
+  status: "published",
+};
