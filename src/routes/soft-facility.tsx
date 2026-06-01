@@ -23,7 +23,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
-import hero from "@/assets/sf-hero.jpg";
+import { Picture } from "@/components/site/Picture";
+import hero from "@/assets/sf-hero.jpg?format=avif;webp;jpg&w=640;1024;1600;1920&as=picture";
 import industrie from "@/assets/sec-industrie.jpg";
 import pharma from "@/assets/sec-pharma.jpg";
 import sante from "@/assets/sec-sante.jpg";
@@ -91,7 +92,7 @@ function SoftFacilityPage() {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={hero} alt="" className="w-full h-full object-cover opacity-50" width={1920} height={1080} />
+          <Picture source={hero} alt="" className="w-full h-full object-cover opacity-50" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
           <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
         </div>

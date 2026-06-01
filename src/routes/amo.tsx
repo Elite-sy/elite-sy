@@ -19,6 +19,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import { Picture } from "@/components/site/Picture";
+import imgPicture from "@/assets/amo.jpg?format=avif;webp;jpg&w=640;1024;1600;1920&as=picture";
 import img from "@/assets/amo.jpg";
 
 const missions: { num: string; title: string; description: string; icon: LucideIcon }[] = [
@@ -217,7 +219,7 @@ function AmoPage() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={img} alt="Assistance à maîtrise d'ouvrage" className="w-full h-[500px] object-cover" loading="eager" width={1600} height={1100} />
+            <Picture source={imgPicture} alt="Assistance à maîtrise d'ouvrage" className="w-full h-[500px] object-cover" priority sizes="100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </motion.div>
         </div>

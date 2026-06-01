@@ -5,6 +5,7 @@
 //     error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
   tanstackStart: {
@@ -12,4 +13,23 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  plugins: [
+    // Auto-convert imported images to WebP (smaller files, near-universal browser support).
+    // Single-format directive → import still returns a URL string, so existing
+    // `import img from "@/assets/x.jpg"` keeps working unchanged.
+    // Opt out per-import with `?skip-opt`. Use `?as=picture&format=avif;webp;jpg&w=640;1024;1600`
+    // for explicit responsive <picture> sources.
+    imagetools({
+      defaultDirectives: (url) => {
+        if (url.searchParams.has("skip-opt") || url.searchParams.has("as")) {
+          return new URLSearchParams();
+        }
+        const ext = url.pathname.split(".").pop()?.toLowerCase();
+        if (!ext || !["jpg", "jpeg", "png"].includes(ext)) {
+          return new URLSearchParams();
+        }
+        return new URLSearchParams("format=webp&quality=78");
+      },
+    }),
+  ],
 });

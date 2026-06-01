@@ -3,7 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
-import heroImg from "@/assets/hero.jpg";
+import { Picture } from "@/components/site/Picture";
+import heroImg from "@/assets/hero.jpg?format=avif;webp;jpg&w=640;1024;1600;1920&as=picture";
 import elitesyTeamImg from "@/assets/elitesy-team.jpg";
 import propreteImg from "@/assets/proprete.jpg";
 import softImg from "@/assets/soft-facility.jpg";
@@ -92,14 +93,12 @@ function Index() {
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img
-            src={heroImg}
+          <Picture
+            source={heroImg}
             alt="Équipe ELITESY assurant la propreté d'un bâtiment professionnel à Paris"
             className="w-full h-full object-cover opacity-50"
-            width={1920}
-            height={1280}
-            fetchPriority="high"
-            decoding="async"
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
           <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
