@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — ELITESY" },
-      { name: "description", content: "Contactez ELITESY pour un devis personnalisé : propreté, soft facility management, AMO." },
+      { name: "description", content: "Contactez ELITESY pour un devis personnalisé : propreté, soft facility (FM), AMO." },
       { property: "og:title", content: "Contact — ELITESY" },
       { property: "og:description", content: "Échangeons sur vos besoins en propreté, soft facility et AMO." },
     ],
@@ -80,7 +80,7 @@ function Contact() {
                   <label className="text-xs uppercase tracking-widest text-muted-foreground block mb-2">Service</label>
                   <select className="w-full bg-input border border-border rounded-sm px-4 py-3 text-foreground focus:border-primary focus:outline-none">
                     <option>Propreté</option>
-                    <option>Soft Facility Management</option>
+                    <option>Soft Facility (FM)</option>
                     <option>Assistance à Maîtrise d'Ouvrage</option>
                     <option>Autre / multi-services</option>
                   </select>

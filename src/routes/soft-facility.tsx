@@ -37,9 +37,9 @@ import hotellerie from "@/assets/sec-hotellerie.jpg";
 export const Route = createFileRoute("/soft-facility")({
   head: () => ({
     meta: [
-      { title: "Soft Facility Management — Services multiservices sur mesure | ELITESY" },
+      { title: "Soft Facility (FM) — Services multiservices sur mesure | ELITESY" },
       { name: "description", content: "ELITESY pilote vos services multiservices : accueil, courrier, espaces verts, gestion des déchets, salles de réunion. Une expertise sur mesure pour 8 secteurs d'activité." },
-      { property: "og:title", content: "Soft Facility Management — ELITESY" },
+      { property: "og:title", content: "Soft Facility (FM) — ELITESY" },
       { property: "og:description", content: "Partenaire premium des services sur site. Une approche multi-sectorielle, des équipes intégrées, une qualité mesurée." },
       { property: "og:image", content: "/og-soft-facility.jpg" },
     ],
@@ -80,7 +80,7 @@ function SoftFacilityPage() {
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-32 w-full">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
-            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Service · Soft Facility Management</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Service · Soft Facility (FM)</p>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05]">
               Services multiservices,
               <br />
@@ -122,7 +122,7 @@ function SoftFacilityPage() {
               service, en milieu classique comme sensible.
             </p>
             <p>
-              Acteur du <span className="text-foreground font-semibold">soft Facility Management</span>,
+              Acteur du <span className="text-foreground font-semibold">soft Facility (FM)</span>,
               nous combinons un savoir-faire éprouvé en management d'équipes avec la
               création de solutions <span className="text-foreground font-semibold">sur mesure</span>.
               Cette approche stratégique contribue directement à la chaîne de valeur de
