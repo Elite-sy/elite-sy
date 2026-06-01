@@ -49,14 +49,6 @@ export const Route = createFileRoute("/proprete/")({
       title="Une propreté digne de votre image de marque."
       description="Bureaux, sièges sociaux, hôtels haut de gamme, espaces premium : nous concevons des prestations de propreté sur-mesure, exécutées avec rigueur et discrétion. Nos équipes formées et nos protocoles certifiés garantissent un résultat irréprochable, jour après jour."
       image={img}
-      features={[
-        { slug: "bureaux-tertiaire", title: "Bureaux / tertiaire", description: "Entretien quotidien et hebdomadaire des bureaux, espaces communs, sanitaires et salles de réunion selon vos protocoles." },
-        { slug: "syndics-copropriete", title: "Syndics de copropriétés", description: "Entretien des parties communes, gestion des bacs roulants et interventions spécifiques pour les résidences." },
-        { slug: "professionnels-sante", title: "Professionnels de santé", description: "Protocoles de bionettoyage rigoureux pour cabinets médicaux, centres de soins et environnements exigeants." },
-        { slug: "professionnels-batiment", title: "Professionnels du bâtiment", description: "​Nettoyage de chantier et entretien de base vie :\nremise en état pour réception et entretien régulier des espaces de vie (sanitaires, vestiaires, bureaux) garantissant propreté, hygiène et confort des équipes." },
-        { slug: "surface-vente-erp", title: "Surface de vente / ERP", description: "​Entretien régulier des surfaces de vente et ERP :\ngarantie d’un environnement propre, sain et attractif, conforme aux exigences d’hygiène et à l’image de votre établissement." },
-        { slug: "industrie", title: "​Industrie", description: "​Entretien régulier des surfaces industrielles, entrepôts et plateformes logistiques :\ngarantie d’un environnement propre, sécurisé et conforme aux exigences d’hygiène, contribuant à la performance et à l’image de votre activité." },
-      ]}
       process={[
         { step: "01", title: "Audit sur site", description: "Diagnostic complet de vos locaux, identification des points sensibles et co-construction du cahier des charges." },
         { step: "02", title: "Plan de prestation", description: "Définition des fréquences, équipes dédiées, produits et matériels, indicateurs de qualité mesurables." },
