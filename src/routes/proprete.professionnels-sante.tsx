@@ -16,9 +16,12 @@ import {
   MessageSquare,
   CalendarCheck,
   Sparkles,
-  Syringe,
+  Shirt,
   Leaf,
   Clock,
+  Award,
+  Smile,
+  Building2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
@@ -39,17 +42,17 @@ import teamImg from "@/assets/elitesy-team.jpg";
 export const Route = createFileRoute("/proprete/professionnels-sante")({
   head: () => ({
     meta: [
-      { title: "Santé & Soins — Bionettoyage hospitalier & établissements de santé | ELITESY" },
+      { title: "Santé & Soins — Nettoyage EHPAD, maisons de retraite & établissements médico-sociaux | ELITESY" },
       {
         name: "description",
         content:
-          "Bionettoyage, désinfection et entretien des établissements de santé : hôpitaux, cliniques, EHPAD, cabinets médicaux et laboratoires. Maîtrise du risque infectieux et traçabilité.",
+          "Nettoyage spécialisé des EHPAD, maisons de retraite et établissements médico-sociaux : hygiène, sécurité et qualité de vie pour des résidents fragiles. Protocoles certifiés et continuité de service.",
       },
-      { property: "og:title", content: "Santé & Soins — ELITESY Propreté" },
+      { property: "og:title", content: "Santé & Soins — Nettoyage EHPAD & maisons de retraite | ELITESY" },
       {
         property: "og:description",
         content:
-          "Hôpitaux, cliniques, EHPAD, cabinets et laboratoires : protocoles de bionettoyage, agents formés au risque infectieux, traçabilité complète.",
+          "Garantir hygiène, sécurité et dignité dans les EHPAD et maisons de retraite : agents formés au médico-social, protocoles ISO 9001 / 14001 et continuité de service totale.",
       },
       { property: "og:image", content: heroImg },
     ],
@@ -69,149 +72,149 @@ type Zone = {
 const zones: Zone[] = [
   {
     id: "chambres",
-    label: "Chambres & services de soins",
+    label: "Chambres & salles de bains",
     icon: BedDouble,
     image: chambreImg,
     description:
-      "Chambres patients, salles de soins et postes infirmiers : nos équipes appliquent les protocoles de bionettoyage en deux temps (détergent puis désinfectant) avec rotation des microfibres et traçabilité de chaque passage.",
+      "Les chambres et salles de bains des résidents concentrent l'essentiel des interactions quotidiennes. ELITESY y applique un entretien rigoureux pour limiter les risques infectieux et préserver le confort, la dignité et la sérénité de chacun.",
     bullets: [
-      "Bionettoyage quotidien et à la sortie du patient",
-      "Désinfection des points de contact à haute fréquence",
-      "Réfection des sanitaires et locaux annexes",
-      "Traçabilité signée à chaque intervention",
+      "Bionettoyage quotidien des chambres et sanitaires privatifs",
+      "Désinfection des points de contact (poignées, télécommandes, rampes)",
+      "Entretien des sols antidérapants sans résidus glissants",
+      "Lessivage périodique des murs et plafonds, aération maîtrisée",
     ],
   },
   {
-    id: "bloc",
-    label: "Blocs opératoires & salles techniques",
-    icon: Syringe,
+    id: "soins-lingerie",
+    label: "Salles de soins, offices & lingerie",
+    icon: Shirt,
     image: blocImg,
     description:
-      "Blocs opératoires, salles de réveil, endoscopie : zones à risque élevé, protocoles renforcés. Nos agents formés interviennent entre interventions et en bionettoyage approfondi de fin de programme.",
+      "Salles de soins, offices alimentaires et lingerie sont soumis à des exigences sanitaires élevées. Nos protocoles respectent les circuits propre/sale, les règles d'hygiène alimentaire et la traçabilité attendue par votre direction.",
     bullets: [
-      "Bionettoyage entre interventions",
-      "Bionettoyage approfondi de fin de programme",
-      "Détergents-désinfectants conformes EN 14476",
-      "Tenues, gants et matériel dédiés à la zone",
+      "Bionettoyage des salles de soins et postes infirmiers",
+      "Hygiène des offices alimentaires (HACCP, marche en avant)",
+      "Respect des circuits propre/sale en lingerie",
+      "Gestion conforme des DASRI et déchets à risque",
     ],
   },
   {
-    id: "ehpad",
-    label: "EHPAD & résidences seniors",
-    icon: Users,
+    id: "espaces-vie",
+    label: "Espaces de vie & restaurant",
+    icon: Smile,
     image: ehpadImg,
     description:
-      "EHPAD, résidences services seniors, USLD : nos équipes interviennent avec discrétion et bienveillance auprès des résidents, dans le respect du rythme de vie de l'établissement et de la prévention des IAS.",
+      "Salons, salles d'animation, salle de restaurant : ces espaces sont au cœur de la vie sociale de l'établissement. Nous y intervenons avec discrétion, en respectant le rythme des résidents et les temps d'animation.",
     bullets: [
-      "Entretien des chambres, parties communes et salons",
-      "Bionettoyage des salles de restaurant et animations",
-      "Désinfection des aides techniques (déambulateurs, fauteuils)",
-      "Agents formés au contact des publics fragiles",
-    ],
-  },
-  {
-    id: "laboratoires",
-    label: "Laboratoires d'analyses",
-    icon: Microscope,
-    image: laboImg,
-    description:
-      "Laboratoires d'analyses médicales, salles de prélèvement, plateaux techniques : entretien respectueux des équipements sensibles et gestion conforme des DASRI.",
-    bullets: [
-      "Bionettoyage des paillasses et zones techniques",
-      "Désinfection des salles de prélèvement",
-      "Gestion des DASRI et déchets à risque",
-      "Respect des plans de prévention et du marquage des zones",
-    ],
-  },
-  {
-    id: "cabinets",
-    label: "Cabinets médicaux & maisons de santé",
-    icon: Stethoscope,
-    image: cabinetImg,
-    description:
-      "Cabinets médicaux, dentaires, paramédicaux, maisons de santé pluriprofessionnelles : interventions en dehors des consultations, désinfection des salles de soins entre deux journées.",
-    bullets: [
-      "Bionettoyage des salles d'examen et de consultation",
-      "Désinfection complète des points de contact",
-      "Salles d'attente accueillantes et impeccables",
-      "Entretien des sanitaires patients à fréquence élevée",
+      "Entretien des salons, bibliothèques et salles d'activité",
+      "Bionettoyage de la salle de restaurant entre les services",
+      "Désinfection des aides techniques (fauteuils, déambulateurs)",
+      "Confort olfactif et ambiance apaisée",
     ],
   },
   {
     id: "circulations",
-    label: "Circulations & accueils",
-    icon: HeartPulse,
+    label: "Circulations, ascenseurs & points de contact",
+    icon: Building2,
     image: heroImg,
     description:
-      "Halls, couloirs, ascenseurs, accueils : zones de passage stratégiques qui conditionnent la perception de l'établissement. Présence continue en journée, contrôles renforcés aux heures de pointe.",
+      "Couloirs, ascenseurs, rampes et poignées : ce sont les principaux vecteurs de transmission. Une désinfection renforcée et des passages fréquents sont indispensables pour sécuriser ces zones de circulation.",
     bullets: [
-      "Lavage mécanisé des sols et couloirs",
-      "Désinfection des rampes, poignées et boutons d'ascenseur",
-      "Vitrages, banques d'accueil et signalétique",
-      "Présence visible aux heures d'affluence",
+      "Lavage mécanisé des sols (autolaveuse) dans les zones adaptées",
+      "Désinfection ciblée des rampes, mains courantes et boutons d'ascenseur",
+      "Vitrages, banques d'accueil et signalétique soignés",
+      "Passages contrôlés aux heures d'affluence",
+    ],
+  },
+  {
+    id: "exterieurs",
+    label: "Extérieurs, parkings & déchets",
+    icon: Leaf,
+    image: laboImg,
+    description:
+      "Une hygiène complète passe aussi par les abords : parkings, jardins thérapeutiques, locaux poubelles. Nous gérons la sortie des conteneurs, le nettoyage des locaux à déchets et l'entretien des parkings pour un cadre global maîtrisé.",
+    bullets: [
+      "Sortie et rentrée des poubelles et conteneurs",
+      "Nettoyage et désinfection des locaux à déchets",
+      "Entretien des parkings, abords et zones extérieures",
+      "Lavage des vitres en hauteur (perches, nacelle)",
+    ],
+  },
+  {
+    id: "cabinets",
+    label: "Cabinets, MSP & USLD",
+    icon: Stethoscope,
+    image: cabinetImg,
+    description:
+      "Au-delà des EHPAD, nous accompagnons cabinets médicaux, maisons de santé pluriprofessionnelles et USLD avec les mêmes exigences sanitaires : protocoles renforcés, agents formés et traçabilité complète.",
+    bullets: [
+      "Bionettoyage des salles d'examen et de consultation",
+      "Désinfection complète des points de contact patients",
+      "Salles d'attente accueillantes et impeccables",
+      "Sanitaires patients à fréquence renforcée",
     ],
   },
 ];
 
 const missions = [
   {
-    icon: ShieldCheck,
-    title: "Bionettoyage hospitalier",
+    icon: Users,
+    title: "Agents formés au médico-social",
     items: [
-      "Protocole en deux temps (détergent + désinfectant)",
-      "Microfibres à code couleur par zone",
-      "Détergents-désinfectants EN 14476 / EN 1276",
-      "Suivi quotidien des consommations produits",
+      "Compréhension des risques infectieux et contaminations croisées",
+      "Postures et gestes adaptés aux personnes âgées fragiles",
+      "Respect, discrétion et bienveillance auprès des résidents",
+      "Encadrement de proximité par un responsable de secteur",
     ],
   },
   {
-    icon: Syringe,
+    icon: Award,
+    title: "Protocoles certifiés ISO 9001 / 14001",
+    items: [
+      "Processus structurés et qualité garantie (ISO 9001)",
+      "Engagement environnemental tracé (ISO 14001)",
+      "Modes opératoires écrits par zone et par fréquence",
+      "Traçabilité complète des interventions",
+    ],
+  },
+  {
+    icon: ShieldCheck,
     title: "Maîtrise du risque infectieux",
     items: [
-      "Agents formés à la prévention des IAS",
-      "Protocoles BMR / Clostridium difficile",
+      "Protocoles renforcés type gastro, grippe, COVID",
+      "Désinfection ciblée des points de contact à haute fréquence",
+      "Matériel et microfibres à code couleur par zone",
       "Gestion des chambres en isolement",
-      "Procédures d'habillage et déshabillage",
-    ],
-  },
-  {
-    icon: ClipboardList,
-    title: "Traçabilité & qualité",
-    items: [
-      "Fiche de passage signée par chambre",
-      "Audits visuels et bionettoyage par ATP-métrie",
-      "Plan d'assurance qualité par établissement",
-      "Reporting mensuel au cadre d'hygiène",
     ],
   },
   {
     icon: Sparkles,
-    title: "Locaux techniques & annexes",
+    title: "Produits & matériels adaptés",
     items: [
-      "Locaux ménages, vidoirs, sas DASRI",
-      "Lingeries et offices alimentaires",
-      "Vestiaires personnels soignants",
-      "Locaux poubelles et zones logistiques",
+      "Détergents-désinfectants efficaces sans irritation",
+      "Produits écolabellisés conformes à la démarche ISO 14001",
+      "Sols traités pour rester sûrs et non glissants",
+      "Aspiration moquettes et sols, lessivage murs et plafonds",
     ],
   },
   {
     icon: HeartPulse,
-    title: "Continuité 24/7",
+    title: "Continuité de service totale",
     items: [
-      "Astreintes nuit, week-end et jours fériés",
-      "Renforts en cas d'épidémie ou de pic d'activité",
-      "Intervention exceptionnelle sous 2 h",
-      "Polyvalence et rotations sécurisées",
+      "Présence 7j/7 — un EHPAD ne ferme jamais",
+      "Remplacements anticipés en cas d'absence",
+      "Astreintes et intervention exceptionnelle sous 2 h",
+      "Renforts mobilisables en cas d'épidémie",
     ],
   },
   {
-    icon: Leaf,
-    title: "Démarche responsable",
+    icon: ClipboardList,
+    title: "Suivi qualité & traçabilité",
     items: [
-      "Produits écolabellisés quand cliniquement compatibles",
-      "Centrales de dilution pour limiter les déchets",
-      "Tri des DASRI et déchets recyclables",
-      "Formation continue au geste juste",
+      "Visites qualité régulières du responsable de secteur",
+      "Grilles d'évaluation partagées avec la direction",
+      "Fiches de passage signées par zone",
+      "Reporting transparent et plans d'amélioration",
     ],
   },
 ];
@@ -220,67 +223,76 @@ const methode = [
   {
     icon: CalendarCheck,
     step: "01",
-    title: "Diagnostic & cartographie des zones",
-    text: "Visite avec l'EOH ou le cadre d'hygiène, identification des zones à risque (1 à 4), cartographie des fréquences et des protocoles applicables par local.",
+    title: "Évaluation complète du site",
+    text: "Visite avec la direction et le médecin coordonnateur, cartographie des zones à risque, analyse des flux de résidents, de soignants et de visiteurs. Identification des contraintes spécifiques à l'établissement.",
   },
   {
     icon: ClipboardList,
     step: "02",
-    title: "Protocoles & plan d'assurance qualité",
-    text: "Rédaction des modes opératoires, choix des produits validés par votre pharmacie, dimensionnement des équipes et planning aligné sur l'activité de soins.",
+    title: "Protocoles ISO 9001 / 14001",
+    text: "Rédaction des modes opératoires par zone et fréquence, choix des produits écolabellisés, dimensionnement des équipes et planning aligné sur la vie de l'établissement (toilettes, repas, animations).",
+  },
+  {
+    icon: Users,
+    step: "03",
+    title: "Équipes formées, stables, encadrées",
+    text: "Agents formés au milieu médico-social, équipe dédiée et stable pour rassurer résidents et familles, chef d'équipe sur site et responsable de secteur en encadrement de proximité.",
   },
   {
     icon: Eye,
-    step: "03",
-    title: "Contrôles qualité & ATP-métrie",
-    text: "Audits visuels hebdomadaires, contrôles par bioluminescence ATP, suivi des indicateurs IAS partagés avec le CLIN et le cadre d'hygiène.",
-  },
-  {
-    icon: MessageSquare,
     step: "04",
-    title: "Pilotage & amélioration continue",
-    text: "Comité de suivi mensuel, plan d'actions correctives, formation continue des agents, ajustement des protocoles aux retours d'expérience.",
+    title: "Suivi qualité & amélioration continue",
+    text: "Visites qualité régulières, grilles d'évaluation, ajustements permanents, reporting transparent à la direction et plan d'actions correctives en cas d'écart.",
   },
 ];
 
 const engagements = [
   {
     icon: ShieldCheck,
-    title: "Conformité aux exigences hospitalières",
-    text: "Protocoles alignés sur les recommandations SF2H, gestion des BMR et des chambres en isolement, produits validés par votre pharmacie hospitalière.",
+    title: "Réduction du risque infectieux",
+    text: "Une hygiène maîtrisée limite la propagation des virus et bactéries (gastro, grippe, COVID), protège les résidents fragiles et réduit les épisodes infectieux dans l'établissement.",
   },
   {
-    icon: Users,
-    title: "Agents formés au milieu de soins",
-    text: "Formation initiale au bionettoyage et au risque infectieux, formation continue, encadrement de proximité par un chef d'équipe dédié à votre site.",
+    icon: Smile,
+    title: "Bien-être & dignité des résidents",
+    text: "Un cadre propre, sans odeurs, avec des sols sûrs et des sanitaires impeccables améliore la qualité de vie, le confort et la perception du lieu — pour les résidents comme pour leurs familles.",
   },
   {
-    icon: Clock,
-    title: "Disponibilité 24/7",
-    text: "Astreintes nuit, week-end et jours fériés. Renforts mobilisables en cas d'épidémie, de pic d'activité ou d'intervention exceptionnelle sous 2 h.",
+    icon: HeartPulse,
+    title: "Soutien aux équipes soignantes",
+    text: "Un environnement stable, propre et sécurisé réduit la charge mentale des soignants et leur permet de se concentrer sur leur cœur de métier : le soin et l'accompagnement humain.",
+  },
+  {
+    icon: Award,
+    title: "Conformité & image de l'établissement",
+    text: "Une hygiène maîtrisée, certifiée et tracée renforce la confiance des familles, facilite les inspections et valorise la réputation de votre EHPAD ou maison de retraite.",
   },
 ];
 
 const faqs = [
   {
-    q: "Vos agents sont-ils formés au bionettoyage hospitalier ?",
-    a: "Oui. Chaque agent affecté à un établissement de santé suit une formation initiale au bionettoyage, à la prévention des IAS et aux protocoles BMR. Des sessions de recyclage sont organisées chaque année et un chef d'équipe dédié assure l'encadrement quotidien.",
+    q: "Quels protocoles appliquez-vous en EHPAD et maison de retraite ?",
+    a: "Nos protocoles s'appuient sur les certifications ISO 9001 et ISO 14001 et sur une analyse précise des risques de votre établissement. Chaque zone (chambres, salles de soins, offices, circulations) dispose d'un mode opératoire écrit, d'une fréquence définie et d'une traçabilité signée à chaque passage.",
   },
   {
-    q: "Quels produits utilisez-vous ?",
-    a: "Nous utilisons exclusivement des détergents-désinfectants conformes aux normes EN 14476 (virucide) et EN 1276 (bactéricide), validés par votre pharmacie hospitalière. Les centrales de dilution garantissent un dosage précis et limitent les déchets d'emballages.",
+    q: "Quels produits utilisez-vous auprès de publics fragiles ?",
+    a: "Nous privilégions des détergents-désinfectants efficaces et non irritants, écolabellisés autant que possible et conformes à la démarche ISO 14001. Les sols sont traités pour rester sûrs et non glissants, et tous les produits sont validés en amont avec votre médecin coordonnateur.",
   },
   {
-    q: "Comment gérez-vous les chambres en isolement ou les BMR ?",
-    a: "Nous appliquons des protocoles renforcés : matériel dédié, désinfection terminale après la sortie du patient, gestion stricte des DASRI et habillage/déshabillage selon les procédures de votre EOH. La traçabilité est complète et conservée à votre disposition.",
+    q: "Quelle est la fréquence de nettoyage adaptée ?",
+    a: "La fréquence varie selon les zones : chambres et sanitaires quotidiennement, points de contact plusieurs fois par jour, salles communes après chaque temps fort (repas, animations), circulations en continu. Nous complétons par des prestations périodiques (lessivage murs et plafonds, lavage des vitres, gestion des déchets, nettoyage de parkings).",
   },
   {
-    q: "Intervenez-vous la nuit, le week-end et les jours fériés ?",
-    a: "Oui, nous assurons une continuité 24/7 avec astreintes téléphoniques et équipes mobilisables. Les rotations de nuit sont organisées avec un encadrement de proximité et nous garantissons une intervention exceptionnelle sous 2 h en cas d'urgence (souillure, isolement, dégât des eaux).",
+    q: "Comment garantissez-vous la continuité de service ?",
+    a: "Un EHPAD ne ferme jamais. Nous garantissons une présence 7j/7, organisons les remplacements anticipés en cas d'absence, mobilisons des renforts en cas d'épidémie ou de pic d'activité, et assurons une astreinte avec intervention exceptionnelle sous 2 h pour toute urgence sanitaire.",
   },
   {
-    q: "Comment garantissez-vous la qualité des prestations ?",
-    a: "Nous mettons en place un Plan d'Assurance Qualité avec audits visuels hebdomadaires, contrôles par bioluminescence ATP, fiches de passage signées et indicateurs partagés mensuellement avec le CLIN et le cadre d'hygiène. Tout écart fait l'objet d'un plan d'actions correctives.",
+    q: "Vos agents sont-ils formés au milieu médico-social ?",
+    a: "Oui. Chaque agent affecté à un EHPAD ou une maison de retraite suit une formation initiale au bionettoyage et à la prévention des infections, des sessions de recyclage annuelles, et bénéficie d'un encadrement de proximité par un chef d'équipe et un responsable de secteur. La stabilité de l'équipe est une de nos priorités pour rassurer résidents et familles.",
+  },
+  {
+    q: "Comment se déroule le suivi qualité ?",
+    a: "Nous appliquons un suivi qualité rigoureux : visites régulières du responsable de secteur, grilles d'évaluation partagées avec la direction, fiches de passage signées par zone, reporting mensuel transparent et plans d'actions correctives. Vous gardez à tout moment la visibilité sur l'exécution du contrat.",
   },
 ];
 
@@ -305,11 +317,11 @@ function SantePage() {
               <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Santé & Soins</p>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
-              Bionettoyage hospitalier,<br />
-              <span className="text-primary">maîtrise du risque infectieux.</span>
+              Nettoyage des EHPAD<br />
+              <span className="text-primary">& maisons de retraite.</span>
             </h1>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Hôpitaux, cliniques, EHPAD, cabinets médicaux et laboratoires : des protocoles rigoureux, des agents formés et une traçabilité complète pour des environnements sains au service de vos patients.
+              Hygiène, sécurité et dignité des résidents : un enjeu sanitaire majeur qui ne peut se réduire à un entretien classique. ELITESY déploie des équipes formées au médico-social et des protocoles certifiés pour protéger les publics les plus fragiles.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
@@ -327,25 +339,28 @@ function SantePage() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={heroImg} alt="Couloir d'hôpital entretenu par ELITESY" width={1600} height={1120} className="w-full h-[500px] object-cover" />
+            <img src={heroImg} alt="Couloir d'établissement médico-social entretenu par ELITESY" width={1600} height={1120} className="w-full h-[500px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </motion.div>
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Intro — enjeu sanitaire */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-5xl px-6 lg:px-10 grid md:grid-cols-[auto_1fr] gap-10 items-start">
           <div className="w-16 h-16 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30 shrink-0">
             <ShieldCheck className="text-primary" size={28} />
           </div>
           <div>
-            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-4 text-sm">L'hygiène, premier acte de soin</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-4 text-sm">Un enjeu sanitaire majeur</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Dans un établissement de santé, la propreté n'est pas une option : c'est une condition de la qualité des soins.
+              Les résidents des EHPAD figurent parmi les publics les plus vulnérables. Leur protection commence par la propreté.
             </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+              Système immunitaire affaibli, vie en collectivité, interactions continues : les gastro-entérites, la grippe ou les épisodes viraux circulent vite dans les lieux clos. Chaque poignée, rampe, bouton d'ascenseur ou table peut devenir un vecteur de transmission.
+            </p>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              ELITESY accompagne hôpitaux, cliniques, EHPAD, cabinets et laboratoires avec des dispositifs alignés sur les recommandations SF2H, des agents formés au risque infectieux et une traçabilité complète des interventions. Une prestation rigoureuse, partenaire de votre équipe opérationnelle d'hygiène.
+              La qualité de vie dépend aussi fortement de l'environnement : une salle de bain mal entretenue, une odeur persistante ou un sol glissant dégradent le confort, la dignité et la sécurité. ELITESY accompagne les directions d'établissement avec une exigence à la hauteur de ces enjeux.
             </p>
           </div>
         </div>
@@ -354,8 +369,8 @@ function SantePage() {
       {/* Zones interactives */}
       <section id="zones" className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Les environnements que nous entretenons</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl">De la chambre du patient au bloc opératoire.</h2>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Les zones critiques que nous entretenons</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl">Où concentrer les efforts de propreté.</h2>
           <p className="text-muted-foreground max-w-2xl mb-12">Cliquez sur une zone pour découvrir notre méthode d'intervention.</p>
 
           <div className="grid lg:grid-cols-[320px_1fr] gap-8">
@@ -413,8 +428,8 @@ function SantePage() {
       {/* Nos missions */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Nos missions en milieu de soins</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Un périmètre complet au service de l'hygiène hospitalière.</h2>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Qu'attendre d'une entreprise spécialisée</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Compétences spécifiques, organisation structurée.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {missions.map((m, i) => {
               const Icon = m.icon;
@@ -449,8 +464,8 @@ function SantePage() {
       {/* Méthode */}
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Méthode & organisation</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Un pilotage rigoureux, partenaire de votre EOH.</h2>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Notre méthode</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Comment ELITESY structure ses interventions.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {methode.map((m, i) => {
               const Icon = m.icon;
@@ -476,7 +491,7 @@ function SantePage() {
         </div>
       </section>
 
-      {/* Pourquoi nous */}
+      {/* Bénéfices concrets */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -487,11 +502,11 @@ function SantePage() {
             className="rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={teamImg} alt="L'équipe ELITESY : agents formés au bionettoyage hospitalier" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
+            <img src={teamImg} alt="L'équipe ELITESY : agents formés au milieu médico-social" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
           </motion.div>
           <div>
-            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour votre établissement.</h2>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Les bénéfices concrets</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-10">Pourquoi choisir ELITESY pour votre établissement.</h2>
             <div className="space-y-6">
               {engagements.map((e) => {
                 const Icon = e.icon;
@@ -512,11 +527,35 @@ function SantePage() {
         </div>
       </section>
 
+      {/* Continuité — bandeau */}
+      <section className="py-20 border-t border-border bg-card/40">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10 grid md:grid-cols-3 gap-8">
+          {[
+            { icon: Clock, title: "Présence 7j/7", text: "Un EHPAD ne ferme jamais. Notre organisation garantit une continuité totale du service." },
+            { icon: Microscope, title: "Renforts épidémie", text: "Équipes mobilisables sous 24 h en cas de gastro, grippe ou pic infectieux." },
+            { icon: MessageSquare, title: "Astreinte 2 h", text: "Intervention exceptionnelle sous 2 h pour toute urgence sanitaire (souillure, dégât, isolement)." },
+          ].map((b) => {
+            const Icon = b.icon;
+            return (
+              <div key={b.title} className="flex gap-5 items-start">
+                <div className="w-12 h-12 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center shrink-0">
+                  <Icon className="text-primary" size={22} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">{b.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{b.text}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section className="py-24 border-t border-border bg-card/40">
+      <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-4xl px-6 lg:px-10">
           <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Questions fréquentes</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">Vos questions, nos réponses.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">Comprendre le nettoyage des EHPAD.</h2>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
               <AccordionItem key={f.q} value={`item-${i}`} className="border-border">
@@ -533,12 +572,12 @@ function SantePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Passons à l'action</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Un dispositif sur mesure pour votre établissement de santé.</h2>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">La propreté, pilier du bien-être</p>
+          <h2 className="text-4xl md:text-5xl font-bold">Vous dirigez un EHPAD ou une maison de retraite ?</h2>
           <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Décrivez-nous votre site et vos contraintes : nous construisons une prestation alignée sur vos protocoles, votre EOH et votre activité de soins.
+            Renforcez l'hygiène et la qualité de vie dans votre établissement. Nous construisons avec vous un dispositif sur mesure, certifié et tracé.
           </p>
           <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
             Demander un devis personnalisé <ArrowRight size={16} />
