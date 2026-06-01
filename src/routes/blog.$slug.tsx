@@ -233,11 +233,10 @@ function BlogPost() {
                     className="group block bg-card border border-border rounded-sm overflow-hidden hover:border-primary/50 transition-colors"
                   >
                     <div className="aspect-[16/10] overflow-hidden bg-muted">
-                      <img
+                      <LazyImage
                         src={p.hero}
                         alt={p.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
                       />
                     </div>
                     <div className="p-5">

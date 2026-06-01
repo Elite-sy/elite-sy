@@ -4,6 +4,7 @@ import { z } from "zod";
 import { useMemo, useState } from "react";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import { LazyImage } from "@/components/site/LazyImage";
 import { getAllPostsForListing } from "@/data/blog";
 
 const POSTS_PER_PAGE = 12;
