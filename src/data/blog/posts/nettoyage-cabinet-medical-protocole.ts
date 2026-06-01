@@ -1,0 +1,53 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/cabinet-medical.jpg";
+
+export const post: Post = {
+  slug: "nettoyage-cabinet-medical-protocole",
+  title: "Protocole de nettoyage d'un cabinet médical : bionettoyage et conformité",
+  description:
+    "Salle d'attente, salle de soins, sanitaires : le protocole ELITESY pour un cabinet médical conforme aux référentiels d'hygiène.",
+  category: "Guides Pratiques",
+  date: "2025-09-01",
+  readingTime: 11,
+  hero,
+  heroAlt: "Agent en blouse nettoyant la salle d'attente d'un cabinet médical",
+  intro:
+    "Un cabinet médical n'est pas un bureau avec une table d'examen. C'est un établissement de santé soumis à un risque infectieux mesurable et à des obligations précises. Le protocole de nettoyage y est un acte de soin à part entière. Voici comment ELITESY le structure, étape par étape.",
+  content: [
+    { type: "h2", text: "Les principes du bionettoyage en cabinet médical" },
+    { type: "p", text: "Le bionettoyage repose sur la combinaison de trois actions : élimination mécanique de la salissure, action chimique d'un détergent-désinfectant, temps de contact respecté. C'est cette combinaison qui garantit l'efficacité, et non l'un des trois pris isolément." },
+    { type: "p", text: "Le bionettoyage se distingue de la simple désinfection : il intègre la phase de nettoyage qui élimine la matière organique, sans laquelle aucun désinfectant n'est pleinement efficace." },
+    { type: "h2", text: "La zonification du cabinet" },
+    { type: "h3", text: "Zone 1 — Salle d'attente et accueil (risque modéré)" },
+    { type: "p", text: "Forte fréquentation, contact prolongé avec les sièges et points de contact. Nettoyage 1 à 2 fois par jour selon l'activité : sièges (microfibre détergent-désinfectant), table basse, presse, points de contact (poignées, interrupteurs, comptoir d'accueil), sols." },
+    { type: "h3", text: "Zone 2 — Couloirs et sanitaires (risque modéré à élevé)" },
+    { type: "p", text: "Sanitaires nettoyés à chaque demi-journée. Couloirs aspirés et lavés quotidiennement. Code couleur strict : microfibre rouge sanitaires, jaune zones intermédiaires, bleu zones tertiaires." },
+    { type: "h3", text: "Zone 3 — Salle de soins et d'examen (risque élevé)" },
+    { type: "p", text: "Bionettoyage entre chaque patient des surfaces touchées (table d'examen, accoudoirs, instruments hors stérile). Bionettoyage complet en fin de journée : surfaces hautes, mobilier, sol, ventilation. Produit virucide EN 14476 obligatoire, désinfection en deux temps validée." },
+    { type: "h3", text: "Zone 4 — Local DASRI et sale (risque élevé)" },
+    { type: "p", text: "Sas propre/sale strict, sol et parois lavés quotidiennement, vidange et désinfection des bacs réglementaires. Toute personne entrant porte des EPI." },
+    { type: "callout", text: "ELITESY forme tous ses agents intervenant en cabinet médical au bionettoyage et au respect strict du code couleur. Audit gratuit de votre protocole actuel — 06 09 16 50 99." },
+    { type: "h2", text: "Les produits autorisés et interdits" },
+    { type: "p", text: "Tous les produits utilisés en cabinet médical doivent être conformes aux normes européennes : EN 1276 (bactéricide), EN 1650 (fongicide), EN 14476 (virucide). Le simple détergent ménager est interdit. Privilégier les détergents-désinfectants en monoflacon plutôt que mélanger soi-même." },
+    { type: "p", text: "L'eau de Javel reste utilisée pour certaines surfaces (DASRI, sols zone 4), mais jamais sur acier inoxydable ou métaux. Le mélange Javel + détartrant est strictement interdit (chlore gazeux toxique)." },
+    { type: "h2", text: "Le matériel dédié" },
+    { type: "p", text: "Chariot de nettoyage spécifique cabinet médical, séparation propre/sale, sacs DASRI à proximité, microfibres lavées en circuit professionnel à 90 °C. Aucun matériel partagé avec un autre site." },
+    { type: "h2", text: "La traçabilité — exigence non négociable" },
+    { type: "p", text: "Chaque vacation se conclut par la signature d'une feuille de traçabilité indiquant : zones traitées, produits utilisés (lot), heure, agent. Conservation 5 ans minimum, à disposition de l'ARS lors d'un contrôle." },
+    { type: "p", text: "Cette traçabilité protège juridiquement le praticien et le prestataire en cas de réclamation patient. Elle est aussi le marqueur principal de sérieux d'un partenariat." },
+    { type: "h2", text: "Gestion des DASRI" },
+    { type: "p", text: "Les déchets d'activités de soins à risque infectieux (DASRI) suivent une filière dédiée : conditionnement en boîtes ou fûts homologués, étiquetage, stockage limité (72 h à 7 j selon volume), enlèvement par prestataire agréé. L'agent de nettoyage manipule le contenant fermé, jamais le déchet." },
+    { type: "h2", text: "Périodicité des grandes opérations" },
+    { type: "ul", items: [
+      "Mensuel : nettoyage des bouches de ventilation, dessus des armoires, plinthes",
+      "Trimestriel : vitrerie intérieure, lavage des murs lessivables zone soins",
+      "Semestriel : décapage des sols zone soins, désinfection terminale renforcée",
+      "Annuel : grand nettoyage complet avec audit hygiène et plan d'amélioration",
+    ]},
+    { type: "h2", text: "Sécurité des agents" },
+    { type: "p", text: "EPI obligatoires : blouse ou tunique dédiée, gants nitrile à usage unique, masque chirurgical en zone soins, lunettes lors de la pulvérisation. Vaccination hépatite B exigée. Formation initiale et recyclage annuel documentés." },
+    { type: "h2", text: "Conclusion : le nettoyage est un acte de soin" },
+    { type: "p", text: "Un cabinet médical mal nettoyé n'est pas seulement peu accueillant : il expose patients et soignants à un risque infectieux réel et engage la responsabilité du praticien. ELITESY intervient dans les cabinets médicaux d'Île-de-France avec des protocoles validés et des agents formés. Demandez-nous un diagnostic." },
+  ],
+  status: "published",
+};

@@ -1,0 +1,50 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/odeurs-clim-bureau.jpg";
+
+export const post: Post = {
+  slug: "eliminer-odeurs-climatisation-bureau",
+  title: "Éliminer les mauvaises odeurs de climatisation au bureau",
+  description:
+    "Causes réelles, réflexes immédiats et entretien des filtres : la méthode ELITESY pour retrouver un air sain et préserver la qualité de l'air intérieur.",
+  category: "Conseils d'entretien",
+  date: "2026-03-22",
+  readingTime: 9,
+  hero,
+  heroAlt: "Grille de bouche de climatisation murale dans un bureau moderne",
+  intro:
+    "Cette odeur de chaussette mouillée qui s'invite chaque matin avec la mise en route de la clim. Personne n'en parle, tout le monde la remarque. Et elle n'est jamais anodine : derrière une odeur de climatisation se cache toujours un développement microbiologique. Voici comment l'éliminer durablement, et pas seulement la masquer.",
+  content: [
+    { type: "h2", text: "D'où vient vraiment l'odeur" },
+    { type: "p", text: "Trois mécanismes la produisent, souvent combinés. Le premier est l'humidité résiduelle dans l'évaporateur : la condensation qui ne sèche pas alimente bactéries et moisissures. Le deuxième est l'encrassement des filtres : poussières, pollens et particules organiques se décomposent. Le troisième est le bac de condensats bouché ou stagnant : odeur de cave garantie en moins d'un mois." },
+    { type: "p", text: "Identifier la cause exacte change tout. Un désodorisant ne règle rien — il ajoute un parfum à une décomposition active. La solution est toujours mécanique : nettoyer, sécher, désinfecter." },
+    { type: "h2", text: "Les réflexes immédiats avant l'intervention" },
+    { type: "ul", items: [
+      "Couper la climatisation et passer en mode ventilation seule pendant 30 minutes pour assécher l'évaporateur",
+      "Aérer la pièce en grand pendant l'opération",
+      "Vérifier visuellement les bouches de soufflage : présence de poussière noire = filtres saturés",
+      "Vérifier le bac de condensats si accessible : eau stagnante = vidange immédiate",
+      "Noter la date des dernières interventions techniques pour le prestataire",
+    ]},
+    { type: "h2", text: "L'entretien préventif qui élimine 80 % des cas" },
+    { type: "h3", text: "Nettoyage des bouches et grilles — mensuel" },
+    { type: "p", text: "Démontage des grilles, dépoussiérage à l'aspirateur HEPA, lavage à l'eau tiède savonneuse, séchage complet avant remise en place. Compter dix minutes par unité, c'est l'intervention la plus simple et la plus efficace." },
+    { type: "h3", text: "Changement ou nettoyage des filtres — trimestriel" },
+    { type: "p", text: "Les filtres lavables se rincent à l'eau claire et sèchent en 24 h. Les filtres jetables se changent — ne jamais aspirer un filtre HEPA, on détruit la fibre. Tracer chaque changement dans le carnet d'entretien." },
+    { type: "h3", text: "Désinfection de l'évaporateur — semestriel" },
+    { type: "p", text: "Pulvérisation d'un produit bactéricide-fongicide compatible CTA sur le serpentin froid, temps de contact respecté, mise en route en ventilation seule pour évacuer. Intervention à confier à un prestataire formé : un produit inadapté abîme le matériel." },
+    { type: "h3", text: "Vidange et désinfection du bac de condensats — annuel minimum" },
+    { type: "p", text: "Souvent négligée, c'est pourtant la cause numéro un des odeurs persistantes. Intervention technique à coordonner avec le mainteneur CVC du site." },
+    { type: "callout", text: "Un bureau de 200 m² mal entretenu côté climatisation perd jusqu'à 15 % d'efficacité énergétique et expose à des arrêts maladie. ELITESY intègre l'entretien des bouches au forfait quotidien — 06 09 16 50 99." },
+    { type: "h2", text: "Pourquoi un désodorisant aggrave la situation" },
+    { type: "p", text: "Les sprays masquant ne sont pas neutres. Ils saturent l'air en COV (composés organiques volatils), augmentent la sensation d'inconfort respiratoire, et certains réagissent avec l'ozone ambiant pour produire du formaldéhyde. Au-delà de l'inefficacité, c'est un risque sanitaire mesuré." },
+    { type: "p", text: "Si une note olfactive est souhaitée, privilégier les diffuseurs à huiles essentielles certifiées, à dose maîtrisée, et jamais en remplacement d'un nettoyage technique." },
+    { type: "h2", text: "Le rôle du prestataire de nettoyage" },
+    { type: "p", text: "L'entretien des bouches de soufflage et grilles de reprise relève du nettoyage, pas de la maintenance CVC. Il doit figurer explicitement au cahier des charges : fréquence, méthode, produit utilisé, traçabilité. Sans cette clause, l'intervention ne sera pas faite, ou facturée en supplément lors d'une remontée d'odeur." },
+    { type: "p", text: "Pour les éléments techniques (évaporateur, bac, fluide), le prestataire de nettoyage signale et coordonne ; il n'intervient pas seul. Un bon contrat prévoit ce partage de responsabilité noir sur blanc." },
+    { type: "h2", text: "Qualité de l'air et productivité : le lien chiffré" },
+    { type: "p", text: "Plusieurs études (Harvard COGfx 2016, Bluyssen 2021) mesurent une baisse de 8 à 13 % des fonctions cognitives dans un environnement à mauvaise qualité d'air. Sur une équipe de 50 personnes, le coût d'une climatisation négligée se compte en dizaines de milliers d'euros annuels de productivité perdue. L'entretien régulier est l'un des ROI les plus rapides du facility management." },
+    { type: "h2", text: "Conclusion : la propreté commence par l'air" },
+    { type: "p", text: "Une odeur de climatisation n'est jamais qu'une nuisance olfactive : c'est le signal d'un problème mesurable de qualité d'air. La traiter à la source, mensuellement, élimine 80 % des situations. Le reste relève d'un partenariat structuré entre prestataire de nettoyage et mainteneur CVC. ELITESY orchestre les deux pour ses clients tertiaires." },
+  ],
+  status: "published",
+};
