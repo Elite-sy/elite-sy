@@ -39,14 +39,18 @@ export function LazyImage({
   ...rest
 }: Props) {
   const ref = useRef<HTMLImageElement | null>(null);
-  // Start un-loaded on the client; SSR emits the real src so it stays SEO-friendly.
-  const [shouldLoad, setShouldLoad] = useState(
-    typeof window === "undefined" || typeof IntersectionObserver === "undefined",
-  );
+  // Always start with the placeholder on first render (server + client) to avoid
+  // hydration mismatches. Modern crawlers (Googlebot) execute JS and will see the
+  // swapped real `src`; `data-src` + `alt` also expose the URL to non-JS clients.
+  const [shouldLoad, setShouldLoad] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (shouldLoad) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setShouldLoad(true);
+      return;
+    }
     const node = ref.current;
     if (!node) return;
 
