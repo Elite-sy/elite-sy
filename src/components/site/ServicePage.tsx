@@ -1,7 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, type LucideIcon } from "lucide-react";
 import { Layout } from "./Layout";
+
+export interface SectorItem {
+  slug: string;
+  label: string;
+  icon: LucideIcon;
+  img: string;
+  tagline: string;
+}
 
 export interface ServicePageProps {
   eyebrow: string;
