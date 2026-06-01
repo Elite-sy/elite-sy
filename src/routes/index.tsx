@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { Picture } from "@/components/site/Picture";
-import heroImg from "@/assets/hero.jpg?as=picture&format=avif;webp;jpg&w=640;1024;1600;1920";
+import heroImg from "@/assets/hero.jpg?format=avif;webp;jpg&w=640;1024;1600;1920&as=picture";
 import elitesyTeamImg from "@/assets/elitesy-team.jpg";
 import propreteImg from "@/assets/proprete.jpg";
 import softImg from "@/assets/soft-facility.jpg";
