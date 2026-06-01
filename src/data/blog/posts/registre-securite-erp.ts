@@ -1,0 +1,51 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/registre-securite.jpg";
+
+export const post: Post = {
+  slug: `registre-securite-erp`,
+  title: `Registre de sécurité ERP : que doit-on y trouver ?`,
+  description: `Documents obligatoires, périodicité et lien avec le contrat de nettoyage : tout savoir sur le registre de sécurité ERP.`,
+  category: `Normes & réglementations`,
+  date: `2025-05-12`,
+  readingTime: 8,
+  hero,
+  heroAlt: `Registre de sécurité d'un ERP avec ses documents`,
+  intro: `Le registre de sécurité est obligatoire dans tous les ERP. Il regroupe les documents prouvant la conformité de l'établissement. Le contrat de nettoyage et la gestion des produits y ont leur place. Présentation à toute commission de sécurité.`,
+  content: [
+    { type: "h2", text: `Le cadre réglementaire` },
+    { type: "p", text: `Article R.143-4 du Code de la construction et de l'habitation. Obligation pour tout exploitant d'ERP (de la 5ème à la 1ère catégorie). Tenu à jour, présenté immédiatement à la commission de sécurité ou aux services d'incendie.` },
+    { type: "h2", text: `Le contenu obligatoire` },
+    { type: "ul", items: [
+      `Procès-verbaux des commissions de sécurité`,
+      `Vérifications périodiques des installations (électricité, gaz, ascenseurs)`,
+      `Contrats de maintenance (extincteurs, désenfumage, SSI)`,
+      `Formations du personnel à la sécurité incendie`,
+      `Exercices d'évacuation`,
+      `Travaux et modifications`,
+      `Plans d'évacuation et consignes`,
+      `Registre des accidents et incidents`
+    ] },
+    { type: "h2", text: `Les vérifications périodiques` },
+    { type: "p", text: `Extincteurs : annuelle. Désenfumage : annuelle. Systèmes de Sécurité Incendie (SSI) : annuelle (Q5) et trimestrielle (Q4). Installations électriques : annuelle. Ascenseurs : annuelle. Toutes par organisme agréé. Rapports archivés dans le registre.` },
+    { type: "h2", text: `Le lien avec le contrat de nettoyage` },
+    { type: "p", text: `Le contrat de nettoyage figure utilement dans le registre car : il liste les produits chimiques utilisés (FDS associées), il décrit les zones et fréquences, il prouve le maintien en propreté des équipements de sécurité (extincteurs accessibles, BAES non obstrués, issues de secours dégagées).` },
+    { type: "h2", text: `Les fiches de données de sécurité (FDS)` },
+    { type: "p", text: `Toutes les FDS des produits utilisés sur site doivent être accessibles. Le prestataire les fournit au client. Mise à jour à chaque nouveau produit. Conservation papier ou numérique. Demandées en cas de pollution ou d'accident chimique.` },
+    { type: "h2", text: `La signalisation et la lisibilité` },
+    { type: "p", text: `Le prestataire de nettoyage est en première ligne pour signaler : ampoule grillée dans BAES (bloc autonome d'éclairage de sécurité), accumulation poussière sur détecteur incendie, obstruction d'une issue de secours. Inclure une grille de contrôle sécurité dans les tournées.` },
+    { type: "callout", text: `ELITESY tient à jour les FDS de ses produits pour chaque client et intègre les contrôles sécurité dans ses tournées (issues, BAES, extincteurs). Documents fournis pour le registre. 06 09 16 50 99.` },
+    { type: "h2", text: `Les exercices d'évacuation` },
+    { type: "p", text: `Au moins un par an dans tout ERP (deux dans les ERP avec hébergement). Date, modalités, durée d'évacuation, dysfonctionnements observés : tout consigné. Le prestataire de nettoyage présent doit y participer comme tout occupant.` },
+    { type: "h2", text: `Les travaux et le contrat` },
+    { type: "p", text: `Tout aménagement modifiant l'organisation des locaux doit être déclaré : changement de cloisons, ajout de mobilier important. Le nettoyage doit s'adapter (nouvelles zones, nouveaux risques). Avenant au contrat de nettoyage si nécessaire.` },
+    { type: "h2", text: `La présentation à la commission` },
+    { type: "p", text: `Visite périodique des commissions de sécurité : 2 ans (ERP avec hébergement et 1ère catégorie), 3 ans (autres). Registre présenté ouvert, à jour, organisé. Une commission qui repart avec un avis défavorable bloque l'exploitation.` },
+    { type: "h2", text: `Le SSI et la propreté` },
+    { type: "p", text: `Détecteurs de fumée non encrassés : un détecteur poussiéreux déclenche en faux ou ne déclenche pas du tout. Désenfumage non obstrué. Trappes accessibles. Le nettoyage participe directement à l'efficacité du SSI.` },
+    { type: "h2", text: `Les ERP de 5ème catégorie` },
+    { type: "p", text: `Petits ERP (commerces, restaurants) souvent < 200 personnes : registre allégé mais obligatoire. Souvent négligé. Une régularisation rapide évite la fermeture en cas de contrôle inopiné.` },
+    { type: "h2", text: `Conclusion` },
+    { type: "p", text: `Le registre de sécurité est la mémoire vivante de la conformité. Le nettoyage en est un acteur direct par les produits, l'entretien des équipements et la vigilance terrain.` }
+  ],
+  status: "published",
+};

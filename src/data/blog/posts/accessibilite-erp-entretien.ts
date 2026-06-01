@@ -1,0 +1,50 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/accessibilite-erp.jpg";
+
+export const post: Post = {
+  slug: `accessibilite-erp-entretien`,
+  title: `Accessibilité ERP : l'entretien des équipements PMR`,
+  description: `Cheminements, sanitaires accessibles et signalétique : l'entretien quotidien des équipements PMR dans les ERP.`,
+  category: `Normes & réglementations`,
+  date: `2025-05-19`,
+  readingTime: 8,
+  hero,
+  heroAlt: `Sanitaire PMR conforme et impeccablement entretenu`,
+  intro: `L'accessibilité aux ERP est une obligation réglementaire forte. L'entretien des équipements PMR (Personnes à Mobilité Réduite) est souvent négligé alors qu'il conditionne l'usage effectif de ces équipements et la conformité de l'établissement.`,
+  content: [
+    { type: "h2", text: `Le cadre réglementaire` },
+    { type: "p", text: `Loi du 11 février 2005 sur l'égalité des droits et des chances. Arrêté du 8 décembre 2014 fixant les dispositions techniques pour ERP existants. Tout ERP doit être accessible ou disposer d'une dérogation justifiée. L'entretien fait partie de la conformité continue.` },
+    { type: "h2", text: `Les équipements PMR à entretenir` },
+    { type: "ul", items: [
+      `Cheminements extérieurs et accès`,
+      `Rampes d'accès (anti-dérapance, signalétique)`,
+      `Ascenseurs et boutons d'appel`,
+      `Sanitaires PMR (barres d'appui, lave-mains)`,
+      `Boucles magnétiques (accueil malentendants)`,
+      `Signalétique en braille`,
+      `Bandes podotactiles (malvoyants)`
+    ] },
+    { type: "h2", text: `Les sanitaires PMR : entretien renforcé` },
+    { type: "p", text: `Cuvette adaptée (hauteur 45-50 cm), barre d'appui, lave-mains accessible : chaque équipement doit fonctionner et être propre. Détartrage rigoureux car le PMR ne peut pas attendre. Sols non glissants même mouillés (anti-dérapance contrôlée annuellement).` },
+    { type: "h2", text: `Les ascenseurs` },
+    { type: "p", text: `Boutons à hauteur PMR (90 à 130 cm) : nettoyage quotidien (points de contact). Boutons en braille : nettoyer sans abrasion (perte des reliefs). Miroir intérieur PMR : nettoyage et contrôle absence rayures gênantes. Signal sonore et lumineux fonctionnel.` },
+    { type: "h2", text: `Les bandes podotactiles` },
+    { type: "p", text: `Présentes en haut d'escaliers et bords de quai. Reliefs perceptibles au pied ou à la canne blanche. Nettoyage doux pour préserver les reliefs (jamais brosse abrasive ni décapage agressif). Contrôle visuel régulier de l'absence de dégradation.` },
+    { type: "h2", text: `La signalétique en braille` },
+    { type: "p", text: `Plaques en braille pour les boutons d'ascenseurs, les portes, les sanitaires. Nettoyage avec chiffon doux uniquement, jamais de produit abrasif ou solvant fort qui altère les reliefs. Contrôle de lisibilité avec un référent.` },
+    { type: "callout", text: `ELITESY intègre les contrôles d'accessibilité PMR dans ses tournées dans les ERP : barres d'appui, hauteurs, anti-dérapance. Signalement immédiat des défauts. 06 09 16 50 99.` },
+    { type: "h2", text: `Les rampes d'accès` },
+    { type: "p", text: `Anti-dérapance : nettoyage régulier sans masquer la texture, contrôle annuel par professionnel. Garde-corps à hauteur réglementaire : contrôle stabilité. Signalétique au sol (bande colorée d'attention) : nettoyer sans effacer.` },
+    { type: "h2", text: `Les boucles magnétiques d'accueil` },
+    { type: "p", text: `Équipement électronique : nettoyer sans humidité directe. Vérifier le pictogramme à proximité (visible et propre). Tester le fonctionnement régulièrement (en coordination avec le responsable accueil).` },
+    { type: "h2", text: `Le registre public d'accessibilité` },
+    { type: "p", text: `Obligatoire dans tout ERP depuis 2017 : décrit les équipements d'accessibilité et leurs modalités d'usage. Consultable par tous (accueil ou en ligne). L'entretien des équipements doit y être documenté (preuve de conformité continue).` },
+    { type: "h2", text: `Les sanctions` },
+    { type: "p", text: `Non-conformité ERP : 45 000 € d'amende pour personne morale (article L.152-1 Code de la construction). Pour les équipements défaillants, la responsabilité du gestionnaire est engagée. L'entretien défaillant en est une cause fréquente.` },
+    { type: "h2", text: `Le rôle du prestataire` },
+    { type: "p", text: `Au-delà du nettoyage, signaler les défauts : barre desserrée, ampoule grillée d'ascenseur, bande podotactile arrachée. C'est une mission de vigilance partagée. Une grille de contrôle PMR est incluse dans les tournées qualité.` },
+    { type: "h2", text: `Conclusion` },
+    { type: "p", text: `L'accessibilité PMR est un droit. L'entretien la rend effective au quotidien. Le prestataire de nettoyage est un acteur de la conformité, pas seulement de la propreté.` }
+  ],
+  status: "published",
+};

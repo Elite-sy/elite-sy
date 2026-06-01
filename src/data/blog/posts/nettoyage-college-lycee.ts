@@ -1,0 +1,50 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/lycee.jpg";
+
+export const post: Post = {
+  slug: `nettoyage-college-lycee`,
+  title: `Nettoyage d'un collège ou d'un lycée : volumes, flux et qualité constante`,
+  description: `Organiser l'entretien d'un établissement secondaire : volumes importants, internats et qualité de service constante.`,
+  category: `Guides Pratiques`,
+  date: `2025-08-11`,
+  readingTime: 9,
+  hero,
+  heroAlt: `Couloir propre d'un lycée moderne entre deux cours`,
+  intro: `Collège et lycée : plusieurs milliers de m², centaines d'élèves, flux concentrés aux récréations, parfois un internat. Le nettoyage doit s'organiser comme un projet industriel : planification, équipes, contrôle qualité, traçabilité.`,
+  content: [
+    { type: "h2", text: `Le diagnostic préalable` },
+    { type: "p", text: `Audit complet : surfaces par zone, fréquences attendues, contraintes horaires, présence d'un internat, restauration interne, équipements sportifs, laboratoires. Le diagnostic conditionne le dimensionnement de l'équipe et le choix du matériel (autolaveuse, balayeuse).` },
+    { type: "h2", text: `Les zones critiques d'un établissement` },
+    { type: "ul", items: [
+      `Sanitaires (priorité, passages très nombreux)`,
+      `Vestiaires EPS et douches`,
+      `Demi-pension (HACCP)`,
+      `CDI et salles informatiques (poussière)`,
+      `Laboratoires sciences (chimie, SVT)`,
+      `Internat (chambres, sanitaires, dortoirs)`,
+      `Bureaux administration et salle des professeurs`
+    ] },
+    { type: "h2", text: `L'organisation type` },
+    { type: "p", text: `Une équipe interne ou prestataire de 4 à 8 agents selon taille, encadrement par un chef d'équipe, rotation des zones, planning hebdomadaire, planning vacances scolaires pour grand nettoyage. Présence en journée pour interventions ponctuelles (sanitaires, incidents).` },
+    { type: "h2", text: `Les sanitaires aux récréations` },
+    { type: "p", text: `Deux passages quotidiens minimum dans les sanitaires les plus fréquentés (récréations, midi). Désinfection complète chaque jour. Détartrage hebdomadaire. Anti-graffitis et anti-tag systématique. C'est l'un des principaux critères de qualité perçue par les élèves et parents.` },
+    { type: "h2", text: `Les vestiaires EPS et douches` },
+    { type: "p", text: `Aération impérative après chaque créneau cours. Désinfection des bancs et porte-manteaux. Lavage des douches avec produit anti-calcaire et anti-fongique. Traitement préventif des sols pour éviter mycoses. Cycle de séchage entre deux groupes.` },
+    { type: "h2", text: `La demi-pension` },
+    { type: "p", text: `Protocole HACCP complet : nettoyage entre chaque service, désinfection des tables, lavage des sols à l'autolaveuse, code couleur respecté, traçabilité. Cuisine traitée selon protocole restauration collective. Souvent gérée par société de restauration mais le nettoyage extérieur reste à l'établissement.` },
+    { type: "callout", text: `ELITESY accompagne des collèges et lycées privés sur Paris en marchés annuels avec engagement qualité contractuel et contrôles mensuels. 06 09 16 50 99.` },
+    { type: "h2", text: `Les laboratoires sciences` },
+    { type: "p", text: `Nettoyage des paillasses et sols après chaque TP, gestion des déchets chimiques par les enseignants (jamais par l'agent), vérification des douches de sécurité et rince-yeux trimestrielle. Ne jamais toucher au matériel pédagogique en place.` },
+    { type: "h2", text: `L'internat` },
+    { type: "p", text: `Chambres nettoyées hebdomadairement en l'absence des élèves. Sanitaires communs deux fois par jour. Cuisines communes après chaque usage. Linge géré séparément. Discrétion totale dans les espaces de vie.` },
+    { type: "h2", text: `Le matériel : autolaveuse indispensable` },
+    { type: "p", text: `À partir de 800 m² de couloirs, l'autolaveuse autoportée est rentable. Elle divise par 3 le temps de lavage des sols et améliore la qualité. Investissement 5 000 à 15 000 € ou location longue durée à 200 €/mois.` },
+    { type: "h2", text: `Le contrôle qualité` },
+    { type: "p", text: `Tournée hebdomadaire du chef d'équipe avec grille de contrôle (méthode INRS), audit mensuel du prestataire avec représentant de l'établissement, retour aux agents en cas de non-conformité. Indicateur de satisfaction parents/élèves annuel.` },
+    { type: "h2", text: `Les vacances scolaires` },
+    { type: "p", text: `Période clé pour grand nettoyage : décapage et émulsion des sols durs, shampouinage des moquettes, nettoyage des vitres, désinfection terminale des sanitaires. Planning de 1 à 2 semaines par grand nettoyage trimestriel.` },
+    { type: "h2", text: `Conclusion` },
+    { type: "p", text: `Un établissement scolaire propre, sain et bien entretenu améliore le climat scolaire, la santé des élèves et l'image de l'établissement. Investissement direct dans la qualité éducative.` }
+  ],
+  status: "published",
+};
