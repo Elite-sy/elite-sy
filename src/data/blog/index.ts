@@ -22,7 +22,7 @@ export const publishedPosts: Post[] = [
 export const plannedPosts: PlannedPost[] = [
   { slug: "nettoyage-ete-locaux-professionnels", title: "Nettoyage d'été des locaux professionnels : remise en état avant la rentrée", description: "Sols, moquettes, sanitaires, VMC et climatisation : planning et méthode pour un grand nettoyage estival réussi.", category: "Guides Pratiques", date: "2026-04-02" },
   { slug: "eliminer-odeurs-climatisation-bureau", title: "Éliminer les mauvaises odeurs de climatisation au bureau", description: "Causes, réflexes immédiats et entretien des filtres pour préserver la qualité de l'air intérieur.", category: "Conseils d'entretien", date: "2026-03-22" },
-  { slug: "nettoyage-frigo-bureau-protocole", title: "Nettoyage du frigo de bureau : protocole mensuel en 5 étapes", description: "Fréquence, produits, températures et règles d'affichage pour limiter odeurs et contaminations.", category: "Conseils d'entretien", date: "2026-03-15" },
+  // nettoyage-frigo-bureau-protocole → publié
   { slug: "nettoyer-ecran-clavier-bureau", title: "Nettoyer écran et clavier sans abîmer son matériel", description: "Les bons produits, les bons gestes et la bonne fréquence pour préserver vos postes de travail.", category: "Conseils d'entretien", date: "2026-03-08" },
   { slug: "tapis-barrieres-hiver-sols", title: "Protéger vos sols en hiver avec des tapis barrières", description: "Réduire les salissures, les glissades et les coûts de réfection grâce à un entretien préventif.", category: "Conseils d'entretien", date: "2026-02-28" },
   { slug: "taches-cafe-moquette-traiter", title: "Taches de café sur moquette : solutions rapides", description: "Les bons gestes à appliquer vite, sans abîmer les fibres, et quand appeler un professionnel.", category: "Conseils d'entretien", date: "2026-02-20" },
@@ -66,8 +66,8 @@ export const plannedPosts: PlannedPost[] = [
   { slug: "accessibilite-erp-entretien", title: "Accessibilité ERP : l'entretien des équipements PMR", description: "Cheminements, sanitaires accessibles et signalétique au quotidien.", category: "Normes & réglementations", date: "2025-05-19" },
   { slug: "registre-securite-erp", title: "Le registre de sécurité ERP : que doit-on y trouver ?", description: "Documents obligatoires, périodicité et lien avec le contrat de nettoyage.", category: "Normes & réglementations", date: "2025-05-12" },
   { slug: "nettoyage-vapeur-sans-produit", title: "Le nettoyage vapeur : nettoyer sans produit chimique", description: "Principes, performances et limites de la vapeur haute température.", category: "Écologie & environnement", date: "2025-05-05" },
-  { slug: "microfibre-vs-lavette-jetable", title: "Microfibre lavable contre lavette jetable : le match", description: "Empreinte carbone, coût d'usage et performance comparée.", category: "Écologie & environnement", date: "2025-04-28" },
-  { slug: "eau-pure-osmosee-nettoyage-vitres", title: "L'eau pure osmosée pour le nettoyage des vitres", description: "Pourquoi les pros l'utilisent et comment elle réduit l'usage de détergents.", category: "Écologie & environnement", date: "2025-04-21" },
+  // microfibre-vs-lavette-jetable → publié
+  // eau-pure-osmosee-nettoyage-vitres → publié
   { slug: "reduction-cov-air-interieur", title: "Réduire les COV pour améliorer l'air intérieur", description: "Choix des produits, ventilation et bonnes pratiques au quotidien.", category: "Écologie & environnement", date: "2025-04-14" },
   // ecolabel-europeen-explication → publié
   { slug: "nettoyage-zero-plastique-bureau", title: "Vers un nettoyage zéro plastique au bureau", description: "Recharges, contenants en verre et fournitures réutilisables.", category: "Écologie & environnement", date: "2025-03-31" },
@@ -76,7 +76,7 @@ export const plannedPosts: PlannedPost[] = [
   { slug: "monobrosse-utilisation-types", title: "La monobrosse : usages, types et bons réflexes", description: "Basse, haute ou ultra-haute vitesse — choisir la bonne machine.", category: "Produits & techniques", date: "2025-03-10" },
   { slug: "aspirateur-professionnel-criteres", title: "Choisir un aspirateur professionnel : les vrais critères", description: "Filtration HEPA, niveau sonore, dépression et débit d'air.", category: "Produits & techniques", date: "2025-03-03" },
   { slug: "chariot-de-menage-organisation", title: "Organiser un chariot de ménage professionnel", description: "Code couleur, ergonomie et productivité sur le terrain.", category: "Produits & techniques", date: "2025-02-24" },
-  { slug: "code-couleur-microfibres", title: "Le code couleur des microfibres : pourquoi et comment", description: "Sanitaires, cuisine, plans de travail : ne plus croiser les risques.", category: "Produits & techniques", date: "2025-02-17" },
+  // code-couleur-microfibres → publié
   { slug: "dilution-produits-detergents", title: "Dilution des produits détergents : les bons dosages", description: "Centrales murales, doseurs et règles de calcul à connaître.", category: "Produits & techniques", date: "2025-02-10" },
   { slug: "ph-produit-nettoyage-quel-choisir", title: "pH d'un produit de nettoyage : lequel choisir et quand", description: "Acide, neutre, alcalin : adapter le produit au type de salissure.", category: "Produits & techniques", date: "2025-02-03" },
   { slug: "detartrant-sanitaires-choisir", title: "Choisir un détartrant pour sanitaires professionnels", description: "Force, compatibilité matériaux et précautions d'usage.", category: "Produits & techniques", date: "2025-01-27" },
