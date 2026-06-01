@@ -12,10 +12,29 @@ import amoImg from "@/assets/amo.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ELITESY — Propreté, Soft Facility & AMO" },
-      { name: "description", content: "Services premium aux entreprises : propreté, soft facility (FM) et assistance à maîtrise d'ouvrage. L'excellence au service de vos bâtiments." },
-      { property: "og:title", content: "ELITESY — Excellence en services aux entreprises" },
-      { property: "og:description", content: "Propreté, Soft Facility et AMO pour les environnements professionnels exigeants." },
+      { title: "ELITESY — Propreté, Soft Facility (FM) & AMO à Paris" },
+      { name: "description", content: "ELITESY : propreté professionnelle, soft facility management et assistance à maîtrise d'ouvrage (AMO) à Paris et en Île-de-France. Devis gratuit sous 24 h." },
+      { property: "og:title", content: "ELITESY — Propreté, Soft Facility (FM) & AMO" },
+      { property: "og:description", content: "Services premium aux entreprises : propreté, soft facility (FM) et AMO. Paris & Île-de-France." },
+      { property: "og:url", content: "https://elite-sy.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "ELITESY",
+          url: "https://elite-sy.lovable.app/",
+          inLanguage: "fr-FR",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://elite-sy.lovable.app/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }),
+      },
     ],
   }),
   component: Index,
@@ -73,7 +92,15 @@ function Index() {
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroImg} alt="" className="w-full h-full object-cover opacity-50" width={1920} height={1280} />
+          <img
+            src={heroImg}
+            alt="Équipe ELITESY assurant la propreté d'un bâtiment professionnel à Paris"
+            className="w-full h-full object-cover opacity-50"
+            width={1920}
+            height={1280}
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
           <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
         </div>
@@ -89,12 +116,10 @@ function Index() {
               Services premium aux entreprises
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] font-sans">
-              L'excellence au
-              <br />
-              service
+              Propreté, Soft Facility & AMO
               <br />
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
-                de vos bâtiments.
+                pour entreprises exigeantes.
               </span>
             </h1>
             <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
