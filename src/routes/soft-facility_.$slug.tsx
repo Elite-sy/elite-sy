@@ -189,10 +189,25 @@ function ServiceDetailPage() {
   const { slug } = Route.useLoaderData() as { slug: string };
   const service = services[slug];
   const Icon = service.icon;
-  const others = Object.entries(services).filter(([s]) => s !== slug);
+  const entries = Object.entries(services);
+  const currentIndex = entries.findIndex(([s]) => s === slug);
+  const prev = entries[(currentIndex - 1 + entries.length) % entries.length];
+  const next = entries[(currentIndex + 1) % entries.length];
+  const others = entries.filter(([s]) => s !== slug);
 
   return (
     <Layout>
+      {/* Breadcrumb */}
+      <nav aria-label="Fil d'Ariane" className="border-b border-border bg-card/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-4 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground overflow-x-auto">
+          <Link to="/" className="hover:text-primary transition">Accueil</Link>
+          <span className="text-border">/</span>
+          <Link to="/soft-facility" className="hover:text-primary transition">Soft Facility</Link>
+          <span className="text-border">/</span>
+          <span className="text-foreground font-semibold whitespace-nowrap">{service.label}</span>
+        </div>
+      </nav>
+
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -214,6 +229,34 @@ function ServiceDetailPage() {
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05]">{service.label}</h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">{service.tagline}</p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Prev / Next quick nav */}
+      <section className="border-t border-border bg-background">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 grid grid-cols-2 gap-4">
+          <Link
+            to="/soft-facility/$slug"
+            params={{ slug: prev[0] }}
+            className="group flex items-center gap-4 p-4 rounded-sm border border-border hover:border-primary/60 transition"
+          >
+            <ArrowLeft className="text-primary shrink-0 group-hover:-translate-x-1 transition" size={18} />
+            <div className="min-w-0">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Précédent</div>
+              <div className="text-sm md:text-base font-semibold truncate">{prev[1].label}</div>
+            </div>
+          </Link>
+          <Link
+            to="/soft-facility/$slug"
+            params={{ slug: next[0] }}
+            className="group flex items-center justify-end gap-4 p-4 rounded-sm border border-border hover:border-primary/60 transition text-right"
+          >
+            <div className="min-w-0">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Suivant</div>
+              <div className="text-sm md:text-base font-semibold truncate">{next[1].label}</div>
+            </div>
+            <ArrowRight className="text-primary shrink-0 group-hover:translate-x-1 transition" size={18} />
+          </Link>
         </div>
       </section>
 
