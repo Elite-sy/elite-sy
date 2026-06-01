@@ -142,13 +142,16 @@ export const Route = createFileRoute("/secteur/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [] };
     const { sector } = loaderData;
+    const url = `https://elite-sy.lovable.app/secteur/${sector.slug}`;
     return {
       meta: [
         { title: `${sector.label} — Soft Facility | ELITESY` },
         { name: "description", content: sector.tagline },
         { property: "og:title", content: `Soft Facility · ${sector.label} — ELITESY` },
         { property: "og:description", content: sector.tagline },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   notFoundComponent: () => (
