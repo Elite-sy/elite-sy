@@ -1,24 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { publishedPosts } from "@/data/blog";
 
-const BASE_URL = "";
+const BASE_URL = "https://elite-sy.lovable.app";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const entries = [
-          { path: "/", priority: "1.0" },
-          { path: "/proprete", priority: "0.9" },
-          { path: "/soft-facility", priority: "0.9" },
-          { path: "/amo", priority: "0.9" },
-          { path: "/contact", priority: "0.7" },
+        const entries: { path: string; priority: string; changefreq?: string }[] = [
+          { path: "/", priority: "1.0", changefreq: "weekly" },
+          { path: "/proprete", priority: "0.9", changefreq: "monthly" },
+          { path: "/proprete/pharmaceutique", priority: "0.8", changefreq: "monthly" },
+          { path: "/proprete/professionnels-sante", priority: "0.8", changefreq: "monthly" },
+          { path: "/proprete/surface-vente-erp", priority: "0.8", changefreq: "monthly" },
+          { path: "/proprete/syndics-copropriete", priority: "0.8", changefreq: "monthly" },
+          { path: "/soft-facility", priority: "0.9", changefreq: "monthly" },
+          { path: "/amo", priority: "0.9", changefreq: "monthly" },
+          { path: "/blog", priority: "0.8", changefreq: "weekly" },
+          { path: "/contact", priority: "0.7", changefreq: "yearly" },
+          ...publishedPosts.map((p) => ({
+            path: `/blog/${p.slug}`,
+            priority: "0.6",
+            changefreq: "monthly",
+          })),
         ];
         const xml =
           `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-          entries.map((e) => `  <url><loc>${BASE_URL}${e.path}</loc><priority>${e.priority}</priority></url>`).join("\n") +
+          entries
+            .map(
+              (e) =>
+                `  <url><loc>${BASE_URL}${e.path}</loc>${e.changefreq ? `<changefreq>${e.changefreq}</changefreq>` : ""}<priority>${e.priority}</priority></url>`,
+            )
+            .join("\n") +
           `\n</urlset>`;
-        return new Response(xml, { headers: { "Content-Type": "application/xml" } });
+        return new Response(xml, {
+          headers: {
+            "Content-Type": "application/xml",
+            "Cache-Control": "public, max-age=3600",
+          },
+        });
       },
     },
   },
