@@ -57,6 +57,7 @@ function MentionsLegales() {
                 <p className="text-muted-foreground mt-2">dont le siège social est situé : 94600 CHOISY-LE-ROI</p>
                 <p className="text-muted-foreground mt-2">immatriculée au RCS de Créteil sous le numéro 852 121 433</p>
                 <p className="text-muted-foreground mt-2">n° SIRET : 852 121 433 00019</p>
+                <p className="text-muted-foreground mt-2">directeur de la publication : Eric Contion</p>
                 <p className="text-muted-foreground mt-2">n° de téléphone : +33 1 00 00 00 00</p>
                 <p className="text-muted-foreground mt-2">
                   adresse mail :{" "}
