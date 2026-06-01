@@ -1,8 +1,12 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, Check, ArrowLeft, Building2, Home, HeartPulse, HardHat, Store, Factory, FlaskConical, School, Hotel } from "lucide-react";
+import { ArrowRight, Check, ArrowLeft, Building2, Home, HeartPulse, HardHat, Store, Factory, FlaskConical, School, Hotel, Clock, Leaf, ShieldCheck, Users, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import bureauxHero from "@/assets/pr-bureaux-hero.jpg";
+import bureauxVitrerie from "@/assets/pr-bureaux-vitrerie.jpg";
+import bureauxAccueil from "@/assets/pr-bureaux-accueil.jpg";
+import bureauxMeeting from "@/assets/pr-bureaux-meeting.jpg";
 
 type ClientDetail = {
   label: string;
@@ -11,6 +15,13 @@ type ClientDetail = {
   intro: string;
   challenges: string[];
   prestations: { title: string; desc: string }[];
+  heroImage?: string;
+  gallery?: { src: string; caption: string }[];
+  stats?: { value: string; label: string }[];
+  typologies?: { title: string; desc: string; icon: LucideIcon }[];
+  methodology?: { step: string; title: string; desc: string }[];
+  engagements?: string[];
+  faq?: { q: string; a: string }[];
 };
 
 const clients: Record<string, ClientDetail> = {
@@ -30,6 +41,57 @@ const clients: Record<string, ClientDetail> = {
       { title: "Entretien quotidien", desc: "Bureaux, salles de réunion, espaces communs et sanitaires selon vos protocoles." },
       { title: "Vitrerie & finitions", desc: "Surfaces vitrées intérieures, miroirs, parois et façades accessibles." },
       { title: "Prestations périodiques", desc: "Shampoing moquettes, cristallisation, remise en état, grands nettoyages." },
+    ],
+    heroImage: bureauxHero,
+    gallery: [
+      { src: bureauxAccueil, caption: "Halls d'accueil & espaces d'image" },
+      { src: bureauxMeeting, caption: "Salles de réunion & espaces collaboratifs" },
+      { src: bureauxVitrerie, caption: "Vitrerie intérieure & parois" },
+    ],
+    stats: [
+      { value: "+250", label: "sites tertiaires entretenus quotidiennement" },
+      { value: "98%", label: "de taux de présence des équipes terrain" },
+      { value: "< 2 h", label: "délai moyen d'intervention exceptionnelle" },
+      { value: "ISO", label: "produits écolabellisés et protocoles certifiés" },
+    ],
+    typologies: [
+      { title: "Sièges sociaux & ETI", desc: "Espaces de représentation, étages dirigeants, salles du conseil. Discrétion et finitions soignées.", icon: Building2 },
+      { title: "Open spaces & flex office", desc: "Postes de travail mutualisés, casiers, phone booths : protocoles adaptés aux nouveaux usages.", icon: Users },
+      { title: "Coworking & espaces partagés", desc: "Forte fréquentation, rotations rapides : interventions cadencées plusieurs fois par jour.", icon: Sparkles },
+      { title: "Cabinets & professions libérales", desc: "Avocats, conseil, expertise comptable : confidentialité totale et créneaux hors présence.", icon: ShieldCheck },
+    ],
+    methodology: [
+      { step: "01", title: "Audit sur site", desc: "Visite de vos locaux, cartographie des zones, fréquences et points sensibles. Recueil de vos contraintes horaires et de sécurité." },
+      { step: "02", title: "Cahier des charges sur mesure", desc: "Élaboration d'un plan de prestations détaillé : zones, fréquences, produits, plannings, indicateurs de contrôle." },
+      { step: "03", title: "Constitution de l'équipe", desc: "Sélection d'agents formés, attribution d'un référent unique et d'un encadrant dédié à votre compte." },
+      { step: "04", title: "Démarrage encadré", desc: "Phase de mise en route accompagnée, formation aux spécificités du site, validation des protocoles avec vos équipes." },
+      { step: "05", title: "Pilotage & amélioration continue", desc: "Contrôles qualité réguliers, reporting mensuel, points de revue trimestriels et ajustements selon vos retours." },
+    ],
+    engagements: [
+      "Référent client unique joignable 6j/7",
+      "Produits écolabellisés et microfibres lavables",
+      "Agents formés, déclarés et fidélisés sur votre site",
+      "Reporting mensuel et contrôles qualité tracés",
+      "Réactivité < 2 h pour toute demande exceptionnelle",
+      "Assurance RC pro et conformité sociale garanties",
+    ],
+    faq: [
+      {
+        q: "À quels horaires interviennent vos équipes ?",
+        a: "Nous adaptons les créneaux à votre activité : tôt le matin avant l'arrivée des collaborateurs, en soirée après leur départ, en journée continue pour les sanitaires et espaces communs, ou en horaires décalés selon vos contraintes.",
+      },
+      {
+        q: "Comment garantissez-vous la discrétion et la sécurité ?",
+        a: "Chaque agent signe une clause de confidentialité, suit une formation sécurité et est habilité aux zones définies avec vous. Les accès, badges et clés sont tracés ; les interventions hors présence respectent vos protocoles internes.",
+      },
+      {
+        q: "Quels produits utilisez-vous ?",
+        a: "Nous privilégions les produits porteurs de l'Écolabel européen et les microfibres lavables. Les fiches de données de sécurité sont mises à votre disposition et les dosages sont contrôlés via centrales de dilution.",
+      },
+      {
+        q: "Pouvez-vous reprendre un contrat en cours ?",
+        a: "Oui. Nous gérons régulièrement des reprises de marché avec transfert conventionnel du personnel en place (annexe 7), garantissant la continuité de service et la stabilité des équipes que vos collaborateurs connaissent déjà.",
+      },
     ],
   },
   "syndics-copropriete": {
