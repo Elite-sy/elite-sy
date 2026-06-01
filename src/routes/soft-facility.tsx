@@ -46,10 +46,10 @@ export const Route = createFileRoute("/soft-facility")({
 const expertises = [
   { icon: ClipboardList, title: "Pilotage multiservices", desc: "Un référent unique, un reporting consolidé, des engagements de service mesurés en continu sur l'ensemble des prestations." },
   { icon: Sparkles, title: "Gestion des déchets", desc: "Tri à la source, valorisation, traçabilité réglementaire et accompagnement vers la réduction de l'empreinte environnementale." },
-  { icon: Leaf, title: "Entretien des espaces verts", desc: "Aménagement, entretien et fleurissement intérieur comme extérieur, dans une démarche raisonnée et durable." },
-  { icon: Building2, title: "Logistique sur site", desc: "Manutention, gestion des flux internes, magasinage et inventaire pilotés par des équipes formées à votre process." },
-  { icon: Mail, title: "Courrier & reprographie", desc: "Gestion centralisée du courrier entrant et sortant, services de copie, numérisation et distribution interne." },
-  { icon: Users, title: "Accueil & salles de réunion", desc: "Hôtes et hôtesses à votre image, préparation et remise en état des salles, accompagnement de vos événements internes." },
+  { icon: Leaf, title: "Entretien des espaces extérieurs", desc: "Tonte des pelouses\nTaille des haies et plantations\nNettoyage des parkings et voiries\nEntretien des espaces verts\nRamassage des feuilles et déchets extérieurs" },
+  { icon: Building2, title: "Logistique sur site", desc: "​Montage / démontage de mobilier (bureaux, armoires, chaises)\nRéorganisation d’espaces de travail\nInstallation de signalétique (panneaux, affichage)\nMise en place de salles de réunion\nInstallation de tableaux, supports, décorations\ndéménagements internes ou optimisation des bureaux" },
+  { icon: Mail, title: "Entretien et travaux de maintenance légère ", desc: "​Remplacement d’ampoules (si simple et accessible)\nRéglage de portes / poignées / petits éléments\nFixation d’éléments muraux (cadres, supports…)\nRéparation mineure du mobilier\nRetouches simples (peinture légère locale)" },
+  { icon: Users, title: "​Services aux occupants", desc: "​Préparation des salles de réunion\nAssistance aux collaborateurs\nOrganisation des espaces partagés\nSupport quotidien (petits besoins internes)" },
 ];
 
 export const sectors = [
