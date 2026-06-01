@@ -20,13 +20,13 @@ export const Route = createFileRoute("/blog/")({
   validateSearch: zodValidator(searchSchema),
   head: () => ({
     meta: [
-      { title: "Blog ELITESY — Conseils, normes & expertise propreté" },
+      { title: "Expertise ELITESY — Conseils, normes & expertise propreté" },
       {
         name: "description",
         content:
           "Guides pratiques, normes ARS/HACCP, écolabels, techniques et études de cas : tout le savoir-faire ELITESY pour la propreté professionnelle.",
       },
-      { property: "og:title", content: "Blog ELITESY — Expertise propreté professionnelle" },
+      { property: "og:title", content: "Expertise ELITESY — Expertise propreté professionnelle" },
       {
         property: "og:description",
         content:
@@ -89,7 +89,7 @@ function BlogIndex() {
       <section className="bg-gradient-to-b from-muted/40 to-background border-b border-border/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20 md:py-28">
           <p className="text-xs tracking-[0.3em] uppercase text-primary font-semibold mb-4">
-            Le blog ELITESY
+            L'expertise ELITESY
           </p>
           <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground max-w-3xl">
             L'expertise propreté, sans détour.
