@@ -1,0 +1,57 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/restaurant-fin-service.jpg";
+
+export const post: Post = {
+  slug: "nettoyage-restaurant-fin-service",
+  title: "Nettoyage d'un restaurant en fin de service : cuisine, salle, sanitaires",
+  description:
+    "Cuisine, salle et sanitaires : la méthode ELITESY pour finir vite, bien et conformément aux exigences HACCP.",
+  category: "Guides Pratiques",
+  date: "2025-09-22",
+  readingTime: 9,
+  hero,
+  heroAlt: "Restaurant en cours de nettoyage de fin de service, salle vide et propre",
+  intro:
+    "Le nettoyage de fin de service est l'une des opérations les plus contraintes du secteur restauration : équipe fatiguée, créneau court, exigence HACCP, ouverture à reprendre quelques heures plus tard. Une méthode rigoureuse fait la différence entre un service propre et un risque sanitaire.",
+  content: [
+    { type: "h2", text: "La règle d'or HACCP" },
+    { type: "p", text: "Nettoyage puis désinfection, jamais l'inverse. Le nettoyage retire la matière organique ; la désinfection tue les micro-organismes. Sans nettoyage préalable, le désinfectant n'agit que sur 30 % des surfaces utiles. Cette règle est non négociable, en cuisine comme en salle." },
+    { type: "h2", text: "L'ordre des opérations en cuisine" },
+    { type: "ol", items: [
+      "Évacuation des déchets et tri (biodéchets, emballages, huiles usagées)",
+      "Démontage et lavage des éléments amovibles (grilles, plaques, accessoires)",
+      "Dégraissage des plans de travail, parois et zones de cuisson",
+      "Lavage et désinfection des sols (méthode pré-imprégnée, eau changée fréquemment)",
+      "Désinfection des points de contact (poignées, robinets, interrupteurs)",
+      "Vidage et désinfection des poubelles",
+      "Contrôle température frigos et inscription sur la feuille de traçabilité",
+      "Remontage et rangement",
+    ]},
+    { type: "h2", text: "La salle : impeccable pour le lendemain" },
+    { type: "ul", items: [
+      "Débarrassage complet, nappes et serviettes en blanchisserie",
+      "Lavage des tables avec produit désinfectant alimentaire",
+      "Aspiration ou balayage humide des sols",
+      "Lavage des sols avec produit adapté",
+      "Désinfection des points de contact (poignées, chaises)",
+      "Vitres extérieures si visibles depuis la salle",
+      "Mise en place pour le service du lendemain (couverts, sets, chaises)",
+    ]},
+    { type: "h2", text: "Les sanitaires clients" },
+    { type: "p", text: "Bionettoyage complet : cuvettes, urinoirs, vasques, miroirs, sols, poignées. Détartrage hebdomadaire en zone calcaire (Île-de-France). Désodorisation par diffuseur (jamais par spray). Réapprovisionnement complet pour le service du lendemain." },
+    { type: "h2", text: "Les hottes : intervention périodique" },
+    { type: "p", text: "Filtres à laver hebdomadairement (souvent en lave-vaisselle dédié). Dégraissage des conduits trimestriellement. Nettoyage technique des moteurs et caissons annuellement par prestataire spécialisé (obligation réglementaire, c'est aussi un enjeu assurance incendie)." },
+    { type: "callout", text: "ELITESY intervient en sous-traitance restauration sur Paris (groupes, restaurants indépendants, hôtels avec restauration). Devis sous 48 h — 06 09 16 50 99." },
+    { type: "h2", text: "Le code couleur HACCP" },
+    { type: "p", text: "Microfibre verte uniquement en cuisine alimentaire. Rouge pour les sanitaires. Bleue pour la salle. Jamais d'inversion. Lavage séparé en machine professionnelle à 90 °C. Cette discipline est l'un des premiers contrôles d'un audit DDPP." },
+    { type: "h2", text: "La traçabilité réglementaire" },
+    { type: "p", text: "Plan de nettoyage et désinfection (PND) affiché en cuisine, traçabilité des opérations sur fiche horodatée et signée, fiches techniques produits disponibles, planning des opérations périodiques (hottes, dégraissage cuisine, traitement nuisibles). Document obligatoire pour la DDPP." },
+    { type: "h2", text: "Le délai réaliste" },
+    { type: "p", text: "Restaurant 80 couverts standard : 2h30 à 3h30 en équipe de 2. Restaurant gastronomique avec multiples espaces : 3h30 à 5h. Brasserie haut volume : équipe de 3 à 4, 2h pour rester dans les créneaux d'ouverture du lendemain." },
+    { type: "h2", text: "L'externalisation : un choix qui se réfléchit" },
+    { type: "p", text: "De plus en plus de restaurateurs externalisent le nettoyage de fin de service à un prestataire spécialisé. Avantages : équipe dédiée et formée, libération de l'équipe cuisine pour la fermeture, traçabilité externalisée, conformité garantie. Coût : 300 à 800 €/semaine selon volume." },
+    { type: "h2", text: "Conclusion : la propreté comme assurance" },
+    { type: "p", text: "Un restaurant fermé pour cause d'inspection DDPP non conforme perd plusieurs semaines de chiffre d'affaires. Le nettoyage rigoureux est une assurance d'activité. ELITESY structure les protocoles pour ses clients du secteur restauration." },
+  ],
+  status: "published",
+};

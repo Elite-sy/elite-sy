@@ -1,0 +1,60 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/marbre.jpg";
+
+export const post: Post = {
+  slug: "decapage-cristallisation-marbre",
+  title: "Décapage et cristallisation du marbre : redonner brillance et protection",
+  description:
+    "Méthode professionnelle pour rénover un sol en pierre naturelle, étapes, matériel et fréquences recommandées.",
+  category: "Guides Pratiques",
+  date: "2025-11-24",
+  readingTime: 9,
+  hero,
+  heroAlt: "Cristallisation d'un sol en marbre dans un hall d'immeuble luxueux",
+  intro:
+    "Le marbre est l'un des sols les plus prestigieux — et l'un des plus mal entretenus. Mal traité, il se ternit en quelques mois. Bien entretenu, il conserve sa brillance trente ans. La différence : connaître le décapage et la cristallisation, deux techniques complémentaires que tout site disposant de pierre naturelle doit maîtriser.",
+  content: [
+    { type: "h2", text: "Pourquoi le marbre est différent" },
+    { type: "p", text: "Le marbre est une roche calcaire, sensible aux acides (vinaigre, détartrants, jus de fruit), poreuse (absorbe les liquides), et tendre (se raye). Il ne supporte aucun des produits ménagers courants. Son entretien repose sur une chimie spécifique : produits neutres au quotidien, cristallisation périodique pour la brillance, décapage de fond tous les 2 à 5 ans selon le trafic." },
+    { type: "h2", text: "La cristallisation : la technique de brillance" },
+    { type: "p", text: "La cristallisation utilise une réaction chimique entre un produit cristallisant (à base d'hexafluorosilicate) et le calcium du marbre. Le résultat : une couche dure, brillante, transparente, qui protège la pierre et renvoie la lumière. La cristallisation peut être effectuée à la monobrosse basse vitesse (méthode douce) ou haute vitesse (méthode plus rapide, surface plus brillante)." },
+    { type: "p", text: "Fréquence : tous les 3 à 6 mois en trafic intense (hall d'immeuble), tous les 12 mois en trafic modéré (couloir d'étage)." },
+    { type: "h2", text: "Le décapage : la remise à zéro périodique" },
+    { type: "p", text: "À force d'entretien et de cristallisations successives, une pellicule d'usure se forme. Décapage tous les 2 à 5 ans : monobrosse + disque diamanté grain 200-400 + eau, retire la couche superficielle, fait apparaître la pierre saine. Puis cristallisation neuve. C'est une intervention lourde mais indispensable." },
+    { type: "h2", text: "Le matériel" },
+    { type: "ul", items: [
+      "Monobrosse basse vitesse 150-300 tr/min pour cristallisation douce",
+      "Monobrosse haute vitesse 800-1500 tr/min pour cristallisation rapide",
+      "Disques diamantés (grain selon état)",
+      "Produit cristallisant à pH adapté pierre naturelle",
+      "Aspirateur eau et poussière",
+      "Tampons feutre blanc et tampons laine d'acier 000",
+    ]},
+    { type: "callout", text: "ELITESY dispose d'agents formés à la rénovation pierre naturelle. Intervention sur halls, sièges sociaux et hôtels — 06 09 16 50 99." },
+    { type: "h2", text: "Le protocole pas à pas (cristallisation)" },
+    { type: "ol", items: [
+      "Aspiration et balayage humide complet du sol",
+      "Application de la solution cristallisante (50 ml/m² environ)",
+      "Passage à la monobrosse haute vitesse avec tampon laine d'acier",
+      "Travailler par bandes de 1 m², jusqu'à apparition de la brillance",
+      "Rinçage si nécessaire et aspiration de l'humidité",
+      "Lustrage final au feutre blanc pour brillance maximale",
+    ]},
+    { type: "h2", text: "Entretien quotidien d'un sol cristallisé" },
+    { type: "p", text: "Détergent neutre pH 7 uniquement (jamais acide, jamais alcalin fort), microfibre, balayage humide quotidien, aspiration deux fois par semaine. Aucun produit ménager grand public : ils contiennent presque tous des acides ou des tensioactifs incompatibles." },
+    { type: "h2", text: "Les erreurs qui détruisent le marbre" },
+    { type: "ul", items: [
+      "Détartrant sanitaire sur marbre : taches mates irréversibles en quelques minutes",
+      "Vinaigre blanc : attaque la pierre, perte de brillance",
+      "Eau de Javel : décoloration et altération",
+      "Tampon abrasif vert ou noir : rayures profondes",
+      "Cire grand public : couche grasse qui jaunit, irréversible sans décapage",
+      "Eau stagnante (sanitaires, plantes vertes) : taches d'auréole permanentes",
+    ]},
+    { type: "h2", text: "Le coût" },
+    { type: "p", text: "Cristallisation : 4 à 8 €/m² HT selon surface et fréquence. Décapage complet + cristallisation : 12 à 20 €/m² HT. Sur un hall de 200 m² avec trafic intense, budget annuel d'environ 3 000 à 5 000 € — à comparer au coût de remplacement d'un sol en marbre (300 à 800 €/m²)." },
+    { type: "h2", text: "Conclusion : le marbre récompense la rigueur" },
+    { type: "p", text: "Un sol marbre bien entretenu valorise un site de manière spectaculaire. Mal entretenu, il devient une charge récurrente. ELITESY structure le plan de rénovation pierre naturelle pour ses clients prestige." },
+  ],
+  status: "published",
+};

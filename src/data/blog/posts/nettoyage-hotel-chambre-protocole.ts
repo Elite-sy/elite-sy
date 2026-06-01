@@ -1,0 +1,53 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/hotel-chambre.jpg";
+
+export const post: Post = {
+  slug: "nettoyage-hotel-chambre-protocole",
+  title: "Protocole de nettoyage d'une chambre d'hôtel : standards et contrôle qualité",
+  description:
+    "Standards de propreté, ordre des opérations, contrôle qualité : le protocole ELITESY adapté au secteur hôtelier.",
+  category: "Guides Pratiques",
+  date: "2025-09-29",
+  readingTime: 10,
+  hero,
+  heroAlt: "Femme de chambre faisant un lit d'hôtel haut de gamme avec linge blanc",
+  intro:
+    "Une chambre d'hôtel doit être impeccable en moins de 30 minutes, entre deux clients qui ne se croisent jamais. C'est l'un des protocoles les plus exigeants de la propreté professionnelle. La marge d'erreur est nulle : un commentaire négatif sur Booking impacte les nuitées des mois suivants. Voici la méthode.",
+  content: [
+    { type: "h2", text: "Les deux types d'interventions" },
+    { type: "h3", text: "Le recouche (chambre en cours de séjour)" },
+    { type: "p", text: "Le client reste — ses affaires sont dans la chambre. Réfection du lit, remise en état des sanitaires, nettoyage minimal sans toucher aux affaires personnelles, vidange poubelles. Compter 12 à 18 minutes." },
+    { type: "h3", text: "Le départ (chambre à reblanchir)" },
+    { type: "p", text: "Le client est parti — la chambre est remise à neuf complètement. Changement de literie, bionettoyage complet, dépoussiérage, vérification mini-bar, contrôle technique. Compter 25 à 40 minutes selon catégorie." },
+    { type: "h2", text: "L'ordre des opérations en départ" },
+    { type: "ol", items: [
+      "Aération immédiate (5 min minimum)",
+      "Vérification objets oubliés (clé coffre, chargeurs, vêtements)",
+      "Vidage corbeilles et poubelles, retrait linge sale et serviettes",
+      "Décrochage et remplacement de la literie complète",
+      "Bionettoyage de la salle de bains (sanitaires, vasques, douche, miroir)",
+      "Dépoussiérage du haut vers le bas (luminaires, têtes de lit, mobilier)",
+      "Désinfection points de contact (poignées, interrupteurs, télécommande)",
+      "Aspiration et lavage du sol",
+      "Réfection du lit aux standards de la marque",
+      "Réapprovisionnement sanitaire et mini-bar",
+      "Contrôle qualité visuel et fonctionnel",
+    ]},
+    { type: "h2", text: "La salle de bains : la zone discriminante" },
+    { type: "p", text: "C'est la zone la plus regardée par les clients. Cinq points qui doivent être impeccables : robinets sans calcaire, miroir sans trace, cuvette extérieure et intérieure parfaitement propre, sol des angles, joints douche sans noir. Un seul de ces points négligé suffit à générer un avis négatif." },
+    { type: "callout", text: "ELITESY intervient en sous-traitance hôtelière sur Paris et région parisienne. Equipes formées aux standards des grandes marques — 06 09 16 50 99." },
+    { type: "h2", text: "La literie : signature de l'hôtel" },
+    { type: "p", text: "Standard 5 étoiles : housse de couette double pliée, oreillers gonflés et calés, drap de pied tendu, taies impeccables, plis aux angles 'hôpital'. La fluidité du geste fait gagner 3 à 5 minutes par chambre — la formation initiale dure environ 15 heures pour atteindre le standard." },
+    { type: "h2", text: "Le contrôle qualité : 20 à 30 points" },
+    { type: "p", text: "Chaque chambre terminée est contrôlée par la gouvernante ou un superviseur : checklist écrite, validation visuelle, photo si écart. Les points sensibles : dessous du lit, derrière le sèche-cheveux, intérieur du frigo, plinthes salle de bains, joints chrome." },
+    { type: "h2", text: "La désinfection en période sanitaire" },
+    { type: "p", text: "Depuis 2020, protocole renforcé avec produits virucides EN 14476 sur tous les points de contact, traçabilité écrite (carte 'chambre désinfectée' visible pour le client), aération renforcée. Cette traçabilité est devenue un standard durable, intégré aux audits des chaînes." },
+    { type: "h2", text: "Le matériel" },
+    { type: "p", text: "Chariot d'étage compact, microfibres en code couleur (rouge sanitaires, bleu chambre, vert verres et vaisselle), produits dosés au pulvérisateur, aspirateur dorsal léger, vapeur sèche pour le textile (matelas, oreillers tissu)." },
+    { type: "h2", text: "Le management des équipes" },
+    { type: "p", text: "L'hôtellerie est l'un des secteurs propreté à plus fort turnover. La fidélisation des équipes (planning stable, formation continue, prime qualité, perspective d'évolution) est l'enjeu RH principal. Un hôtel avec une équipe stable a un taux de note Booking supérieur de 0,3 à 0,5 point en moyenne." },
+    { type: "h2", text: "Conclusion : la chambre, produit ultime de l'hôtel" },
+    { type: "p", text: "La chambre est ce que le client achète. Sa propreté est non négociable. ELITESY intervient en partenariat avec des établissements 3 à 5 étoiles parisiens, en sous-traitance ou en équipe dédiée." },
+  ],
+  status: "published",
+};
