@@ -303,14 +303,14 @@ function PharmaceutiquePage() {
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30">
                 <FlaskConical className="text-primary" size={26} />
               </div>
-              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Pharmaceutique</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Pharmacie & officine</p>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
-              Salles blanches & ZAC,<br />
-              <span className="text-primary">l'exigence du détail.</span>
+              Nettoyage d'officine,<br />
+              <span className="text-primary">protocole prêt pour l'ARS.</span>
             </h1>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Bionettoyage des environnements pharmaceutiques sensibles : protocoles BPF, équipes habilitées et traçabilité complète pour vos sites de production, laboratoires et zones logistiques.
+              Protocole d'hygiène par zone, désinfection du comptoir et du TPE, bionettoyage du back-office, frigos médicaments tracés : un dispositif clair, reproductible et justifiable en cas d'inspection.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
@@ -328,7 +328,7 @@ function PharmaceutiquePage() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={heroImg} alt="Salle blanche pharmaceutique ELITESY en bionettoyage" width={1600} height={1120} className="w-full h-[500px] object-cover" />
+            <img src={heroImg} alt="Nettoyage d'officine de pharmacie par ELITESY : désinfection du comptoir et du terminal CB" width={1600} height={1120} className="w-full h-[500px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </motion.div>
         </div>
@@ -341,12 +341,12 @@ function PharmaceutiquePage() {
             <ShieldCheck className="text-primary" size={28} />
           </div>
           <div>
-            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-4 text-sm">Un partenaire à la hauteur de vos exigences</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-4 text-sm">Un partenaire pour votre officine</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Le bionettoyage pharmaceutique exige des protocoles validés, des équipes habilitées et une traçabilité sans faille.
+              Une officine cumule des contraintes de commerce ouvert au public et d'activité de santé : il faut un protocole clair, reproductible et traçable.
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              ELITESY intervient sur l'ensemble de vos zones — production stérile, laboratoires R&D et contrôle qualité, sas d'habillage, logistique — avec des modes opératoires conformes aux Bonnes Pratiques de Fabrication, à la norme ISO 14644 et aux référentiels GMP.
+              ELITESY structure l'hygiène de votre pharmacie autour d'un zoning pragmatique — espace de vente, comptoir et TPE, back-office et préparations, stockage et réfrigérateurs médicaments, sanitaires — avec une traçabilité simple alignée sur la Démarche Qualité Officine (DQO) et prête en cas d'inspection ARS.
             </p>
           </div>
         </div>
@@ -355,9 +355,9 @@ function PharmaceutiquePage() {
       {/* Zones interactives */}
       <section id="zones" className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Les zones que nous traitons</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl">Chaque environnement, son protocole.</h2>
-          <p className="text-muted-foreground max-w-2xl mb-12">Cliquez sur une zone pour découvrir notre méthode d'intervention.</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Zoning de votre officine</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl">Du plus public au plus sensible, chaque zone son protocole.</h2>
+          <p className="text-muted-foreground max-w-2xl mb-12">Cliquez sur une zone pour découvrir fréquences, produits et points d'attention.</p>
 
           <div className="grid lg:grid-cols-[320px_1fr] gap-8">
             <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
@@ -414,8 +414,8 @@ function PharmaceutiquePage() {
       {/* Nos missions */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Nos missions en pharmaceutique</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Un périmètre complet, du laboratoire à la logistique.</h2>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Nos missions en officine</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Un dispositif complet, de la vitrine au dossier qualité.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {missions.map((m, i) => {
               const Icon = m.icon;
@@ -451,7 +451,7 @@ function PharmaceutiquePage() {
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Méthode & organisation</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">De l'audit au pilotage continu.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">De l'audit de l'officine au dossier inspection.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {methode.map((m, i) => {
               const Icon = m.icon;
@@ -488,11 +488,11 @@ function PharmaceutiquePage() {
             className="rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={teamImg} alt="L'équipe ELITESY : agents habilités aux environnements pharmaceutiques" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
+            <img src={teamImg} alt="L'équipe ELITESY : agents formés au bionettoyage en officine de pharmacie" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
           </motion.div>
           <div>
             <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour vos environnements sensibles.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour votre officine.</h2>
             <div className="space-y-6">
               {engagements.map((e) => {
                 const Icon = e.icon;
@@ -537,9 +537,9 @@ function PharmaceutiquePage() {
       <section className="py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Passons à l'action</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Un devis adapté à votre site pharmaceutique.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Un devis adapté à votre officine.</h2>
           <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Décrivez-nous vos zones et vos référentiels : nous construisons un dispositif sur mesure, conforme à vos exigences qualité.
+            Décrivez-nous votre officine, vos horaires et votre zoning : nous construisons un protocole sur mesure, traçable et compatible avec votre démarche qualité.
           </p>
           <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
             Demander un devis personnalisé <ArrowRight size={16} />
