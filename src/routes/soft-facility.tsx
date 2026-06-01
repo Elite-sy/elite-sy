@@ -50,26 +50,10 @@ export const Route = createFileRoute("/soft-facility")({
 const expertises = [
   { slug: "pilotage-multiservices", icon: ClipboardList, title: "Pilotage multiservices", desc: "Un référent unique, un reporting consolidé, des engagements de service mesurés en continu sur l'ensemble des prestations." },
   { slug: "gestion-dechets", icon: Sparkles, title: "Gestion des déchets", desc: "Tri à la source, valorisation, traçabilité réglementaire et accompagnement vers la réduction de l'empreinte environnementale." },
-  { slug: "espaces-exterieurs", icon: Leaf, title: "Entretien des espaces extérieurs", desc: "Tonte des pelouses
-Taille des haies et plantations
-Nettoyage des parkings et voiries
-Entretien des espaces verts
-Ramassage des feuilles et déchets extérieurs" },
-  { slug: "logistique-sur-site", icon: Building2, title: "Logistique sur site", desc: "​Montage / démontage de mobilier (bureaux, armoires, chaises)
-Réorganisation d’espaces de travail
-Installation de signalétique (panneaux, affichage)
-Mise en place de salles de réunion
-Installation de tableaux, supports, décorations
-déménagements internes ou optimisation des bureaux" },
-  { slug: "maintenance-legere", icon: Mail, title: "Entretien et travaux de maintenance légère ", desc: "​Remplacement d’ampoules (si simple et accessible)
-Réglage de portes / poignées / petits éléments
-Fixation d’éléments muraux (cadres, supports…)
-Réparation mineure du mobilier
-Retouches simples (peinture légère locale)" },
-  { slug: "services-occupants", icon: Users, title: "​Services aux occupants", desc: "​Préparation des salles de réunion
-Assistance aux collaborateurs
-Organisation des espaces partagés
-Support quotidien (petits besoins internes)" },
+  { slug: "espaces-exterieurs", icon: Leaf, title: "Entretien des espaces extérieurs", desc: "Tonte des pelouses\nTaille des haies et plantations\nNettoyage des parkings et voiries\nEntretien des espaces verts\nRamassage des feuilles et déchets extérieurs" },
+  { slug: "logistique-sur-site", icon: Building2, title: "Logistique sur site", desc: "​Montage / démontage de mobilier (bureaux, armoires, chaises)\nRéorganisation d’espaces de travail\nInstallation de signalétique (panneaux, affichage)\nMise en place de salles de réunion\nInstallation de tableaux, supports, décorations\ndéménagements internes ou optimisation des bureaux" },
+  { slug: "maintenance-legere", icon: Mail, title: "Entretien et travaux de maintenance légère ", desc: "​Remplacement d’ampoules (si simple et accessible)\nRéglage de portes / poignées / petits éléments\nFixation d’éléments muraux (cadres, supports…)\nRéparation mineure du mobilier\nRetouches simples (peinture légère locale)" },
+  { slug: "services-occupants", icon: Users, title: "​Services aux occupants", desc: "​Préparation des salles de réunion\nAssistance aux collaborateurs\nOrganisation des espaces partagés\nSupport quotidien (petits besoins internes)" },
 ];
 
 export const sectors = [
