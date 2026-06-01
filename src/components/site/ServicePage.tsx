@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Check, ArrowRight, type LucideIcon } from "lucide-react";
 import { Layout } from "./Layout";
+import { LazyImage } from "./LazyImage";
 
 export interface SectorItem {
   slug: string;
@@ -122,7 +123,7 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
                     params={{ slug: s.slug }}
                     className="group block relative aspect-[4/5] rounded-sm overflow-hidden border border-border hover:border-primary/60 transition"
                   >
-                    <img src={s.img} alt={s.label} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1280} height={800} />
+                    <LazyImage src={s.img} alt={s.label} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" width={1280} height={800} />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <s.icon className="text-primary mb-3" size={22} />
