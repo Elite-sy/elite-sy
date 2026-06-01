@@ -54,7 +54,9 @@ export const Route = createFileRoute("/proprete/professionnels-sante")({
           "Garantir hygiène, sécurité et dignité dans les EHPAD et résidences seniors : agents formés, protocoles ISO et continuité de service totale.",
       },
       { property: "og:image", content: heroImg },
+      { property: "og:url", content: "https://elite-sy.lovable.app/proprete/professionnels-sante" },
     ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/proprete/professionnels-sante" }],
   }),
   component: SantePage,
 });

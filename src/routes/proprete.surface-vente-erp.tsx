@@ -51,7 +51,9 @@ export const Route = createFileRoute("/proprete/surface-vente-erp")({
           "Boutiques, showrooms, centres commerciaux, restaurants : un service de propreté à la hauteur de votre image de marque et de l'expérience client.",
       },
       { property: "og:image", content: heroImg },
+      { property: "og:url", content: "https://elite-sy.lovable.app/proprete/surface-vente-erp" },
     ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/proprete/surface-vente-erp" }],
   }),
   component: ErpPage,
 });
