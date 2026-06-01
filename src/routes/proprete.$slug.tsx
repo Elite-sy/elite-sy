@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, Check, ArrowLeft, Building2, Home, HeartPulse, HardHat, Store, Factory } from "lucide-react";
+import { ArrowRight, Check, ArrowLeft, Building2, Home, HeartPulse, HardHat, Store, Factory, FlaskConical, School, Hotel } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 
