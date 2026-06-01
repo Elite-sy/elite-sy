@@ -19,7 +19,6 @@ import {
   Droplets,
   Pill,
   Leaf,
-  FileCheck,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
