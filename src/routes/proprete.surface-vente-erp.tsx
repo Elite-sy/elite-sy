@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import { LazyImage } from "@/components/site/LazyImage";
 import {
   Accordion,
   AccordionContent,
@@ -392,7 +393,7 @@ function ErpPage() {
               className="grid md:grid-cols-2 gap-0 border border-border rounded-sm overflow-hidden bg-background"
             >
               <div className="relative h-64 md:h-auto min-h-[320px]">
-                <img src={current.image} alt={current.label} loading="lazy" width={1280} height={900} className="absolute inset-0 w-full h-full object-cover" />
+                <LazyImage src={current.image} alt={current.label} width={1280} height={900} className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">{current.label}</h3>
@@ -488,7 +489,7 @@ function ErpPage() {
             className="rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={teamImg} alt="L'équipe ELITESY : agents formés au retail et aux ERP" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
+            <LazyImage src={teamImg} alt="L'équipe ELITESY : agents formés au retail et aux ERP" width={1280} height={960} className="w-full h-[500px] object-cover" />
           </motion.div>
           <div>
             <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>

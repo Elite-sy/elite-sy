@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Check, ArrowLeft, Building2, Home, HeartPulse, HardHat, Store, Factory, FlaskConical, School, Hotel, Clock, Leaf, ShieldCheck, Users, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import { LazyImage } from "@/components/site/LazyImage";
 import bureauxHero from "@/assets/pr-bureaux-hero.jpg";
 import bureauxVitrerie from "@/assets/pr-bureaux-vitrerie.jpg";
 import bureauxAccueil from "@/assets/pr-bureaux-accueil.jpg";
@@ -443,7 +444,7 @@ function ClientPage() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   className="group relative overflow-hidden rounded-sm border border-border"
                 >
-                  <img src={g.src} alt={g.caption} className="w-full h-80 object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1280} height={900} />
+                  <LazyImage src={g.src} alt={g.caption} className="w-full h-80 object-cover group-hover:scale-105 transition duration-700" width={1280} height={900} />
                   <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/70 to-transparent text-sm font-medium">
                     {g.caption}
                   </figcaption>
