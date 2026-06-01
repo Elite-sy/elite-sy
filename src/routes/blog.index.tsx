@@ -16,7 +16,7 @@ const searchSchema = z.object({
 
 type BlogSearch = { cat: string; q: string; page: number };
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   validateSearch: zodValidator(searchSchema),
   head: () => ({
     meta: [
