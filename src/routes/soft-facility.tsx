@@ -166,50 +166,6 @@ function SoftFacilityPage() {
         </div>
       </section>
 
-      {/* Sectors */}
-      <section id="secteurs" className="py-32 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-            <div>
-              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos secteurs</p>
-              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Une expertise multisectorielle.</h2>
-            </div>
-            <p className="text-muted-foreground max-w-md">
-              Chaque environnement a ses contraintes. Nos équipes sont formées aux
-              exigences spécifiques de votre secteur, du tertiaire à l'industrie sensible.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sectors.map((s, i) => (
-              <motion.div
-                key={s.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-              >
-                <Link
-                  to="/secteur/$slug"
-                  params={{ slug: s.slug }}
-                  className="group block relative aspect-[4/5] rounded-sm overflow-hidden border border-border hover:border-primary/60 transition"
-                >
-                  <img src={s.img} alt={s.label} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1280} height={800} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <s.icon className="text-primary mb-3" size={22} />
-                    <h3 className="text-lg font-bold uppercase tracking-wider">{s.label}</h3>
-                    <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{s.tagline}</p>
-                    <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-primary group-hover:gap-3 transition-all">
-                      Découvrir <ArrowRight size={12} />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits */}
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
