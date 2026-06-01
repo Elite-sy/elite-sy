@@ -32,7 +32,7 @@ const sectors = [
   { slug: "industrie", label: "Industrie", icon: Factory, img: industrie, tagline: "Propreté technique et services support aux sites de production." },
   { slug: "education-collectivites", label: "Education & Collectivités", icon: School, img: education, tagline: "Entretien et maintenance des établissements publics et scolaires." },
   { slug: "hotellerie", label: "Hôtellerie", icon: Hotel, img: hotellerie, tagline: "Services support aux hôtels et résidences pour un accueil parfait." },
-] as const;
+];
 
 export const Route = createFileRoute("/proprete/")({
   head: () => ({
