@@ -2,8 +2,20 @@ import type { Post, PlannedPost } from "./types";
 import { post as vitres } from "./posts/vitres-bureau-sans-traces";
 import { post as ecolo } from "./posts/produits-ecologiques-nettoyage";
 import { post as haccp } from "./posts/normes-haccp-restauration";
+import { post as ars } from "./posts/conformite-ars-officine-pharmacie";
+import { post as bionet } from "./posts/bionettoyage-hospitalier-protocole";
+import { post as ecolabel } from "./posts/ecolabel-europeen-explication";
+import { post as vitresHauteur } from "./posts/nettoyage-vitres-grande-hauteur";
 
-export const publishedPosts: Post[] = [vitres, ecolo, haccp].sort(
+export const publishedPosts: Post[] = [
+  vitres,
+  ecolo,
+  haccp,
+  ars,
+  bionet,
+  ecolabel,
+  vitresHauteur,
+].sort(
   (a, b) => b.date.localeCompare(a.date),
 );
 
