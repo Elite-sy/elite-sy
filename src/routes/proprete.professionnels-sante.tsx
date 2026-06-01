@@ -37,7 +37,6 @@ import blocImg from "@/assets/sante-bloc.jpg";
 import ehpadImg from "@/assets/sante-ehpad.jpg";
 import laboImg from "@/assets/sante-labo.jpg";
 import cabinetImg from "@/assets/sante-cabinet.jpg";
-import teamImg from "@/assets/elitesy-team.jpg";
 
 export const Route = createFileRoute("/proprete/professionnels-sante")({
   head: () => ({
