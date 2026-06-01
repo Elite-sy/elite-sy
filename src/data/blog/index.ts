@@ -6,6 +6,20 @@ import { post as ars } from "./posts/conformite-ars-officine-pharmacie";
 import { post as bionet } from "./posts/bionettoyage-hospitalier-protocole";
 import { post as ecolabel } from "./posts/ecolabel-europeen-explication";
 import { post as vitresHauteur } from "./posts/nettoyage-vitres-grande-hauteur";
+import { post as frigo } from "./posts/nettoyage-frigo-bureau-protocole";
+import { post as eauPure } from "./posts/eau-pure-osmosee-nettoyage-vitres";
+import { post as microfibre } from "./posts/microfibre-vs-lavette-jetable";
+import { post as codeCouleur } from "./posts/code-couleur-microfibres";
+import { post as ete } from "./posts/nettoyage-ete-locaux-professionnels";
+import { post as odeursClim } from "./posts/eliminer-odeurs-climatisation-bureau";
+import { post as protocoleQuot } from "./posts/protocole-nettoyage-bureaux-quotidien";
+import { post as moquette } from "./posts/entretien-moquette-bureaux";
+import { post as cabinetMed } from "./posts/nettoyage-cabinet-medical-protocole";
+import { post as creche } from "./posts/nettoyage-creche-protocole";
+import { post as vapeur } from "./posts/nettoyage-vapeur-sans-produit";
+import { post as autolaveuse } from "./posts/choisir-autolaveuse-bureaux";
+import { post as ph } from "./posts/ph-produit-nettoyage-quel-choisir";
+import { post as coutM2 } from "./posts/combien-coute-nettoyage-bureaux-m2";
 
 export const publishedPosts: Post[] = [
   vitres,
@@ -15,6 +29,20 @@ export const publishedPosts: Post[] = [
   bionet,
   ecolabel,
   vitresHauteur,
+  frigo,
+  eauPure,
+  microfibre,
+  codeCouleur,
+  ete,
+  odeursClim,
+  protocoleQuot,
+  moquette,
+  cabinetMed,
+  creche,
+  vapeur,
+  autolaveuse,
+  ph,
+  coutM2,
 ].sort(
   (a, b) => b.date.localeCompare(a.date),
 );
