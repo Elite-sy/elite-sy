@@ -42,17 +42,17 @@ import teamImg from "@/assets/elitesy-team.jpg";
 export const Route = createFileRoute("/proprete/professionnels-sante")({
   head: () => ({
     meta: [
-      { title: "Santé & Soins — Nettoyage EHPAD, maisons de retraite & établissements médico-sociaux | ELITESY" },
+      { title: "EHPAD & Résidences Seniors — Nettoyage spécialisé & bionettoyage | ELITESY" },
       {
         name: "description",
         content:
-          "Nettoyage spécialisé des EHPAD, maisons de retraite et établissements médico-sociaux : hygiène, sécurité et qualité de vie pour des résidents fragiles. Protocoles certifiés et continuité de service.",
+          "Nettoyage des EHPAD et maisons de retraite : comment assurer hygiène, sécurité et qualité de vie. Protocoles certifiés et bionettoyage pour établissements médico-sociaux.",
       },
-      { property: "og:title", content: "Santé & Soins — Nettoyage EHPAD & maisons de retraite | ELITESY" },
+      { property: "og:title", content: "EHPAD & Résidences Seniors — Nettoyage spécialisé | ELITESY" },
       {
         property: "og:description",
         content:
-          "Garantir hygiène, sécurité et dignité dans les EHPAD et maisons de retraite : agents formés au médico-social, protocoles ISO 9001 / 14001 et continuité de service totale.",
+          "Garantir hygiène, sécurité et dignité dans les EHPAD et résidences seniors : agents formés, protocoles ISO et continuité de service totale.",
       },
       { property: "og:image", content: heroImg },
     ],
@@ -314,14 +314,14 @@ function SantePage() {
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30">
                 <HeartPulse className="text-primary" size={26} />
               </div>
-              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Santé & Soins</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">EHPAD & Résidences Seniors</p>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
               Nettoyage des EHPAD<br />
               <span className="text-primary">& maisons de retraite.</span>
             </h1>
-            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Hygiène, sécurité et dignité des résidents : un enjeu sanitaire majeur qui ne peut se réduire à un entretien classique. ELITESY déploie des équipes formées au médico-social et des protocoles certifiés pour protéger les publics les plus fragiles.
+            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl text-balance">
+              Nettoyage des EHPAD et maisons de retraite : comment assurer hygiène, sécurité et qualité de vie. ELITESY déploie des équipes formées au médico-social et des protocoles certifiés pour protéger les publics les plus fragiles.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
