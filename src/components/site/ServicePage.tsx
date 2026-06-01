@@ -116,7 +116,7 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                 >
                   <Link
-                    to="/secteur/$slug"
+                    to="/proprete/$slug"
                     params={{ slug: s.slug }}
                     className="group block relative aspect-[4/5] rounded-sm overflow-hidden border border-border hover:border-primary/60 transition"
                   >
