@@ -1,0 +1,40 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/produits-ecologiques.jpg";
+
+export const post: Post = {
+  slug: `nettoyage-zero-plastique-bureau`,
+  title: `Nettoyage zéro plastique au bureau : recharges et alternatives`,
+  description: `Recharges, contenants en verre et fournitures réutilisables pour un nettoyage zéro plastique au bureau.`,
+  category: `Écologie & environnement`,
+  date: `2025-03-31`,
+  readingTime: 7,
+  hero,
+  heroAlt: `Produits de nettoyage zéro plastique en flacons verre rechargeables`,
+  intro: `Le secteur du nettoyage consomme massivement du plastique : flacons, sacs, lingettes, gants. Réduire cette empreinte est possible avec une démarche structurée. Voici les leviers concrets pour un nettoyage zéro ou bas plastique en entreprise.`,
+  content: [
+    { type: "h2", text: `L'enjeu chiffré` },
+    { type: "p", text: `Un bureau de 100 personnes consomme typiquement 1500 à 2000 flacons plastiques de produits d'entretien par an, 50 000 lingettes jetables, 800 sacs poubelle 100 L. Le tout en plastique vierge ou peu recyclé. Le potentiel de réduction est énorme.` },
+    { type: "h2", text: `Les recharges concentrées` },
+    { type: "p", text: `Plus impactant : remplacer les flacons prêts à l'emploi par des concentrés à diluer (1 L de concentré = 20 L de produit). Bidon 5 L réutilisé sur centrale de dilution. Économie plastique : 95 %. Économie financière : 30 à 50 % sur le coût produit.` },
+    { type: "h2", text: `Les contenants en verre` },
+    { type: "p", text: `Flacons spray en verre épais et rechargeables : durée de vie illimitée. Code couleur par étiquette. Plus lourds que le plastique mais ergonomie correcte. Coût initial 5 à 10 €/flacon, amorti en 1 an.` },
+    { type: "h2", text: `La microfibre vs jetable` },
+    { type: "p", text: `Microfibre réutilisable lavable 300 cycles vs lingettes jetables. Économie : 30 € par poste sur 5 ans. Réduction déchets : 95 %. Performance supérieure (capture mécanique des bactéries). Lavage en machine professionnelle à 60-90 °C.` },
+    { type: "h2", text: `Les sacs poubelle` },
+    { type: "p", text: `Sacs en matière biosourcée (amidon de maïs, canne à sucre) : option intermédiaire. Sacs réutilisables en tissu pour le linge sale interne. Réduction du nombre de sacs par optimisation des poubelles (tri sélectif, vidage moins fréquent).` },
+    { type: "callout", text: `ELITESY déploie sur demande une offre 'zéro plastique' : centrale de dilution, flacons verre, microfibre réutilisable, sacs biosourcés. Audit consommation initial, suivi annuel. 06 09 16 50 99.` },
+    { type: "h2", text: `La centrale de dilution` },
+    { type: "p", text: `Système mural avec bidons concentrés et eau du réseau, dilution automatique au robinet. Remplissage de flacons d'usage. Coût équipement : 300 à 800 €. ROI : 18 mois pour un site de 1000 m². Sécurité (pas de manipulation pure) et hygiène (dilution propre).` },
+    { type: "h2", text: `Les gants : un gros poste` },
+    { type: "p", text: `Gants nitrile jetables : à minimiser. Privilégier gants réutilisables en latex épais (renouvelés mensuellement) sauf en zone biologique. Gants à usage unique réservés aux sanitaires et zones contaminées.` },
+    { type: "h2", text: `Les fournitures hygiéniques` },
+    { type: "p", text: `Distributeur de savon rechargeable (bag-in-box) vs flacons individuels. Essuie-mains en tissu vs papier (pour entreprises avec linge interne). Papier toilette recyclé en grands rouleaux distributeurs vs petits rouleaux individuels.` },
+    { type: "h2", text: `Le tri des déchets de nettoyage` },
+    { type: "p", text: `Flacons rincés à jeter en recyclage plastique. Cartons d'emballage triés. Microfibres en fin de vie en filière textile (Le Relais). Démarche zéro déchet finale : compostage des déchets verts si jardin.` },
+    { type: "h2", text: `La communication interne` },
+    { type: "p", text: `Afficher l'engagement de l'entreprise et du prestataire dans les espaces communs. Indicateurs annuels : nombre de flacons économisés, kg de déchets évités. Effet d'entraînement sur les autres pratiques RSE.` },
+    { type: "h2", text: `Conclusion` },
+    { type: "p", text: `Le nettoyage zéro plastique demande un peu d'organisation initiale mais devient rapidement la norme. Économique, écologique et valorisable en communication RSE. ELITESY accompagne cette transition pour ses clients engagés.` }
+  ],
+  status: "published",
+};

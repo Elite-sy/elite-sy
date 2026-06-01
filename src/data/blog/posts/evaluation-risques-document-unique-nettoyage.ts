@@ -1,0 +1,51 @@
+import type { Post } from "../types";
+import hero from "@/assets/blog/protocole-quotidien.jpg";
+
+export const post: Post = {
+  slug: `evaluation-risques-document-unique-nettoyage`,
+  title: `Document unique et évaluation des risques pour le nettoyage`,
+  description: `Document unique d'évaluation des risques professionnels : obligations employeur, TMS et exposition chimique dans le nettoyage.`,
+  category: `Normes & réglementations`,
+  date: `2025-06-09`,
+  readingTime: 8,
+  hero,
+  heroAlt: `Agent de nettoyage en intervention avec EPI complets`,
+  intro: `Le Document Unique d'Évaluation des Risques Professionnels (DUERP) est obligatoire dans toute entreprise depuis 2001. Dans le nettoyage, il prend une importance particulière : TMS, exposition chimique, chutes, agressions.`,
+  content: [
+    { type: "h2", text: `Le cadre légal` },
+    { type: "p", text: `Articles L.4121-1 à L.4121-5 et R.4121-1 du Code du travail. Obligation depuis le décret du 5 novembre 2001. Tout employeur doit évaluer les risques, formaliser dans le DUERP, mettre à jour annuellement et tenir à disposition des salariés, CSE, médecine du travail, inspection.` },
+    { type: "h2", text: `Les risques spécifiques du nettoyage` },
+    { type: "ul", items: [
+      `Troubles musculo-squelettiques (TMS) : 60% des AT du secteur`,
+      `Chutes de plain-pied (sols mouillés)`,
+      `Chutes de hauteur (vitres, escabeaux)`,
+      `Exposition chimique aux produits`,
+      `Risque biologique (sanitaires, DASRI)`,
+      `Risque routier (déplacements entre sites)`,
+      `Agressions et incivilités (parties communes)`,
+      `Travail isolé (bureaux soir, parkings)`
+    ] },
+    { type: "h2", text: `Les TMS : risque numéro 1` },
+    { type: "p", text: `Lombalgies (port de charges, gestes répétitifs), tendinites épaule (lavage vitres en hauteur), syndrome canal carpien (essorage manuel). Prévention : matériel ergonomique (perches télescopiques, chariots motorisés, microfibre pré-imprégnée), formation gestes et postures, rotation des tâches.` },
+    { type: "h2", text: `L'exposition chimique` },
+    { type: "p", text: `Produits acides (détartrants), alcalins (dégraissants), désinfectants (eau de Javel, alcool). Risques : brûlures, dermatoses, atteintes respiratoires. Prévention : substitution par produits moins dangereux (Ecolabel), centrale de dilution (jamais de pur), gants nitrile, lunettes, ventilation.` },
+    { type: "h2", text: `Les chutes de plain-pied` },
+    { type: "p", text: `Premier risque d'accident grave. Prévention : signalétique 'sol mouillé', chaussures antidérapantes, sols propres et secs avant ouverture, lampe frontale en début de matinée. Audit régulier des sols par zone.` },
+    { type: "h2", text: `Les chutes de hauteur` },
+    { type: "p", text: `Pour le nettoyage de vitres en hauteur : préférer perche télescopique au lieu d'échelle. Si échelle inévitable : formation, contrôle annuel matériel, point d'amarrage si plus de 3 m. Pour vitrines très hautes : nacelle ou cordiste obligatoire.` },
+    { type: "callout", text: `ELITESY met à jour son DUERP annuellement et forme tous ses agents aux risques métier. Les EPI sont fournis et renouvelés. C'est une exigence de sérieux et un avantage en cas d'audit client. 06 09 16 50 99.` },
+    { type: "h2", text: `Le risque biologique` },
+    { type: "p", text: `Sanitaires, DASRI mal triés, cabinets médicaux. Prévention : vaccination hépatite B fortement recommandée (obligatoire si exposition documentée), gants systématiques, lavage des mains, EPI à usage unique en zones sensibles.` },
+    { type: "h2", text: `Le travail isolé` },
+    { type: "p", text: `Agent seul sur un site en horaires décalés. Dispositif PTI (Protection Travailleur Isolé) recommandé : alarme avec détection chute, géolocalisation, appel automatique en cas d'inactivité. Procédure de contact avec encadrement.` },
+    { type: "h2", text: `Les TPE-PME du nettoyage : obligations identiques` },
+    { type: "p", text: `Pas de seuil minimum d'effectif : même une entreprise de 2 salariés doit avoir un DUERP. Pour < 50 salariés, plan d'action de prévention obligatoire annexé. Outils gratuits sur INRS.fr et Travailler-Mieux.gouv.fr.` },
+    { type: "h2", text: `Les sanctions` },
+    { type: "p", text: `Absence ou non mise à jour : 1 500 € par salarié, 3 000 € en récidive. En cas d'AT grave, faute inexcusable possible avec dommages-intérêts élevés. Au-delà de l'amende, c'est la responsabilité civile et pénale de l'employeur.` },
+    { type: "h2", text: `Le rôle du client donneur d'ordre` },
+    { type: "p", text: `Le client peut demander le DUERP du prestataire avant signature. C'est un indicateur de sérieux. Le plan de prévention conjoint (article R.4512-6) est obligatoire pour interventions > 400 heures/an sur site.` },
+    { type: "h2", text: `Conclusion` },
+    { type: "p", text: `Le DUERP n'est pas une formalité : c'est un outil de pilotage de la sécurité au travail. Bien tenu, il diminue les accidents, les arrêts maladie et les coûts associés. Un prestataire qui le néglige expose ses clients à des risques juridiques par ricochet.` }
+  ],
+  status: "published",
+};
