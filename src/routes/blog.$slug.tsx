@@ -11,11 +11,11 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Article — Blog ELITESY" }] };
+    if (!loaderData) return { meta: [{ title: "Article — Expertise ELITESY" }] };
     const { post } = loaderData;
     return {
       meta: [
-        { title: `${post.title} — Blog ELITESY` },
+        { title: `${post.title} — Expertise ELITESY` },
         { name: "description", content: post.description },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.description },
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/blog/$slug")({
           to="/blog"
           className="inline-block mt-6 text-sm text-primary hover:underline"
         >
-          ← Retour au blog
+          ← Retour à l'expertise
         </Link>
       </div>
     </Layout>
