@@ -19,7 +19,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
-import img from "@/assets/amo.jpg";
+import { Picture } from "@/components/site/Picture";
+import img from "@/assets/amo.jpg?format=avif;webp;jpg&w=640;1024;1600;1920&as=picture";
 
 const missions: { num: string; title: string; description: string; icon: LucideIcon }[] = [
   {
