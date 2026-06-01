@@ -198,7 +198,7 @@ function BlogIndex() {
                   <div className="flex items-center gap-3 text-xs">
                     <Link
                       to="/blog"
-                      search={(prev) => ({ ...prev, cat: p.category })}
+                      search={(prev: BlogSearch) => ({ ...prev, cat: p.category })}
                       className="text-primary font-semibold tracking-wider uppercase hover:underline"
                     >
                       {p.category}
