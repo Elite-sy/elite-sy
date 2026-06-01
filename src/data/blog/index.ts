@@ -2,8 +2,20 @@ import type { Post, PlannedPost } from "./types";
 import { post as vitres } from "./posts/vitres-bureau-sans-traces";
 import { post as ecolo } from "./posts/produits-ecologiques-nettoyage";
 import { post as haccp } from "./posts/normes-haccp-restauration";
+import { post as ars } from "./posts/conformite-ars-officine-pharmacie";
+import { post as bionet } from "./posts/bionettoyage-hospitalier-protocole";
+import { post as ecolabel } from "./posts/ecolabel-europeen-explication";
+import { post as vitresHauteur } from "./posts/nettoyage-vitres-grande-hauteur";
 
-export const publishedPosts: Post[] = [vitres, ecolo, haccp].sort(
+export const publishedPosts: Post[] = [
+  vitres,
+  ecolo,
+  haccp,
+  ars,
+  bionet,
+  ecolabel,
+  vitresHauteur,
+].sort(
   (a, b) => b.date.localeCompare(a.date),
 );
 
@@ -22,7 +34,7 @@ export const plannedPosts: PlannedPost[] = [
   { slug: "protocole-nettoyage-bureaux-quotidien", title: "Protocole de nettoyage quotidien des bureaux", description: "Méthode, ordre des opérations et fréquences pour un entretien tertiaire irréprochable.", category: "Guides Pratiques", date: "2026-01-05" },
   { slug: "nettoyage-fin-chantier-livraison", title: "Nettoyage de fin de chantier avant livraison", description: "Étapes, matériel et points de contrôle pour livrer un bâtiment impeccable.", category: "Guides Pratiques", date: "2025-12-22" },
   { slug: "remise-en-etat-locaux-vacants", title: "Remise en état de locaux vacants : méthode complète", description: "Décapage, vitrerie, sanitaires : préparer un local pour une nouvelle occupation.", category: "Guides Pratiques", date: "2025-12-15" },
-  { slug: "nettoyage-vitres-grande-hauteur", title: "Nettoyage de vitres en grande hauteur : sécurité et méthode", description: "Perche d'eau pure, nacelle, cordistes : choisir la bonne technique selon la façade.", category: "Guides Pratiques", date: "2025-12-08" },
+  // nettoyage-vitres-grande-hauteur → publié
   { slug: "entretien-moquette-bureaux", title: "Entretien des moquettes de bureaux : injection-extraction ou shampouinage ?", description: "Fréquences, méthodes et coûts pour préserver vos textiles de sol.", category: "Guides Pratiques", date: "2025-12-01" },
   { slug: "decapage-cristallisation-marbre", title: "Décapage et cristallisation du marbre", description: "Redonner brillance et protection à un sol en pierre naturelle.", category: "Guides Pratiques", date: "2025-11-24" },
   { slug: "nettoyage-cage-escalier-immeuble", title: "Nettoyage d'une cage d'escalier en immeuble", description: "Méthode, fréquences et matériel pour un entretien efficace des parties communes.", category: "Guides Pratiques", date: "2025-11-17" },
@@ -42,9 +54,9 @@ export const plannedPosts: PlannedPost[] = [
   { slug: "nettoyage-college-lycee", title: "Nettoyage d'un collège ou d'un lycée", description: "Volumes, flux et internat : organiser un entretien de qualité constante.", category: "Guides Pratiques", date: "2025-08-11" },
   { slug: "nettoyage-musee-galerie", title: "Nettoyage d'un musée ou d'une galerie d'art", description: "Préserver les œuvres, encadrer les agents et gérer les vitrines.", category: "Guides Pratiques", date: "2025-08-04" },
   { slug: "nettoyage-salle-spectacle", title: "Nettoyage d'une salle de spectacle", description: "Interventions en flux tendu entre deux représentations.", category: "Guides Pratiques", date: "2025-07-28" },
-  { slug: "bionettoyage-hospitalier-protocole", title: "Bionettoyage hospitalier : protocole et traçabilité", description: "Chambres, blocs et zones à risque infectieux : la méthode validée.", category: "Normes & réglementations", date: "2025-07-21" },
+  // bionettoyage-hospitalier-protocole → publié
   { slug: "norme-iso-14644-salles-blanches", title: "Norme ISO 14644 : ce qu'il faut savoir sur les salles blanches", description: "Classes ISO 5 à 8, contrôles particulaires et méthode de bionettoyage.", category: "Normes & réglementations", date: "2025-07-14" },
-  { slug: "conformite-ars-officine-pharmacie", title: "Conformité ARS en officine de pharmacie", description: "Plan de nettoyage, traçabilité et dossier prêt pour l'inspection.", category: "Normes & réglementations", date: "2025-07-07" },
+  // conformite-ars-officine-pharmacie → publié
   { slug: "demarche-qualite-officine-dqo", title: "La Démarche Qualité Officine (DQO) et l'hygiène", description: "Intégrer le protocole de nettoyage à votre démarche qualité.", category: "Normes & réglementations", date: "2025-06-30" },
   { slug: "certification-qualipropre", title: "La certification Qualipropre : à quoi elle engage", description: "Le référentiel qualité de la profession propreté décrypté.", category: "Normes & réglementations", date: "2025-06-23" },
   { slug: "reglementation-dasri-officine", title: "Gestion des DASRI en officine et cabinet médical", description: "Tri, conditionnement, traçabilité et filières d'élimination.", category: "Normes & réglementations", date: "2025-06-16" },
@@ -57,7 +69,7 @@ export const plannedPosts: PlannedPost[] = [
   { slug: "microfibre-vs-lavette-jetable", title: "Microfibre lavable contre lavette jetable : le match", description: "Empreinte carbone, coût d'usage et performance comparée.", category: "Écologie & environnement", date: "2025-04-28" },
   { slug: "eau-pure-osmosee-nettoyage-vitres", title: "L'eau pure osmosée pour le nettoyage des vitres", description: "Pourquoi les pros l'utilisent et comment elle réduit l'usage de détergents.", category: "Écologie & environnement", date: "2025-04-21" },
   { slug: "reduction-cov-air-interieur", title: "Réduire les COV pour améliorer l'air intérieur", description: "Choix des produits, ventilation et bonnes pratiques au quotidien.", category: "Écologie & environnement", date: "2025-04-14" },
-  { slug: "ecolabel-europeen-explication", title: "L'Ecolabel européen expliqué : ce qu'il garantit", description: "Critères, cycle de vie et reconnaissance officielle du label.", category: "Écologie & environnement", date: "2025-04-07" },
+  // ecolabel-europeen-explication → publié
   { slug: "nettoyage-zero-plastique-bureau", title: "Vers un nettoyage zéro plastique au bureau", description: "Recharges, contenants en verre et fournitures réutilisables.", category: "Écologie & environnement", date: "2025-03-31" },
   { slug: "materiel-nettoyage-electrique-vs-thermique", title: "Matériel de nettoyage : électrique ou thermique ?", description: "Bruit, émissions et coût d'usage : faire le bon choix selon le site.", category: "Écologie & environnement", date: "2025-03-24" },
   { slug: "choisir-autolaveuse-bureaux", title: "Comment choisir une autolaveuse pour des bureaux ?", description: "Largeur de travail, autonomie, manœuvrabilité : les critères qui comptent.", category: "Produits & techniques", date: "2025-03-17" },
