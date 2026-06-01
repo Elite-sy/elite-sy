@@ -6,9 +6,12 @@ import {
   Building2,
   Wheat,
   Factory,
-  Atom,
+  HardHat,
   FlaskConical,
   HeartPulse,
+  Home,
+  Hotel,
+  School,
   Store,
   Briefcase,
   Train,
@@ -21,14 +24,15 @@ import {
 } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import hero from "@/assets/sf-hero.jpg";
-import agro from "@/assets/sec-agro.jpg";
 import industrie from "@/assets/sec-industrie.jpg";
-import nucleaire from "@/assets/sec-nucleaire.jpg";
 import pharma from "@/assets/sec-pharma.jpg";
 import sante from "@/assets/sec-sante.jpg";
 import retail from "@/assets/sec-retail.jpg";
 import tertiaire from "@/assets/sec-tertiaire.jpg";
-import transport from "@/assets/sec-transport.jpg";
+import syndics from "@/assets/sec-syndics.jpg";
+import construction from "@/assets/sec-construction.jpg";
+import education from "@/assets/sec-education.jpg";
+import hotellerie from "@/assets/sec-hotellerie.jpg";
 
 export const Route = createFileRoute("/soft-facility")({
   head: () => ({
@@ -53,14 +57,15 @@ const expertises = [
 ];
 
 export const sectors = [
-  { slug: "agroalimentaire", label: "Agroalimentaire", icon: Wheat, img: agro, tagline: "Hygiène et sécurité alimentaire en environnement sensible." },
-  { slug: "industrie", label: "Industrie", icon: Factory, img: industrie, tagline: "Propreté technique et services support aux sites de production." },
-  { slug: "nucleaire", label: "Nucléaire", icon: Atom, img: nucleaire, tagline: "Interventions habilitées, exigence de sûreté et de traçabilité." },
-  { slug: "pharmaceutique", label: "Pharmaceutique", icon: FlaskConical, img: pharma, tagline: "Salles blanches, bioproduction et environnements ultra-contrôlés." },
-  { slug: "sante-et-soins", label: "Santé & Soins", icon: HeartPulse, img: sante, tagline: "Bionettoyage hospitalier et accompagnement des établissements de santé." },
-  { slug: "surfaces-de-vente", label: "Surfaces de vente", icon: Store, img: retail, tagline: "Mise en valeur de vos points de vente, prestations en flux tendu." },
   { slug: "tertiaire", label: "Tertiaire", icon: Briefcase, img: tertiaire, tagline: "Confort des occupants, expérience employé et image de marque." },
-  { slug: "transport", label: "Transport", icon: Train, img: transport, tagline: "Gares, aéroports, flottes : exigence opérationnelle et continuité de service." },
+  { slug: "syndics-gestionnaires", label: "Syndics & Gestionnaires", icon: Home, img: syndics, tagline: "Gestion technique et entretien des parties communes en copropriété." },
+  { slug: "pharmaceutique", label: "Pharmaceutique", icon: FlaskConical, img: pharma, tagline: "Salles blanches, bioproduction et environnements ultra-contrôlés." },
+  { slug: "surfaces-de-vente", label: "Surfaces de vente", icon: Store, img: retail, tagline: "Mise en valeur de vos points de vente, prestations en flux tendu." },
+  { slug: "sante-et-soins", label: "Santé & Soins", icon: HeartPulse, img: sante, tagline: "Bionettoyage hospitalier et accompagnement des établissements de santé." },
+  { slug: "construction", label: "Construction", icon: HardHat, img: construction, tagline: "Services support sur chantiers et sites de rénovation." },
+  { slug: "industrie", label: "Industrie", icon: Factory, img: industrie, tagline: "Propreté technique et services support aux sites de production." },
+  { slug: "education-collectivites", label: "Education & Collectivités", icon: School, img: education, tagline: "Entretien et maintenance des établissements publics et scolaires." },
+  { slug: "hotellerie", label: "Hôtellerie", icon: Hotel, img: hotellerie, tagline: "Services support aux hôtels et résidences pour un accueil parfait." },
 ] as const;
 
 function SoftFacilityPage() {
