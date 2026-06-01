@@ -182,7 +182,7 @@ function Index() {
               >
                 <Link to={s.to} className="group block rounded-sm overflow-hidden border border-border bg-card hover:border-primary/60 transition h-full">
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1600} height={1200} />
+                    <img src={s.img} alt={`${s.title} — ${s.subtitle} ELITESY`} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" width={1600} height={1200} />
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
                   </div>
                   <div className="p-8">
@@ -243,7 +243,7 @@ function Index() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={elitesyTeamImg} alt="Équipe ELITESY" className="w-full h-[600px] object-cover" loading="lazy" width={1920} height={1280} />
+            <img src={elitesyTeamImg} alt="Équipe ELITESY au travail sur un site client à Paris" className="w-full h-[600px] object-cover" loading="lazy" width={1920} height={1280} />
           </motion.div>
         </div>
       </section>
