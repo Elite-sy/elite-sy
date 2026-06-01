@@ -48,12 +48,28 @@ export const Route = createFileRoute("/soft-facility")({
 });
 
 const expertises = [
-  { icon: ClipboardList, title: "Pilotage multiservices", desc: "Un référent unique, un reporting consolidé, des engagements de service mesurés en continu sur l'ensemble des prestations." },
-  { icon: Sparkles, title: "Gestion des déchets", desc: "Tri à la source, valorisation, traçabilité réglementaire et accompagnement vers la réduction de l'empreinte environnementale." },
-  { icon: Leaf, title: "Entretien des espaces extérieurs", desc: "Tonte des pelouses\nTaille des haies et plantations\nNettoyage des parkings et voiries\nEntretien des espaces verts\nRamassage des feuilles et déchets extérieurs" },
-  { icon: Building2, title: "Logistique sur site", desc: "​Montage / démontage de mobilier (bureaux, armoires, chaises)\nRéorganisation d’espaces de travail\nInstallation de signalétique (panneaux, affichage)\nMise en place de salles de réunion\nInstallation de tableaux, supports, décorations\ndéménagements internes ou optimisation des bureaux" },
-  { icon: Mail, title: "Entretien et travaux de maintenance légère ", desc: "​Remplacement d’ampoules (si simple et accessible)\nRéglage de portes / poignées / petits éléments\nFixation d’éléments muraux (cadres, supports…)\nRéparation mineure du mobilier\nRetouches simples (peinture légère locale)" },
-  { icon: Users, title: "​Services aux occupants", desc: "​Préparation des salles de réunion\nAssistance aux collaborateurs\nOrganisation des espaces partagés\nSupport quotidien (petits besoins internes)" },
+  { slug: "pilotage-multiservices", icon: ClipboardList, title: "Pilotage multiservices", desc: "Un référent unique, un reporting consolidé, des engagements de service mesurés en continu sur l'ensemble des prestations." },
+  { slug: "gestion-dechets", icon: Sparkles, title: "Gestion des déchets", desc: "Tri à la source, valorisation, traçabilité réglementaire et accompagnement vers la réduction de l'empreinte environnementale." },
+  { slug: "espaces-exterieurs", icon: Leaf, title: "Entretien des espaces extérieurs", desc: "Tonte des pelouses
+Taille des haies et plantations
+Nettoyage des parkings et voiries
+Entretien des espaces verts
+Ramassage des feuilles et déchets extérieurs" },
+  { slug: "logistique-sur-site", icon: Building2, title: "Logistique sur site", desc: "​Montage / démontage de mobilier (bureaux, armoires, chaises)
+Réorganisation d’espaces de travail
+Installation de signalétique (panneaux, affichage)
+Mise en place de salles de réunion
+Installation de tableaux, supports, décorations
+déménagements internes ou optimisation des bureaux" },
+  { slug: "maintenance-legere", icon: Mail, title: "Entretien et travaux de maintenance légère ", desc: "​Remplacement d’ampoules (si simple et accessible)
+Réglage de portes / poignées / petits éléments
+Fixation d’éléments muraux (cadres, supports…)
+Réparation mineure du mobilier
+Retouches simples (peinture légère locale)" },
+  { slug: "services-occupants", icon: Users, title: "​Services aux occupants", desc: "​Préparation des salles de réunion
+Assistance aux collaborateurs
+Organisation des espaces partagés
+Support quotidien (petits besoins internes)" },
 ];
 
 export const sectors = [
@@ -153,13 +169,21 @@ function SoftFacilityPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="p-8 border border-border rounded-sm bg-background hover:border-primary/50 transition group"
               >
-                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30 mb-6 group-hover:scale-110 transition">
-                  <e.icon className="text-primary" size={22} />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">{e.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{e.desc}</p>
+                <Link
+                  to="/soft-facility/$slug"
+                  params={{ slug: e.slug }}
+                  className="block h-full p-8 border border-border rounded-sm bg-background hover:border-primary/50 transition group"
+                >
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30 mb-6 group-hover:scale-110 transition">
+                    <e.icon className="text-primary" size={22} />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">{e.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{e.desc}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                    En savoir plus <ArrowRight size={14} />
+                  </span>
+                </Link>
               </motion.div>
             ))}
           </div>
