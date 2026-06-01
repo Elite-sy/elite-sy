@@ -32,7 +32,9 @@ export const Route = createFileRoute("/blog/")({
         content:
           "Filtrez par catégorie : vitres, écolabel, HACCP, pharmacie, santé, syndics… 70+ articles pour les décideurs exigeants.",
       },
+      { property: "og:url", content: "https://elite-sy.lovable.app/blog" },
     ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/blog" }],
   }),
   component: BlogIndex,
 });
