@@ -6,9 +6,9 @@ import {
   ArrowRight,
   Check,
   FlaskConical,
-  Microscope,
-  Beaker,
-  Wind,
+  Store,
+  CreditCard,
+  Snowflake,
   ShieldCheck,
   ClipboardList,
   Eye,
@@ -16,8 +16,9 @@ import {
   CalendarCheck,
   Sparkles,
   HeartHandshake,
-  Boxes,
+  Droplets,
   Pill,
+  Leaf,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
@@ -38,17 +39,17 @@ import teamImg from "@/assets/elitesy-team.jpg";
 export const Route = createFileRoute("/proprete/pharmaceutique")({
   head: () => ({
     meta: [
-      { title: "Pharmaceutique — Bionettoyage salles blanches & ZAC | ELITESY" },
+      { title: "Nettoyage pharmacie & officine — Protocole ARS | ELITESY" },
       {
         name: "description",
         content:
-          "Bionettoyage des salles blanches, laboratoires et zones à atmosphère contrôlée. Protocoles BPF, ISO 14644 et traçabilité complète pour vos environnements pharmaceutiques.",
+          "Nettoyage et bionettoyage d'officines de pharmacie : protocole par zone, désinfection comptoir & TPE, frigos médicaments, conformité ARS et démarche qualité DQO.",
       },
-      { property: "og:title", content: "Pharmaceutique — ELITESY Propreté" },
+      { property: "og:title", content: "Nettoyage pharmacie & officine — ELITESY" },
       {
         property: "og:description",
         content:
-          "Salles blanches, laboratoires, bioproduction, logistique : des équipes formées aux BPF et des protocoles validés pour vos environnements sensibles.",
+          "Protocole d'hygiène complet pour officines : espace de vente, comptoir & TPE, back-office, réfrigérateurs médicaments, sanitaires. Traçabilité prête pour inspection ARS.",
       },
       { property: "og:image", content: heroImg },
     ],
@@ -67,150 +68,150 @@ type Zone = {
 
 const zones: Zone[] = [
   {
-    id: "salles-blanches",
-    label: "Salles blanches (ZAC)",
-    icon: Wind,
+    id: "espace-vente",
+    label: "Espace de vente",
+    icon: Store,
     image: cleanroomImg,
     description:
-      "Bionettoyage des zones à atmosphère contrôlée classées ISO 5 à ISO 8. Nos protocoles validés respectent les exigences BPF, GMP et ISO 14644 pour garantir l'intégrité de vos environnements de production stérile.",
+      "La zone de vente est la vitrine de votre officine. Nous intervenons hors heures de pointe (avant ouverture, pause midi, après fermeture) pour maintenir des sols, linéaires et vitrines impeccables sans gêner le flux patients.",
     bullets: [
-      "Bionettoyage en flux validé (sens, dosage, temps de contact)",
-      "Microfibres dédiées à code couleur par classe ISO",
-      "Détergents-désinfectants homologués spectre large",
-      "Contrôles particulaires et microbiologiques tracés",
+      "Sols quotidiens en franges pré-imprégnées",
+      "Dépoussiérage des rayonnages du haut vers le bas",
+      "Vitrines hebdomadaires, ajustées selon exposition",
+      "Produits peu odorants et à faibles COV",
     ],
   },
   {
-    id: "laboratoires",
-    label: "Laboratoires R&D et CQ",
-    icon: Microscope,
+    id: "comptoir",
+    label: "Comptoir & TPE",
+    icon: CreditCard,
     image: labImg,
     description:
-      "Entretien des laboratoires de recherche, contrôle qualité et bioanalyse. Nos agents formés aux risques biologiques et chimiques préservent vos paillasses, hottes, postes de sécurité microbiologique et instruments analytiques.",
+      "Le comptoir concentre les risques : ordonnances, paiement, signature, écrans tactiles. Nous appliquons une désinfection deux fois par jour des points de contact (TPE, stylos, plateau, sonnette, poignées) avec respect strict du temps de contact.",
     bullets: [
-      "Nettoyage des paillasses et plans de travail inox",
-      "Entretien des PSM, sorbonnes et zones d'analyse",
-      "Gestion des déchets DASRI et chimiques",
-      "Respect strict des zones et flux du laboratoire",
+      "Désinfection 2x/jour (pause midi + fermeture)",
+      "Produits virucides EN 14476 sur surfaces haut contact",
+      "Application sur lavette dédiée (jamais pulvérisé sur le TPE)",
+      "Renfort en période de forte affluence ou épidémie",
     ],
   },
   {
-    id: "sas-vestiaires",
-    label: "Sas & vestiaires",
-    icon: Beaker,
+    id: "back-office",
+    label: "Back-office & préparations",
+    icon: Pill,
     image: airlockImg,
     description:
-      "Les sas d'habillage et vestiaires sont la première barrière biologique de votre établissement. Nous garantissons un bionettoyage rigoureux, respectant la séparation des flux propres et sales.",
+      "Le back-office est moins visible mais plus sensible. Bionettoyage du plan de travail de préparation selon une méthode stable : matériel dédié, code couleur par zone, séquence reproductible et limitation des contaminations croisées.",
     bullets: [
-      "Bionettoyage des sas d'habillage et de déshabillage",
-      "Désinfection des bancs, vestiaires et sanitaires associés",
-      "Réapprovisionnement des consommables stériles",
-      "Respect de la marche en avant et des flux",
+      "Bionettoyage du plan de préparation",
+      "Lavettes codées par zone (vente, back-office, sanitaires)",
+      "Détergents-désinfectants compatibles produits de santé",
+      "Stockage séparé des produits d'entretien et médicaments",
     ],
   },
   {
-    id: "production",
-    label: "Zones de production",
-    icon: Pill,
+    id: "frigos",
+    label: "Réfrigérateurs médicaments",
+    icon: Snowflake,
     image: productionImg,
     description:
-      "Bionettoyage des ateliers de production, salles de remplissage, locaux de pesée et zones de conditionnement. Interventions cadencées sur vos arrêts techniques et campagnes de production.",
+      "Nettoyage mensuel des réfrigérateurs à médicaments avec procédure dédiée et traçabilité. Une opération simple mais documentée, intégrée à votre dossier qualité « prêt inspection ARS ».",
     bullets: [
-      "Nettoyage entre lots et fins de campagne",
-      "Décontamination des équipements et bâtis inox",
-      "Sols époxy, plafonds techniques et parois lessivables",
-      "Validation et traçabilité documentaire complète",
+      "Espace temporaire propre préparé pour les produits",
+      "Nettoyage étagères, parois et contrôle des joints",
+      "Vérification visuelle de la condensation",
+      "Fiche datée signée : opérateur, observations, actions",
     ],
   },
   {
-    id: "logistique",
-    label: "Logistique & stockage",
-    icon: Boxes,
+    id: "sanitaires",
+    label: "Sanitaires & zones humides",
+    icon: Droplets,
     image: warehouseImg,
     description:
-      "Entretien des zones logistiques, magasins matières premières, articles de conditionnement et produits finis. Maintien des conditions de stockage et propreté des zones de réception et d'expédition.",
+      "Désinfection renforcée des sanitaires (personnel et public si accessibles). Matériel strictement séparé pour éviter tout transfert de germes vers les zones de vente ou de préparation.",
     bullets: [
-      "Balayage et lavage mécanisé des sols",
-      "Dépoussiérage des rayonnages et palettiers",
-      "Nettoyage des quais et zones de transit",
-      "Respect des plans de circulation et FIFO",
+      "Surfaces, robinetterie, poignées, cuvettes, sols",
+      "Réassort des consommables (savon, papier)",
+      "Lavettes et gants dédiés, jamais croisés",
+      "Routine courte et constante, traçée à chaque passage",
     ],
   },
   {
-    id: "tertiaire",
-    label: "Bureaux & espaces périphériques",
+    id: "annexes",
+    label: "Bureaux & espace pause",
     icon: Sparkles,
     image: teamImg,
     description:
-      "Au-delà des zones réglementées, nous entretenons les espaces tertiaires de votre site : bureaux d'études, salles de réunion, espaces de restauration et zones d'accueil. Une qualité homogène, partout sur votre site.",
+      "Au-delà des zones réglementées, nous entretenons les espaces de travail de l'équipe : bureau du titulaire, espace de pause, vestiaires. Une qualité homogène, partout dans votre officine.",
     bullets: [
-      "Entretien quotidien des bureaux et open spaces",
-      "Vitrerie, miroirs et parois vitrées",
-      "Salles de réunion et espaces de convivialité",
-      "Sanitaires et zones de restauration",
+      "Entretien du bureau du titulaire et coin administratif",
+      "Espace pause, micro-ondes, frigo, vaisselle",
+      "Vestiaires et coin équipe",
+      "Vitrerie intérieure et miroirs",
     ],
   },
 ];
 
 const missions = [
   {
-    icon: Wind,
-    title: "Bionettoyage ZAC",
+    icon: Store,
+    title: "Espace de vente",
     items: [
-      "Protocoles validés classes ISO 5 à ISO 8",
-      "Flux entrant et sortant maîtrisés",
-      "Détergents-désinfectants homologués",
-      "Matériel dédié par classe de propreté",
+      "Sols quotidiens, vitrines hebdomadaires",
+      "Dépoussiérage des linéaires et mobilier",
+      "Interventions hors heures de pointe",
+      "Produits peu odorants pour le confort patients",
     ],
   },
   {
     icon: ShieldCheck,
-    title: "Conformité BPF & GMP",
+    title: "Conformité ARS & DQO",
     items: [
-      "Procédures rédigées selon vos référentiels",
-      "Modes opératoires validés avec votre QA",
-      "Traçabilité complète des interventions",
-      "Préparation et accompagnement aux audits",
+      "Plan de nettoyage-désinfection (PND) par zone",
+      "Alignement avec la Démarche Qualité Officine",
+      "Fiches techniques et FDS à disposition",
+      "Dossier « prêt inspection ARS » à jour",
     ],
   },
   {
-    icon: Microscope,
-    title: "Laboratoires sensibles",
+    icon: CreditCard,
+    title: "Comptoir & points haut contact",
     items: [
-      "Entretien des paillasses, PSM et sorbonnes",
-      "Gestion des DASRI et déchets chimiques",
-      "Agents formés aux risques biologiques",
-      "Respect strict des zones et flux",
+      "Désinfection 2x/jour du comptoir et TPE",
+      "Produits virucides (référence EN 14476)",
+      "Respect des temps de contact et séchage à l'air",
+      "Renfort en période épidémique",
     ],
   },
   {
     icon: Pill,
-    title: "Production pharmaceutique",
+    title: "Bionettoyage back-office",
     items: [
-      "Bionettoyage entre lots et campagnes",
-      "Décontamination des équipements inox",
-      "Interventions sur arrêts techniques",
-      "Validation documentaire complète",
+      "Plan de préparation traité en bionettoyage",
+      "Matériel dédié, code couleur par zone",
+      "Produits compatibles stockage médicaments",
+      "Pas de mélanges, pas de lavettes multi-usages",
     ],
   },
   {
-    icon: Boxes,
-    title: "Logistique & stockage",
+    icon: Snowflake,
+    title: "Réfrigérateurs médicaments",
     items: [
-      "Balayage et lavage mécanisé",
-      "Dépoussiérage rayonnages et palettiers",
-      "Maintien des conditions de stockage",
-      "Nettoyage quais et zones de transit",
+      "Nettoyage mensuel tracé",
+      "Contrôle joints et condensation",
+      "Fiche datée signée par l'opérateur",
+      "Intégration au dossier qualité",
     ],
   },
   {
-    icon: ClipboardList,
-    title: "Documentation & traçabilité",
+    icon: Leaf,
+    title: "Produits & engagement écologique",
     items: [
-      "Fiches de relevés par zone et par passage",
-      "Plans de nettoyage et de désinfection",
-      "Bilans qualité mensuels et trimestriels",
-      "Dossier audit prêt à présenter",
+      "Produits éco-labellisés quand l'usage le permet",
+      "Solutions à faibles COV pour l'air intérieur",
+      "Microfibres professionnelles, juste dose",
+      "Stockage séparé et étiquetage clair",
     ],
   },
 ];
@@ -219,67 +220,67 @@ const methode = [
   {
     icon: CalendarCheck,
     step: "01",
-    title: "Audit & qualification du site",
-    text: "Visite des zones avec votre référent QA, cartographie des classes ISO, identification des flux propres et sales, recensement des contraintes BPF spécifiques à votre activité.",
+    title: "Audit de votre officine",
+    text: "Visite avec le titulaire, cartographie des zones (vente, comptoir, back-office, stockage, frigos, sanitaires), recensement des flux patients et contraintes d'horaires.",
   },
   {
     icon: ClipboardList,
     step: "02",
-    title: "Rédaction des protocoles",
-    text: "Élaboration des modes opératoires par zone, choix des produits et matériels validés, plans de nettoyage et grilles de contrôle. Validation conjointe avec votre assurance qualité.",
+    title: "Plan de nettoyage & produits",
+    text: "Rédaction du PND par zone avec fréquences, choix des produits (compatibles médicaments, faibles COV, EN 14476 si besoin) et du matériel dédié. Validation avec vous.",
   },
   {
     icon: Eye,
     step: "03",
-    title: "Formation & habilitation",
-    text: "Formation des agents aux BPF, à l'habillage en cascade, aux gestes de bionettoyage. Habilitation par zone et tests microbiologiques périodiques pour garantir la conformité.",
+    title: "Formation des agents",
+    text: "Formation aux gestes de bionettoyage, au code couleur des lavettes, aux temps de contact et à la confidentialité spécifique à l'officine. Agent référent attitré à votre site.",
   },
   {
     icon: MessageSquare,
     step: "04",
-    title: "Pilotage & amélioration continue",
-    text: "Référent dédié, contrôles qualité tracés, revue mensuelle avec votre QA, plan d'actions correctives. Accompagnement complet lors de vos audits internes et clients.",
+    title: "Pilotage & dossier ARS",
+    text: "Check-lists datées à chaque passage, revue mensuelle avec le titulaire, actions correctives en cas d'écart. Votre dossier d'hygiène reste prêt en permanence pour l'inspection ARS.",
   },
 ];
 
 const engagements = [
   {
     icon: ShieldCheck,
-    title: "Conformité réglementaire",
-    text: "BPF, GMP, ISO 14644, USP <797> : nos protocoles sont alignés sur les référentiels en vigueur et adaptés à votre niveau d'exigence interne.",
+    title: "Prêt pour l'inspection ARS",
+    text: "Plan de nettoyage-désinfection, FDS, check-lists datées et fiches frigo : votre dossier hygiène est à jour, cohérent avec la réalité du terrain et alignable sur la DQO.",
   },
   {
     icon: HeartHandshake,
-    title: "Équipes stables & habilitées",
-    text: "Agents formés, habilités par zone et fidélisés sur votre site. Aucun intérimaire non habilité, continuité de service garantie via un volant de remplaçants formés.",
+    title: "Discrétion & continuité",
+    text: "Agent référent fidélisé sur votre officine, interventions hors flux patients, remplaçants formés pour garantir un niveau constant toute l'année, y compris en saison épidémique.",
   },
   {
-    icon: ClipboardList,
-    title: "Traçabilité audit-ready",
-    text: "Chaque intervention est documentée : fiches de relevés, registres signés, plans de nettoyage à jour. Votre dossier audit est prêt en permanence.",
+    icon: Leaf,
+    title: "Produits compatibles santé",
+    text: "Produits éco-labellisés à faibles COV quand c'est compatible, virucides EN 14476 sur points haut contact, microfibres pro et juste dose : efficacité sans sur-désinfection.",
   },
 ];
 
 const faqs = [
   {
-    q: "Êtes-vous habitués aux environnements BPF / GMP ?",
-    a: "Oui. Nos équipes interviennent quotidiennement dans des environnements pharmaceutiques et bioproduction soumis aux Bonnes Pratiques de Fabrication. Nos protocoles, formations et documents qualité sont conçus pour résister aux audits internes, clients et inspections ANSM.",
+    q: "Quelle est la fréquence recommandée pour nettoyer une pharmacie ?",
+    a: "Une base réaliste : sols de la zone vente au quotidien, comptoirs et surfaces à haut contact 1 à 2 fois par jour, vitrines de façon hebdomadaire (à ajuster selon l'exposition), réfrigérateurs médicaments mensuellement. Toutes ces fréquences sont consignées dans votre plan de nettoyage officine et ajustées selon l'affluence.",
   },
   {
-    q: "Quelles classes ISO traitez-vous ?",
-    a: "Nous intervenons en zones classées ISO 5 à ISO 8 selon ISO 14644. Les protocoles, matériels et habillages sont adaptés à chaque classe, avec une séparation stricte des consommables et un code couleur par niveau de propreté.",
+    q: "Le terminal CB (TPE) doit-il être désinfecté tous les jours ?",
+    a: "Oui, au minimum. C'est l'un des points de contact les plus manipulés de l'officine. Nous le désinfectons 2 fois par jour avec un produit appliqué sur lavette dédiée (jamais pulvérisé directement sur l'appareil), en respectant le temps de contact et en laissant sécher à l'air.",
   },
   {
-    q: "Comment garantissez-vous la traçabilité ?",
-    a: "Chaque passage donne lieu à un relevé daté et signé : zone, opérateur, produits utilisés, lot, temps de contact. Les données sont consolidées dans un tableau de bord mensuel partagé avec votre QA, et l'historique complet est conservé pour vos audits.",
+    q: "Comment se passe le nettoyage du réfrigérateur à médicaments ?",
+    a: "Une procédure simple et mensuelle : préparation d'un espace propre temporaire pour les produits, nettoyage des étagères et parois, vérification des joints et de la condensation, puis enregistrement sur une fiche datée (opérateur, observations). Cette traçabilité s'intègre directement à votre dossier qualité.",
   },
   {
-    q: "Pouvez-vous intervenir sur arrêts techniques et shutdowns ?",
-    a: "Absolument. Nous mobilisons des équipes renforcées sur vos arrêts de production, shutdowns annuels, requalifications ou changements de campagne. Planning défini conjointement, équipes formées aux contraintes de votre site.",
+    q: "Vos produits sont-ils compatibles avec le stockage de médicaments ?",
+    a: "Oui. Nous privilégions des produits à faibles COV, peu odorants et éco-labellisés quand l'usage le permet, pour préserver la qualité de l'air et éviter toute interférence avec les produits de santé. Les produits virucides (EN 14476) sont réservés aux surfaces à haut contact où le risque est réel.",
   },
   {
-    q: "Gérez-vous les déchets DASRI et chimiques ?",
-    a: "Oui. Nous assurons la collecte, le conditionnement et la traçabilité des DASRI conformément à la réglementation, ainsi que la prise en charge des déchets chimiques en liaison avec vos prestataires d'évacuation agréés.",
+    q: "Pouvez-vous intervenir hors heures d'ouverture ?",
+    a: "C'est notre standard pour les officines. Nous planifions les passages avant ouverture, sur la pause méridienne ou après fermeture, pour ne pas perturber le flux patients. L'agent référent dispose d'un protocole d'accès convenu avec le titulaire et garantit la discrétion sur les zones confidentielles.",
   },
 ];
 
@@ -301,14 +302,14 @@ function PharmaceutiquePage() {
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/15 border border-primary/30">
                 <FlaskConical className="text-primary" size={26} />
               </div>
-              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Pharmaceutique</p>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary text-lg">Pharmacie & officine</p>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
-              Salles blanches & ZAC,<br />
-              <span className="text-primary">l'exigence du détail.</span>
+              Nettoyage d'officine,<br />
+              <span className="text-primary">protocole prêt pour l'ARS.</span>
             </h1>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Bionettoyage des environnements pharmaceutiques sensibles : protocoles BPF, équipes habilitées et traçabilité complète pour vos sites de production, laboratoires et zones logistiques.
+              Protocole d'hygiène par zone, désinfection du comptoir et du TPE, bionettoyage du back-office, frigos médicaments tracés : un dispositif clair, reproductible et justifiable en cas d'inspection.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
@@ -326,7 +327,7 @@ function PharmaceutiquePage() {
             className="relative rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={heroImg} alt="Salle blanche pharmaceutique ELITESY en bionettoyage" width={1600} height={1120} className="w-full h-[500px] object-cover" />
+            <img src={heroImg} alt="Nettoyage d'officine de pharmacie par ELITESY : désinfection du comptoir et du terminal CB" width={1600} height={1120} className="w-full h-[500px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </motion.div>
         </div>
@@ -339,12 +340,12 @@ function PharmaceutiquePage() {
             <ShieldCheck className="text-primary" size={28} />
           </div>
           <div>
-            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-4 text-sm">Un partenaire à la hauteur de vos exigences</p>
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-4 text-sm">Un partenaire pour votre officine</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Le bionettoyage pharmaceutique exige des protocoles validés, des équipes habilitées et une traçabilité sans faille.
+              Une officine cumule des contraintes de commerce ouvert au public et d'activité de santé : il faut un protocole clair, reproductible et traçable.
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              ELITESY intervient sur l'ensemble de vos zones — production stérile, laboratoires R&D et contrôle qualité, sas d'habillage, logistique — avec des modes opératoires conformes aux Bonnes Pratiques de Fabrication, à la norme ISO 14644 et aux référentiels GMP.
+              ELITESY structure l'hygiène de votre pharmacie autour d'un zoning pragmatique — espace de vente, comptoir et TPE, back-office et préparations, stockage et réfrigérateurs médicaments, sanitaires — avec une traçabilité simple alignée sur la Démarche Qualité Officine (DQO) et prête en cas d'inspection ARS.
             </p>
           </div>
         </div>
@@ -353,9 +354,9 @@ function PharmaceutiquePage() {
       {/* Zones interactives */}
       <section id="zones" className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Les zones que nous traitons</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl">Chaque environnement, son protocole.</h2>
-          <p className="text-muted-foreground max-w-2xl mb-12">Cliquez sur une zone pour découvrir notre méthode d'intervention.</p>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Zoning de votre officine</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl">Du plus public au plus sensible, chaque zone son protocole.</h2>
+          <p className="text-muted-foreground max-w-2xl mb-12">Cliquez sur une zone pour découvrir fréquences, produits et points d'attention.</p>
 
           <div className="grid lg:grid-cols-[320px_1fr] gap-8">
             <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
@@ -412,8 +413,8 @@ function PharmaceutiquePage() {
       {/* Nos missions */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Nos missions en pharmaceutique</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Un périmètre complet, du laboratoire à la logistique.</h2>
+          <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Nos missions en officine</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">Un dispositif complet, de la vitrine au dossier qualité.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {missions.map((m, i) => {
               const Icon = m.icon;
@@ -449,7 +450,7 @@ function PharmaceutiquePage() {
       <section className="py-24 border-t border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Méthode & organisation</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">De l'audit au pilotage continu.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-3xl">De l'audit de l'officine au dossier inspection.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {methode.map((m, i) => {
               const Icon = m.icon;
@@ -486,11 +487,11 @@ function PharmaceutiquePage() {
             className="rounded-sm overflow-hidden"
             style={{ boxShadow: "var(--shadow-elegant)" }}
           >
-            <img src={teamImg} alt="L'équipe ELITESY : agents habilités aux environnements pharmaceutiques" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
+            <img src={teamImg} alt="L'équipe ELITESY : agents formés au bionettoyage en officine de pharmacie" loading="lazy" width={1280} height={960} className="w-full h-[500px] object-cover" />
           </motion.div>
           <div>
             <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Pourquoi ELITESY</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour vos environnements sensibles.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-10">Un partenaire fiable pour votre officine.</h2>
             <div className="space-y-6">
               {engagements.map((e) => {
                 const Icon = e.icon;
@@ -535,9 +536,9 @@ function PharmaceutiquePage() {
       <section className="py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-sm">Passons à l'action</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Un devis adapté à votre site pharmaceutique.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Un devis adapté à votre officine.</h2>
           <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Décrivez-nous vos zones et vos référentiels : nous construisons un dispositif sur mesure, conforme à vos exigences qualité.
+            Décrivez-nous votre officine, vos horaires et votre zoning : nous construisons un protocole sur mesure, traçable et compatible avec votre démarche qualité.
           </p>
           <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
             Demander un devis personnalisé <ArrowRight size={16} />
