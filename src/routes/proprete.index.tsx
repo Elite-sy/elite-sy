@@ -41,6 +41,24 @@ export const Route = createFileRoute("/proprete/")({
       { name: "description", content: "Prestations de propreté haut de gamme pour bureaux, sièges sociaux, hôtellerie et environnements exigeants." },
       { property: "og:title", content: "Propreté premium — ELITESY" },
       { property: "og:description", content: "Prestations sur-mesure, équipes qualifiées, exigence du détail." },
+      { property: "og:image", content: img },
+      { property: "og:url", content: "https://elite-sy.lovable.app/proprete" },
+    ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/proprete" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Propreté professionnelle",
+          provider: { "@type": "Organization", name: "ELITESY" },
+          areaServed: "Paris, Île-de-France, France",
+          url: "https://elite-sy.lovable.app/proprete",
+          description:
+            "Propreté haut de gamme pour bureaux, sièges sociaux, hôtellerie, santé, pharmaceutique, retail et copropriétés.",
+        }),
+      },
     ],
   }),
   component: () => (

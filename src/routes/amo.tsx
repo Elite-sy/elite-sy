@@ -149,6 +149,23 @@ export const Route = createFileRoute("/amo")({
       },
       { property: "og:image", content: img },
       { property: "twitter:image", content: img },
+      { property: "og:url", content: "https://elite-sy.lovable.app/amo" },
+    ],
+    links: [{ rel: "canonical", href: "https://elite-sy.lovable.app/amo" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Assistance à Maîtrise d'Ouvrage (AMO)",
+          provider: { "@type": "Organization", name: "ELITESY" },
+          areaServed: "Paris, Île-de-France, France",
+          url: "https://elite-sy.lovable.app/amo",
+          description:
+            "AMO indépendante : programmation, pilotage de rénovation, réhabilitation et construction. VEFA, BEFA, CPI, décret tertiaire.",
+        }),
+      },
     ],
   }),
   component: AmoPage,
