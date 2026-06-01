@@ -11,7 +11,7 @@ export function Footer() {
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
             L'excellence opérationnelle au service de vos environnements professionnels.
-            Propreté, Soft Facility Management et Assistance à Maîtrise d'Ouvrage.
+            Propreté, Soft Facility (FM) et Assistance à Maîtrise d'Ouvrage.
           </p>
         </div>
         <div>

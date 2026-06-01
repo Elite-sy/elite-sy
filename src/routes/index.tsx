@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ELITESY — Propreté, Soft Facility & AMO" },
-      { name: "description", content: "Services premium aux entreprises : propreté, soft facility management et assistance à maîtrise d'ouvrage. L'excellence au service de vos bâtiments." },
+      { name: "description", content: "Services premium aux entreprises : propreté, soft facility (FM) et assistance à maîtrise d'ouvrage. L'excellence au service de vos bâtiments." },
       { property: "og:title", content: "ELITESY — Excellence en services aux entreprises" },
       { property: "og:description", content: "Propreté, Soft Facility et AMO pour les environnements professionnels exigeants." },
     ],
@@ -99,7 +99,7 @@ function Index() {
             </h1>
             <p className="mt-10 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               ELITESY accompagne les entreprises et institutions dans la propreté,
-              le soft facility management et l'assistance à maîtrise d'ouvrage.
+              le soft facility (FM) et l'assistance à maîtrise d'ouvrage.
               Une exigence intransigeante, des résultats mesurables.
             </p>
             <div className="mt-12 flex flex-wrap gap-4">
