@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import { LazyImage } from "@/components/site/LazyImage";
 import { getPostBySlug, publishedPosts } from "@/data/blog";
 import type { Block } from "@/data/blog/types";
 
