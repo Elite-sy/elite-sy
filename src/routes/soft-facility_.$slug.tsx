@@ -137,15 +137,16 @@ export const services: Record<string, ServiceDetail> = {
   },
 };
 
-export const Route = createFileRoute("/soft-facility/$slug")({
+export const Route = createFileRoute("/soft-facility_/$slug")({
   loader: ({ params }) => {
     const service = services[params.slug];
     if (!service) throw notFound();
-    return { service, slug: params.slug };
+    return { slug: params.slug };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [] };
-    const { service } = loaderData;
+    const service = services[loaderData.slug];
+    if (!service) return { meta: [] };
     return {
       meta: [
         { title: `${service.label} — Soft Facility | ELITESY` },
@@ -185,7 +186,8 @@ export const Route = createFileRoute("/soft-facility/$slug")({
 });
 
 function ServiceDetailPage() {
-  const { service, slug } = Route.useLoaderData() as { service: ServiceDetail; slug: string };
+  const { slug } = Route.useLoaderData() as { slug: string };
+  const service = services[slug];
   const Icon = service.icon;
   const others = Object.entries(services).filter(([s]) => s !== slug);
 
