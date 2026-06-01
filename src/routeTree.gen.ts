@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AmoRouteImport } from './routes/amo'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PropreteIndexRouteImport } from './routes/proprete.index'
+import { Route as SoftFacilitySlugRouteImport } from './routes/soft-facility.$slug'
 import { Route as SecteurSlugRouteImport } from './routes/secteur.$slug'
 import { Route as PropreteSyndicsCoproprieteRouteImport } from './routes/proprete.syndics-copropriete'
 import { Route as PropreteSlugRouteImport } from './routes/proprete.$slug'
@@ -55,6 +56,11 @@ const PropreteIndexRoute = PropreteIndexRouteImport.update({
   path: '/',
   getParentRoute: () => PropreteRoute,
 } as any)
+const SoftFacilitySlugRoute = SoftFacilitySlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => SoftFacilityRoute,
+} as any)
 const SecteurSlugRoute = SecteurSlugRouteImport.update({
   id: '/secteur/$slug',
   path: '/secteur/$slug',
@@ -78,10 +84,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/soft-facility': typeof SoftFacilityRoute
+  '/soft-facility': typeof SoftFacilityRouteWithChildren
   '/proprete/$slug': typeof PropreteSlugRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
+  '/soft-facility/$slug': typeof SoftFacilitySlugRoute
   '/proprete/': typeof PropreteIndexRoute
 }
 export interface FileRoutesByTo {
@@ -89,10 +96,11 @@ export interface FileRoutesByTo {
   '/amo': typeof AmoRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/soft-facility': typeof SoftFacilityRoute
+  '/soft-facility': typeof SoftFacilityRouteWithChildren
   '/proprete/$slug': typeof PropreteSlugRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
+  '/soft-facility/$slug': typeof SoftFacilitySlugRoute
   '/proprete': typeof PropreteIndexRoute
 }
 export interface FileRoutesById {
@@ -102,10 +110,11 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/proprete': typeof PropreteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/soft-facility': typeof SoftFacilityRoute
+  '/soft-facility': typeof SoftFacilityRouteWithChildren
   '/proprete/$slug': typeof PropreteSlugRoute
   '/proprete/syndics-copropriete': typeof PropreteSyndicsCoproprieteRoute
   '/secteur/$slug': typeof SecteurSlugRoute
+  '/soft-facility/$slug': typeof SoftFacilitySlugRoute
   '/proprete/': typeof PropreteIndexRoute
 }
 export interface FileRouteTypes {
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/proprete/$slug'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
+    | '/soft-facility/$slug'
     | '/proprete/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/proprete/$slug'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
+    | '/soft-facility/$slug'
     | '/proprete'
   id:
     | '__root__'
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/proprete/$slug'
     | '/proprete/syndics-copropriete'
     | '/secteur/$slug'
+    | '/soft-facility/$slug'
     | '/proprete/'
   fileRoutesById: FileRoutesById
 }
@@ -152,7 +164,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PropreteRoute: typeof PropreteRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  SoftFacilityRoute: typeof SoftFacilityRoute
+  SoftFacilityRoute: typeof SoftFacilityRouteWithChildren
   SecteurSlugRoute: typeof SecteurSlugRoute
 }
 
@@ -207,6 +219,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PropreteIndexRouteImport
       parentRoute: typeof PropreteRoute
     }
+    '/soft-facility/$slug': {
+      id: '/soft-facility/$slug'
+      path: '/$slug'
+      fullPath: '/soft-facility/$slug'
+      preLoaderRoute: typeof SoftFacilitySlugRouteImport
+      parentRoute: typeof SoftFacilityRoute
+    }
     '/secteur/$slug': {
       id: '/secteur/$slug'
       path: '/secteur/$slug'
@@ -247,13 +266,25 @@ const PropreteRouteWithChildren = PropreteRoute._addFileChildren(
   PropreteRouteChildren,
 )
 
+interface SoftFacilityRouteChildren {
+  SoftFacilitySlugRoute: typeof SoftFacilitySlugRoute
+}
+
+const SoftFacilityRouteChildren: SoftFacilityRouteChildren = {
+  SoftFacilitySlugRoute: SoftFacilitySlugRoute,
+}
+
+const SoftFacilityRouteWithChildren = SoftFacilityRoute._addFileChildren(
+  SoftFacilityRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AmoRoute: AmoRoute,
   ContactRoute: ContactRoute,
   PropreteRoute: PropreteRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  SoftFacilityRoute: SoftFacilityRoute,
+  SoftFacilityRoute: SoftFacilityRouteWithChildren,
   SecteurSlugRoute: SecteurSlugRoute,
 }
 export const routeTree = rootRouteImport
