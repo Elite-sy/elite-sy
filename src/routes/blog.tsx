@@ -11,6 +11,8 @@ const searchSchema = z.object({
   q: fallback(z.string(), "").default(""),
 });
 
+type BlogSearch = { cat: string; q: string };
+
 export const Route = createFileRoute("/blog")({
   validateSearch: zodValidator(searchSchema),
   head: () => ({
@@ -87,7 +89,7 @@ function BlogIndex() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              navigate({ search: (prev) => ({ ...prev, q: query }) });
+              navigate({ search: (prev: BlogSearch) => ({ ...prev, q: query }) });
             }}
             className="mt-10 max-w-xl flex items-center gap-2 bg-background border border-border rounded-sm px-4 py-3 shadow-sm"
           >
@@ -104,7 +106,7 @@ function BlogIndex() {
                 type="button"
                 onClick={() => {
                   setQuery("");
-                  navigate({ search: (prev) => ({ ...prev, q: "" }) });
+                  navigate({ search: (prev: BlogSearch) => ({ ...prev, q: "" }) });
                 }}
                 className="text-xs text-muted-foreground hover:text-primary"
               >
@@ -124,7 +126,7 @@ function BlogIndex() {
               <Link
                 key={c}
                 to="/blog"
-                search={(prev) => ({ ...prev, cat: c })}
+                search={(prev: BlogSearch) => ({ ...prev, cat: c })}
                 className={`shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium border transition-colors ${
                   active
                     ? "bg-primary text-primary-foreground border-primary"
