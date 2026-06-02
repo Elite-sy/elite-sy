@@ -354,6 +354,165 @@ function Index() {
         </div>
       </section>
 
+      {/* Advantages */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos avantages</p>
+            <h2 className="text-4xl md:text-5xl font-bold">Six raisons de nous confier vos sites.</h2>
+            <p className="mt-6 text-muted-foreground">
+              Une promesse claire : des prestations irréprochables, un suivi transparent, et une équipe
+              qui s'engage à vos côtés sur la durée.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {advantages.map((a, i) => (
+              <motion.div
+                key={a.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="group p-8 border border-border rounded-sm bg-card/40 hover:border-primary/60 hover:bg-card/80 transition"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <a.icon className="text-primary" size={22} />
+                </div>
+                <h3 className="text-lg font-bold mb-3">{a.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process / Methodology */}
+      <section className="py-32 border-t border-border bg-card/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Notre méthode</p>
+              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Quatre étapes pour des résultats durables.</h2>
+            </div>
+            <p className="text-muted-foreground max-w-md">
+              Un processus éprouvé qui sécurise vos décisions et garantit la qualité dans la durée.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {process.map((p, i) => (
+              <motion.div
+                key={p.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="rounded-sm overflow-hidden border border-border bg-background hover:border-primary/60 transition"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <LazyImage src={p.img} alt={`Étape ${p.step} — ${p.title}`} className="w-full h-full object-cover" width={800} height={600} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
+                  <div className="absolute top-4 left-4 font-display text-3xl font-bold text-primary" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>{p.step}</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-3">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specialised expertise */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Expertises spécialisées</p>
+            <h2 className="text-4xl md:text-5xl font-bold">Des protocoles adaptés aux environnements critiques.</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { img: santeChambreImg, title: "Santé & bionettoyage", desc: "Protocoles certifiés pour cliniques, EHPAD et cabinets médicaux.", to: "/proprete/professionnels-sante" },
+              { img: pharmaCleanroomImg, title: "Pharmaceutique & salles blanches", desc: "Conformité ISO 14644, traçabilité et équipes habilitées.", to: "/proprete/pharmaceutique" },
+              { img: prBureauxVitrerieImg, title: "Tertiaire & vitrerie", desc: "Bureaux, sièges sociaux, vitrerie grande hauteur, accueil.", to: "/proprete" },
+            ].map((c, i) => (
+              <motion.div
+                key={c.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <Link to={c.to} className="group block relative aspect-[4/5] rounded-sm overflow-hidden border border-border hover:border-primary/60 transition">
+                  <LazyImage src={c.img} alt={c.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" width={1200} height={1500} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-8">
+                    <h3 className="text-2xl font-bold mb-3">{c.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{c.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                      Découvrir <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-32 border-t border-border bg-card/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Ils nous font confiance</p>
+              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">La parole à nos clients.</h2>
+            </div>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <div className="flex gap-1 text-primary">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i}>★</span>
+                ))}
+              </div>
+              <span>98 % de clients fidèles depuis plus de 3 ans</span>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="p-8 border border-border rounded-sm bg-background flex flex-col"
+              >
+                <Quote className="text-primary mb-5" size={28} />
+                <p className="text-foreground leading-relaxed mb-8 flex-1">« {t.quote} »</p>
+                <div className="pt-6 border-t border-border">
+                  <div className="font-semibold">{t.name}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t.role}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-20 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">Certifications & engagements</p>
+          <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+            {certifications.map((c) => (
+              <div key={c} className="px-6 py-3 rounded-full border border-border bg-card/60 text-sm font-semibold tracking-wide hover:border-primary/60 hover:text-primary transition">
+                {c}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 mb-24">
