@@ -4,14 +4,9 @@
 # par Vite/Nitro. À uploader dans public_html/ sur O2switch.
 # ============================================================
 
-# --- Sécurité : forcer HTTPS ---------------------------------
+# --- Réécriture des URLs pour hébergement mutualisé -----------
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  # HTTPS obligatoire
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # URLs propres : /contact -> /contact/index.html (si le dossier existe)
   RewriteCond %{REQUEST_FILENAME} !-f

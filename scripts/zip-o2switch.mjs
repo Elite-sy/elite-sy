@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-// Génère dist-o2switch.zip à partir de .output/public/ (build statique Nitro).
+// Génère un ZIP O2switch à partir de dist/client/.
 // Le ZIP contient tout le contenu prêt à uploader dans public_html/ sur O2switch,
 // y compris le fichier .htaccess.
 
-import { existsSync, mkdirSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, statSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import AdmZip from "adm-zip";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(__dirname, "..");
-const sourceDir = resolve(projectRoot, ".output/public");
+const sourceDir = resolve(projectRoot, "dist/client");
 const outDir = resolve(projectRoot, "dist-o2switch");
 const stamp = new Date().toISOString().replace(/[:T]/g, "-").slice(0, 16);
 const outFile = resolve(outDir, `elitesy-o2switch-${stamp}.zip`);
@@ -27,6 +27,12 @@ if (!statSync(sourceDir).isDirectory()) {
 }
 
 mkdirSync(outDir, { recursive: true });
+
+const htaccessSrc = resolve(projectRoot, "public/.htaccess");
+const htaccessDst = resolve(sourceDir, ".htaccess");
+if (existsSync(htaccessSrc)) {
+  copyFileSync(htaccessSrc, htaccessDst);
+}
 
 console.log(`📦 Compression de ${sourceDir} ...`);
 const zip = new AdmZip();
