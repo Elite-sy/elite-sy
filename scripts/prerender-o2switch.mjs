@@ -55,7 +55,8 @@ const routes = [
   "/",
   "/proprete","/proprete/pharmaceutique","/proprete/professionnels-sante",
   "/proprete/surface-vente-erp","/proprete/syndics-copropriete",
-  "/soft-facility","/amo","/blog","/contact","/mentions-legales",
+  "/soft-facility","/amo","/contact","/mentions-legales",
+  ["/blog?cat=Toutes&q=&page=1", "/blog"],
   "/sitemap.xml",
   ...propreteSlugs.map((s) => `/proprete/${s}`),
   ...softFacilitySlugs.map((s) => `/soft-facility/${s}`),
@@ -75,29 +76,31 @@ let ok = 0;
 let fail = 0;
 for (const route of routes) {
   try {
-    const res = await handler.fetch(new Request("http://localhost" + route), {}, ctx);
+    const [requestPath, outputPath] = Array.isArray(route) ? route : [route, route];
+    const res = await handler.fetch(new Request("http://localhost" + requestPath), {}, ctx);
     if (res.status !== 200) {
-      console.warn(`  ⚠️  ${route} -> ${res.status}`);
+      console.warn(`  ⚠️  ${requestPath} -> ${res.status}`);
       fail++;
       continue;
     }
     const body = await res.text();
     const ct = res.headers.get("content-type") ?? "";
     let outPath;
-    if (route === "/sitemap.xml") {
+    if (outputPath === "/sitemap.xml") {
       outPath = join(clientDir, "sitemap.xml");
-    } else if (route === "/") {
+    } else if (outputPath === "/") {
       outPath = join(clientDir, "index.html");
     } else if (ct.includes("xml")) {
-      outPath = join(clientDir, route.replace(/^\//, ""));
+      outPath = join(clientDir, outputPath.replace(/^\//, ""));
     } else {
-      outPath = join(clientDir, route, "index.html");
+      outPath = join(clientDir, outputPath, "index.html");
     }
     mkdirSync(dirname(outPath), { recursive: true });
     writeFileSync(outPath, body);
     ok++;
   } catch (e) {
-    console.error(`  ❌ ${route}:`, e.message);
+    const requestPath = Array.isArray(route) ? route[0] : route;
+    console.error(`  ❌ ${requestPath}:`, e.message);
     fail++;
   }
 }
