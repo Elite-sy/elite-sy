@@ -116,6 +116,66 @@ const details: Record<string, SectorDetail> = {
       { title: "Espaces verts intérieurs", desc: "Mur végétal, plantes d'intérieur, entretien et fleurissement." },
     ],
   },
+  "syndics-gestionnaires": {
+    intro:
+      "Copropriétés, immeubles tertiaires et résidences gérées exigent une continuité visible : halls impeccables, circulations entretenues, petites interventions coordonnées et communication claire avec les occupants.",
+    challenges: [
+      "Qualité constante des parties communes et des abords",
+      "Réactivité sur incidents, encombrants et demandes occupants",
+      "Coordination avec conseils syndicaux, gardiens et gestionnaires",
+      "Traçabilité des passages et maîtrise budgétaire",
+    ],
+    prestations: [
+      { title: "Entretien des parties communes", desc: "Halls, escaliers, ascenseurs, locaux techniques, parkings et abords." },
+      { title: "Services aux occupants", desc: "Petite logistique, affichage, remontées terrain et suivi des demandes." },
+      { title: "Pilotage gestionnaire", desc: "Planning, contrôles qualité, reporting et coordination multiservices." },
+    ],
+  },
+  construction: {
+    intro:
+      "Chantiers, rénovations et opérations en site occupé nécessitent des services support fiables pour maintenir la sécurité, la propreté et le bon déroulement des travaux sans gêner l'exploitation.",
+    challenges: [
+      "Coactivité maîtrisée entre entreprises et occupants",
+      "Nettoyage fin de chantier et remise en état progressive",
+      "Gestion des flux, déchets et zones de stockage",
+      "Respect des délais de livraison et des contraintes sécurité",
+    ],
+    prestations: [
+      { title: "Nettoyage chantier", desc: "Bases vie, circulations, zones livrées, dépoussiérage et remise en état." },
+      { title: "Logistique sur site", desc: "Aide à l'installation, déplacements internes, signalétique et petits supports opérationnels." },
+      { title: "Gestion des déchets", desc: "Tri, évacuation, suivi des bennes et reporting de valorisation." },
+    ],
+  },
+  "education-collectivites": {
+    intro:
+      "Écoles, collectivités et établissements recevant du public demandent une organisation rigoureuse, compatible avec les horaires d'accueil et les exigences d'hygiène des espaces partagés.",
+    challenges: [
+      "Interventions en horaires contraints et zones occupées",
+      "Hygiène renforcée des sanitaires, classes et espaces communs",
+      "Sécurité des publics sensibles et maîtrise des produits",
+      "Souplesse pendant vacances, événements et pics d'activité",
+    ],
+    prestations: [
+      { title: "Entretien quotidien", desc: "Salles, bureaux administratifs, sanitaires, circulations et espaces extérieurs." },
+      { title: "Remises en état", desc: "Nettoyages périodiques, sols, vitrerie et préparations de rentrée." },
+      { title: "Services support", desc: "Petite logistique, gestion des consommables et accompagnement événementiel." },
+    ],
+  },
+  hotellerie: {
+    intro:
+      "Hôtels, résidences et lieux d'accueil doivent maintenir un niveau de service irréprochable à chaque contact client. ELITESY renforce vos équipes sur les zones visibles et les services support.",
+    challenges: [
+      "Exigence esthétique élevée et contrôles fréquents",
+      "Interventions discrètes en présence de clientèle",
+      "Variations d'activité selon saisons, événements et taux d'occupation",
+      "Coordination avec housekeeping, maintenance et réception",
+    ],
+    prestations: [
+      { title: "Espaces communs", desc: "Lobbies, couloirs, sanitaires publics, salles de réunion et zones de restauration." },
+      { title: "Renfort opérationnel", desc: "Appui ponctuel aux équipes, logistique interne et préparation d'espaces." },
+      { title: "Image & détails", desc: "Vitrerie, sols, finitions visibles et contrôles qualité orientés expérience client." },
+    ],
+  },
   transport: {
     intro:
       "Gares, aéroports, métros, flottes : le transport impose une exigence opérationnelle 7/7 et une visibilité immédiate de la qualité. ELITESY intervient avec des équipes dédiées, capables d'opérer en flux continus et en environnement public.",
