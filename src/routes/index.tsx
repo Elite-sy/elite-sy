@@ -373,44 +373,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Process / Methodology */}
-      <section className="py-32 border-t border-border bg-card/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-            <div>
-              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Notre méthode</p>
-              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Quatre étapes pour des résultats durables.</h2>
-            </div>
-            <p className="text-muted-foreground max-w-md">
-              Un processus éprouvé qui sécurise vos décisions et garantit la qualité dans la durée.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((p, i) => (
-              <motion.div
-                key={p.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="rounded-sm overflow-hidden border border-border bg-background hover:border-primary/60 transition"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <LazyImage src={p.img} alt={`Étape ${p.step} — ${p.title}`} className="w-full h-full object-cover" width={800} height={600} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
-                  <div className="absolute top-4 left-4 font-display text-3xl font-bold text-primary" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>{p.step}</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-3">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Specialised expertise */}
       <section className="py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
