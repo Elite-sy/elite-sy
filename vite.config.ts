@@ -82,6 +82,9 @@ const staticRoutes = [
 ];
 
 export default defineConfig({
+  nitro: {
+    preset: "static",
+  },
   tanstackStart: {
     prerender: {
       enabled: true,
