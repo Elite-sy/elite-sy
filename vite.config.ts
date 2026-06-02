@@ -82,9 +82,6 @@ const staticRoutes = [
 ];
 
 export default defineConfig({
-  tanstackStart: {
-    server: { entry: "server" },
-  },
   plugins: [
     // Auto-convert imported images to WebP (smaller files, near-universal browser support).
     // Single-format directive → import still returns a URL string, so existing
