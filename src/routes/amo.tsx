@@ -252,7 +252,7 @@ function AmoPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
               <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos missions</p>
-              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Diriger, construire, livrer.</h2>
+              <h2 className="text-4xl font-bold max-w-2xl md:text-2xl">Diriger, construire, livrer.</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
               Trois familles d'opérations, une même exigence : sécuriser l'investissement et garantir un ouvrage

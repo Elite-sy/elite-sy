@@ -247,7 +247,7 @@ function Index() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
               <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos métiers</p>
-              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Trois expertises, une seule promesse.</h2>
+              <h2 className="text-4xl font-bold max-w-2xl md:text-2xl">Trois expertises, une seule promesse.</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
               Chaque prestation est conçue sur-mesure, pilotée par des experts et mesurée à l'aune de votre satisfaction.
@@ -405,7 +405,7 @@ function Index() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
               <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Ils nous font confiance</p>
-              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">La parole à nos clients.</h2>
+              <h2 className="text-4xl font-bold max-w-2xl md:text-2xl">La parole à nos clients.</h2>
             </div>
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <div className="flex gap-1 text-primary">
