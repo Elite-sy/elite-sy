@@ -334,12 +334,9 @@ function BlogIndex() {
             de vos besoins.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition"
-            >
+            <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition">
               Demander un devis
-            </Link>
+            </a>
             <a
               href="tel:+33609165099"
               className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-sm border border-border text-foreground hover:border-primary hover:text-primary transition"

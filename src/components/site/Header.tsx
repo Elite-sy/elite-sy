@@ -32,12 +32,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link
-          to="/contact"
-          className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition"
-        >
+        <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition">
           Devis gratuit
-        </Link>
+        </a>
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>

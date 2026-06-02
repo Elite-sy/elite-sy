@@ -202,12 +202,9 @@ function BlogPost() {
               et devis sous 24 h.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition"
-              >
+              <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-sm bg-primary text-primary-foreground hover:opacity-90 transition">
                 Demander un devis
-              </Link>
+              </a>
               <a
                 href="tel:+33609165099"
                 className="inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-sm border border-border text-foreground hover:border-primary hover:text-primary transition"

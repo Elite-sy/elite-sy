@@ -152,13 +152,10 @@ function Index() {
               Une exigence intransigeante, des résultats mesurables.
             </p>
             <div className="mt-12 flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90 transition"
-                style={{ boxShadow: "var(--shadow-gold)" }}
-              >
+              <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90 transition"
+                style={{ boxShadow: "var(--shadow-gold)" }}>
                 Demander un devis <ArrowRight size={16} />
-              </Link>
+              </a>
               <Link
                 to="/proprete"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-sm border border-border text-foreground hover:border-primary hover:text-primary transition"
@@ -370,13 +367,10 @@ function Index() {
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
               Un échange de quinze minutes suffit pour comprendre vos enjeux et bâtir une proposition.
             </p>
-            <Link
-              to="/contact"
-              className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90"
-              style={{ boxShadow: "var(--shadow-gold)" }}
-            >
+            <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90"
+              style={{ boxShadow: "var(--shadow-gold)" }}>
               Démarrer maintenant <ArrowRight size={16} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

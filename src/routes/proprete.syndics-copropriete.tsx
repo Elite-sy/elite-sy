@@ -320,9 +320,9 @@ function SyndicsPage() {
               Propreté, hygiène et valorisation de votre immeuble grâce à un service fiable, régulier et adapté aux exigences des syndics et copropriétaires.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
+              <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
                 Demander un devis <ArrowRight size={16} />
-              </Link>
+              </a>
               <a href="#zones" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm border border-border font-semibold hover:border-primary/60 transition">
                 Découvrir nos prestations
               </a>
@@ -570,9 +570,9 @@ function SyndicsPage() {
           <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
             Décrivez-nous votre immeuble : nous vous proposons un cahier des charges sur mesure et une équipe dédiée.
           </p>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
+          <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
             Demander un devis personnalisé <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       </section>
     </Layout>

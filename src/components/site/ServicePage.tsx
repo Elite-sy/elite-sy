@@ -39,9 +39,9 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">{title}</h1>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">{description}</p>
             <div className="mt-10 flex gap-4">
-              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
+              <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
                 Demander un devis <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </motion.div>
           <motion.div
@@ -179,9 +179,9 @@ export function ServicePage({ eyebrow, title, description, image, features, proc
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold">Prêt à passer à l'excellence ?</h2>
           <p className="mt-6 text-muted-foreground text-lg">Échangeons sur vos besoins, sans engagement.</p>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
+          <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
             Nous contacter <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       </section>
     </Layout>

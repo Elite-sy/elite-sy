@@ -290,9 +290,9 @@ function SectorPage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold">Un projet dans le {sector.label.toLowerCase()} ?</h2>
           <p className="mt-6 text-muted-foreground text-lg">Parlons de vos enjeux et bâtissons une proposition adaptée.</p>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
+          <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90" style={{ boxShadow: "var(--shadow-gold)" }}>
             Nous contacter <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       </section>
     </Layout>

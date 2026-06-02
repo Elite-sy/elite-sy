@@ -198,12 +198,9 @@ function AmoPage() {
               favorisons la valorisation de vos actifs : bureaux, logements, hôtellerie, commerce, activité, stockage.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90"
-              >
+              <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
                 Discuter de votre projet <ArrowRight size={16} />
-              </Link>
+              </a>
               <a
                 href="#expertises"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-sm border border-border font-semibold hover:border-primary/60"
@@ -403,12 +400,9 @@ function AmoPage() {
           <p className="mt-6 text-muted-foreground text-lg">
             Échangeons sur vos enjeux. Premier rendez-vous gratuit, sans engagement, à Paris ou en visio.
           </p>
-          <Link
-            to="/contact"
-            className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90"
-          >
+          <a href="https://share-eu1.hsforms.com/1lM_viBXtQkeoO0DMIqgv-w2fo2b4" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-primary text-primary-foreground font-semibold hover:opacity-90">
             Nous contacter <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       </section>
     </Layout>
