@@ -102,23 +102,6 @@ const advantages = [
 ];
 
 
-const testimonials = [
-  {
-    quote: "Une équipe d'une rigueur exemplaire. Nos espaces n'ont jamais été aussi soignés et le pilotage est d'une transparence rare.",
-    name: "Directrice des services généraux",
-    role: "Cabinet d'avocats — Paris 8e",
-  },
-  {
-    quote: "Réactivité parfaite, prestations irréprochables. ELITESY a su s'adapter à nos contraintes hôtelières exigeantes.",
-    name: "Directeur d'exploitation",
-    role: "Hôtellerie 5★ — Paris",
-  },
-  {
-    quote: "Un vrai partenaire de confiance pour notre établissement de santé. Protocoles maîtrisés et équipes formées.",
-    name: "Responsable technique",
-    role: "Établissement de santé — Île-de-France",
-  },
-];
 
 const certifications = [
   "Qualipropre",
@@ -346,44 +329,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-32 border-t border-border bg-card/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-            <div>
-              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Ils nous font confiance</p>
-              <h2 className="text-4xl font-bold max-w-2xl md:text-2xl">La parole à nos clients.</h2>
-            </div>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <div className="flex gap-1 text-primary">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i}>★</span>
-                ))}
-              </div>
-              <span>98 % de clients fidèles depuis plus de 3 ans</span>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-8 border border-border rounded-sm bg-background flex flex-col"
-              >
-                <Quote className="text-primary mb-5" size={28} />
-                <p className="text-foreground leading-relaxed mb-8 flex-1">« {t.quote} »</p>
-                <div className="pt-6 border-t border-border">
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{t.role}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Certifications */}
       <section className="py-20 border-t border-border">
