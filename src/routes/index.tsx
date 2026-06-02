@@ -96,6 +96,49 @@ const sectors = [
   { icon: Factory, label: "Industrie & logistique" },
 ];
 
+const advantages = [
+  { icon: BadgeCheck, title: "Exigence quotidienne", desc: "Des contrôles qualité réguliers et un encadrement de proximité sur chaque site." },
+  { icon: Clock, title: "Réactivité 24/7", desc: "Une astreinte joignable jour et nuit pour les interventions urgentes et imprévues." },
+  { icon: Leaf, title: "Démarche responsable", desc: "Produits écolabellisés, microfibres, dosage maîtrisé et gestion raisonnée des déchets." },
+  { icon: HeartHandshake, title: "Relation durable", desc: "Un interlocuteur unique, transparent, qui connaît vos sites et vos équipes." },
+  { icon: Sparkles, title: "Finitions premium", desc: "Un niveau de finition pensé pour les environnements à forte exposition visuelle." },
+  { icon: Target, title: "Résultats mesurables", desc: "Reporting, indicateurs de satisfaction et plans d'amélioration continue." },
+];
+
+const process = [
+  { step: "01", title: "Audit & écoute", desc: "Visite de site, analyse de vos contraintes, identification des points critiques.", img: prBureauxAccueilImg },
+  { step: "02", title: "Proposition sur-mesure", desc: "Cahier des charges, fréquences, équipes dédiées et chiffrage transparent.", img: prBureauxMeetingImg },
+  { step: "03", title: "Mise en place", desc: "Formation des équipes, protocoles, matériel et démarrage encadré.", img: sfMaintenanceImg },
+  { step: "04", title: "Pilotage & amélioration", desc: "Contrôles qualité, reporting et ajustements continus avec votre interlocuteur unique.", img: sfPilotageImg },
+];
+
+const testimonials = [
+  {
+    quote: "Une équipe d'une rigueur exemplaire. Nos espaces n'ont jamais été aussi soignés et le pilotage est d'une transparence rare.",
+    name: "Directrice des services généraux",
+    role: "Cabinet d'avocats — Paris 8e",
+  },
+  {
+    quote: "Réactivité parfaite, prestations irréprochables. ELITESY a su s'adapter à nos contraintes hôtelières exigeantes.",
+    name: "Directeur d'exploitation",
+    role: "Hôtellerie 5★ — Paris",
+  },
+  {
+    quote: "Un vrai partenaire de confiance pour notre établissement de santé. Protocoles maîtrisés et équipes formées.",
+    name: "Responsable technique",
+    role: "Établissement de santé — Île-de-France",
+  },
+];
+
+const certifications = [
+  "Qualipropre",
+  "ISO 9001",
+  "ISO 14001",
+  "MASE",
+  "Écolabel européen",
+  "RGE",
+];
+
 function Index() {
   return (
     <Layout>
