@@ -197,19 +197,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-y border-border bg-card/40">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-4xl md:text-5xl font-bold text-primary">{s.value}</div>
-              <div className="mt-2 text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Intro / About */}
       <section className="py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -547,6 +534,18 @@ function Index() {
               Démarrer maintenant <ArrowRight size={16} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="border-y border-border bg-card/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <div className="font-display text-4xl md:text-5xl font-bold text-primary">{s.value}</div>
+              <div className="mt-2 text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
+            </div>
+          ))}
         </div>
       </section>
     </Layout>
