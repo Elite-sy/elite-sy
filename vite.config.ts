@@ -6,12 +6,69 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { imagetools } from "vite-imagetools";
+import { publishedPosts } from "./src/data/blog";
+
+// Slugs des pages dynamiques — listés ici pour le pré-rendu statique (O2switch).
+const propreteSlugs = [
+  "bureaux-tertiaire",
+  "syndics-copropriete",
+  "professionnels-sante",
+  "professionnels-batiment",
+  "surface-vente-erp",
+  "education-collectivites",
+];
+
+const softFacilitySlugs = [
+  "pilotage-multiservices",
+  "gestion-dechets",
+  "espaces-exterieurs",
+  "logistique-sur-site",
+  "maintenance-legere",
+  "services-occupants",
+];
+
+const secteurSlugs = [
+  "tertiaire",
+  "syndics-gestionnaires",
+  "pharmaceutique",
+  "surfaces-de-vente",
+];
+
+const staticRoutes = [
+  "/",
+  "/proprete",
+  "/proprete/pharmaceutique",
+  "/proprete/professionnels-sante",
+  "/proprete/surface-vente-erp",
+  "/proprete/syndics-copropriete",
+  "/soft-facility",
+  "/amo",
+  "/blog",
+  "/contact",
+  "/mentions-legales",
+  "/sitemap.xml",
+  ...propreteSlugs.map((s) => `/proprete/${s}`),
+  ...softFacilitySlugs.map((s) => `/soft-facility/${s}`),
+  ...secteurSlugs.map((s) => `/secteur/${s}`),
+  ...publishedPosts.map((p) => `/blog/${p.slug}`),
+];
 
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+  },
+  // Export 100% statique pour hébergement mutualisé (O2switch).
+  // Toutes les routes ci-dessus sont pré-rendues en HTML dans `.output/public/`.
+  nitro: {
+    preset: "static",
+    // @ts-expect-error — prerender est transmis tel quel à nitro (non typé par le wrapper Lovable).
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+      routes: staticRoutes,
+    },
   },
   plugins: [
     // Auto-convert imported images to WebP (smaller files, near-universal browser support).
