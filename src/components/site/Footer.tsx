@@ -26,7 +26,7 @@ export function Footer() {
           <h4 className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><Mail size={14} className="mt-1 text-primary" /><span>contact@elitesy.fr</span></li>
-            <li className="flex items-start gap-2"><Phone size={14} className="mt-1 text-primary" /><span>+33 6 09 16 509 9</span></li>
+            <li className="flex items-start gap-2"><Phone size={14} className="mt-1 text-primary" /><span>+33 6 09 16 50 99</span></li>
             <li className="flex items-start gap-2"><MapPin size={14} className="mt-1 text-primary" /><span>Paris, France</span></li>
           </ul>
         </div>
