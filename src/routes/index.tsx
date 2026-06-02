@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory } from "lucide-react";
+import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory, CheckCircle2, Clock, Leaf, Sparkles, Quote, Phone, Mail, MapPin, Target, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { Picture } from "@/components/site/Picture";
 import { LazyImage } from "@/components/site/LazyImage";
@@ -10,6 +10,14 @@ import elitesyTeamImg from "@/assets/elitesy-team.jpg";
 import propreteImg from "@/assets/proprete.jpg";
 import softImg from "@/assets/soft-facility.jpg";
 import amoImg from "@/assets/amo.jpg";
+import servicesTrioImg from "@/assets/services-trio.jpg";
+import prBureauxAccueilImg from "@/assets/pr-bureaux-accueil.jpg";
+import prBureauxMeetingImg from "@/assets/pr-bureaux-meeting.jpg";
+import prBureauxVitrerieImg from "@/assets/pr-bureaux-vitrerie.jpg";
+import sfPilotageImg from "@/assets/sf-pilotage.jpg";
+import sfMaintenanceImg from "@/assets/sf-maintenance.jpg";
+import santeChambreImg from "@/assets/sante-chambre.jpg";
+import pharmaCleanroomImg from "@/assets/pharma-cleanroom.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -88,6 +96,49 @@ const sectors = [
   { icon: Factory, label: "Industrie & logistique" },
 ];
 
+const advantages = [
+  { icon: BadgeCheck, title: "Exigence quotidienne", desc: "Des contrôles qualité réguliers et un encadrement de proximité sur chaque site." },
+  { icon: Clock, title: "Réactivité 24/7", desc: "Une astreinte joignable jour et nuit pour les interventions urgentes et imprévues." },
+  { icon: Leaf, title: "Démarche responsable", desc: "Produits écolabellisés, microfibres, dosage maîtrisé et gestion raisonnée des déchets." },
+  { icon: HeartHandshake, title: "Relation durable", desc: "Un interlocuteur unique, transparent, qui connaît vos sites et vos équipes." },
+  { icon: Sparkles, title: "Finitions premium", desc: "Un niveau de finition pensé pour les environnements à forte exposition visuelle." },
+  { icon: Target, title: "Résultats mesurables", desc: "Reporting, indicateurs de satisfaction et plans d'amélioration continue." },
+];
+
+const process = [
+  { step: "01", title: "Audit & écoute", desc: "Visite de site, analyse de vos contraintes, identification des points critiques.", img: prBureauxAccueilImg },
+  { step: "02", title: "Proposition sur-mesure", desc: "Cahier des charges, fréquences, équipes dédiées et chiffrage transparent.", img: prBureauxMeetingImg },
+  { step: "03", title: "Mise en place", desc: "Formation des équipes, protocoles, matériel et démarrage encadré.", img: sfMaintenanceImg },
+  { step: "04", title: "Pilotage & amélioration", desc: "Contrôles qualité, reporting et ajustements continus avec votre interlocuteur unique.", img: sfPilotageImg },
+];
+
+const testimonials = [
+  {
+    quote: "Une équipe d'une rigueur exemplaire. Nos espaces n'ont jamais été aussi soignés et le pilotage est d'une transparence rare.",
+    name: "Directrice des services généraux",
+    role: "Cabinet d'avocats — Paris 8e",
+  },
+  {
+    quote: "Réactivité parfaite, prestations irréprochables. ELITESY a su s'adapter à nos contraintes hôtelières exigeantes.",
+    name: "Directeur d'exploitation",
+    role: "Hôtellerie 5★ — Paris",
+  },
+  {
+    quote: "Un vrai partenaire de confiance pour notre établissement de santé. Protocoles maîtrisés et équipes formées.",
+    name: "Responsable technique",
+    role: "Établissement de santé — Île-de-France",
+  },
+];
+
+const certifications = [
+  "Qualipropre",
+  "ISO 9001",
+  "ISO 14001",
+  "MASE",
+  "Écolabel européen",
+  "RGE",
+];
+
 function Index() {
   return (
     <Layout>
@@ -155,6 +206,61 @@ function Index() {
               <div className="mt-2 text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Intro / About */}
+      <section className="py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Qui sommes-nous</p>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+              L'art de prendre soin des lieux qui comptent.
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              ELITESY est une entreprise indépendante dédiée aux environnements professionnels exigeants.
+              Nous intervenons à Paris et en Île-de-France pour offrir un niveau de service à la hauteur des
+              lieux que vous représentez.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-10">
+              Notre force : des équipes formées en interne, un encadrement de proximité, et une exigence
+              opérationnelle qui ne laisse rien au hasard. Du nettoyage quotidien au pilotage multiservices,
+              chaque intervention est pensée pour durer.
+            </p>
+            <div className="space-y-3">
+              {[
+                "Encadrement dédié à chaque site",
+                "Matériel professionnel et produits écolabellisés",
+                "Reporting et contrôles qualité réguliers",
+                "Conformité réglementaire et formations continues",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="text-primary mt-0.5 shrink-0" size={18} />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative rounded-sm overflow-hidden" style={{ boxShadow: "var(--shadow-elegant)" }}>
+              <LazyImage src={servicesTrioImg} alt="Services ELITESY — propreté, soft facility et AMO" className="w-full h-[520px] object-cover" width={1600} height={1200} />
+            </div>
+            <div className="absolute -bottom-8 -left-8 hidden md:block rounded-sm border border-primary/30 bg-card p-6 max-w-[240px]" style={{ boxShadow: "var(--shadow-gold)" }}>
+              <div className="font-display text-4xl font-bold text-primary leading-none">15+</div>
+              <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">années d'expertise au service des entreprises franciliennes</div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -245,6 +351,165 @@ function Index() {
           >
             <LazyImage src={elitesyTeamImg} alt="Équipe ELITESY au travail sur un site client à Paris" className="w-full h-[600px] object-cover" width={1920} height={1280} />
           </motion.div>
+        </div>
+      </section>
+
+      {/* Advantages */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Nos avantages</p>
+            <h2 className="text-4xl md:text-5xl font-bold">Six raisons de nous confier vos sites.</h2>
+            <p className="mt-6 text-muted-foreground">
+              Une promesse claire : des prestations irréprochables, un suivi transparent, et une équipe
+              qui s'engage à vos côtés sur la durée.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {advantages.map((a, i) => (
+              <motion.div
+                key={a.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="group p-8 border border-border rounded-sm bg-card/40 hover:border-primary/60 hover:bg-card/80 transition"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <a.icon className="text-primary" size={22} />
+                </div>
+                <h3 className="text-lg font-bold mb-3">{a.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process / Methodology */}
+      <section className="py-32 border-t border-border bg-card/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Notre méthode</p>
+              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Quatre étapes pour des résultats durables.</h2>
+            </div>
+            <p className="text-muted-foreground max-w-md">
+              Un processus éprouvé qui sécurise vos décisions et garantit la qualité dans la durée.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {process.map((p, i) => (
+              <motion.div
+                key={p.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="rounded-sm overflow-hidden border border-border bg-background hover:border-primary/60 transition"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <LazyImage src={p.img} alt={`Étape ${p.step} — ${p.title}`} className="w-full h-full object-cover" width={800} height={600} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
+                  <div className="absolute top-4 left-4 font-display text-3xl font-bold text-primary" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>{p.step}</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-3">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specialised expertise */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Expertises spécialisées</p>
+            <h2 className="text-4xl md:text-5xl font-bold">Des protocoles adaptés aux environnements critiques.</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { img: santeChambreImg, title: "Santé & bionettoyage", desc: "Protocoles certifiés pour cliniques, EHPAD et cabinets médicaux.", to: "/proprete/professionnels-sante" },
+              { img: pharmaCleanroomImg, title: "Pharmaceutique & salles blanches", desc: "Conformité ISO 14644, traçabilité et équipes habilitées.", to: "/proprete/pharmaceutique" },
+              { img: prBureauxVitrerieImg, title: "Tertiaire & vitrerie", desc: "Bureaux, sièges sociaux, vitrerie grande hauteur, accueil.", to: "/proprete" },
+            ].map((c, i) => (
+              <motion.div
+                key={c.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <Link to={c.to} className="group block relative aspect-[4/5] rounded-sm overflow-hidden border border-border hover:border-primary/60 transition">
+                  <LazyImage src={c.img} alt={c.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" width={1200} height={1500} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-8">
+                    <h3 className="text-2xl font-bold mb-3">{c.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{c.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                      Découvrir <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-32 border-t border-border bg-card/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Ils nous font confiance</p>
+              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">La parole à nos clients.</h2>
+            </div>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <div className="flex gap-1 text-primary">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i}>★</span>
+                ))}
+              </div>
+              <span>98 % de clients fidèles depuis plus de 3 ans</span>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="p-8 border border-border rounded-sm bg-background flex flex-col"
+              >
+                <Quote className="text-primary mb-5" size={28} />
+                <p className="text-foreground leading-relaxed mb-8 flex-1">« {t.quote} »</p>
+                <div className="pt-6 border-t border-border">
+                  <div className="font-semibold">{t.name}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t.role}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-20 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">Certifications & engagements</p>
+          <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+            {certifications.map((c) => (
+              <div key={c} className="px-6 py-3 rounded-full border border-border bg-card/60 text-sm font-semibold tracking-wide hover:border-primary/60 hover:text-primary transition">
+                {c}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
