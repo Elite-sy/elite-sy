@@ -13,6 +13,16 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Enable Nitro with the Netlify preset so Vite build produces a proper SSR
+  // function in .netlify/functions-internal and static assets in dist/.
+  nitro: {
+    preset: "netlify",
+    output: {
+      dir: ".netlify/functions-internal",
+      serverDir: ".netlify/functions-internal/server",
+      publicDir: "dist",
+    },
+  },
   plugins: [
     // Auto-convert imported images to WebP (smaller files, near-universal browser support).
     // Single-format directive → import still returns a URL string, so existing
