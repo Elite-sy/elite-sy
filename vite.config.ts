@@ -85,17 +85,6 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-  // Export 100% statique pour hébergement mutualisé (O2switch).
-  // Toutes les routes ci-dessus sont pré-rendues en HTML dans `.output/public/`.
-  nitro: {
-    preset: "static",
-    // @ts-expect-error — prerender est transmis tel quel à nitro (non typé par le wrapper Lovable).
-    prerender: {
-      crawlLinks: true,
-      failOnError: false,
-      routes: staticRoutes,
-    },
-  },
   plugins: [
     // Auto-convert imported images to WebP (smaller files, near-universal browser support).
     // Single-format directive → import still returns a URL string, so existing
