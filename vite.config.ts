@@ -84,6 +84,11 @@ const staticRoutes = [
 export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+    },
+    pages: staticRoutes.map((path) => ({ path })),
   },
   plugins: [
     // Auto-convert imported images to WebP (smaller files, near-universal browser support).
