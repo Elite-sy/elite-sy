@@ -22,7 +22,7 @@ export const Route = createFileRoute("/contact")({
           "@type": "LocalBusiness",
           name: "ELITESY",
           email: "contact@elitesy.fr",
-          telephone: "+33-1-00-00-00-00",
+          telephone: "+33-6-09-16-509-9",
           url: "https://elite-sy.lovable.app/contact",
           address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
           areaServed: "FR",
@@ -50,7 +50,7 @@ function Contact() {
             <div className="mt-12 space-y-6">
               {[
                 { icon: Mail, label: "Email", value: "contact@elitesy.fr" },
-                { icon: Phone, label: "Téléphone", value: "+33 1 00 00 00 00" },
+                { icon: Phone, label: "Téléphone", value: "+33 6 09 16 509 9" },
                 { icon: MapPin, label: "Adresse", value: "Paris, France" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 p-5 rounded-sm border border-border bg-card">

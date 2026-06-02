@@ -95,7 +95,7 @@ function BlogIndex() {
             L'expertise ELITESY
           </p>
           <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground max-w-3xl">
-            L'expertise propreté, sans détour.
+            L'expertise ELITESY, sans détour.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
             Guides pratiques, normes ARS &amp; HACCP, écolabels, techniques de
