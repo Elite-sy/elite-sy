@@ -264,7 +264,7 @@ function MentionsLegales() {
                 <a href="mailto:contact@elitesy.fr" className="text-primary hover:underline">contact@elitesy.fr</a>
               </p>
               <p className="text-muted-foreground leading-relaxed mt-2">
-                <strong>Téléphone :</strong> +33 1 00 00 00 00
+                <strong>Téléphone :</strong> +33 6 09 16 50 99
               </p>
               <p className="text-muted-foreground leading-relaxed mt-2">
                 <strong>Adresse :</strong> Paris, France
