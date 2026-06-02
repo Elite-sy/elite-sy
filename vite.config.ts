@@ -82,6 +82,9 @@ const staticRoutes = [
 ];
 
 export default defineConfig({
+  tanstackStart: {
+    server: { entry: "server" },
+  },
   // Export 100% statique pour hébergement mutualisé (O2switch).
   // Toutes les routes ci-dessus sont pré-rendues en HTML dans `.output/public/`.
   nitro: {
