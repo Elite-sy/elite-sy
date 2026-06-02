@@ -10,7 +10,7 @@ import elitesyTeamImg from "@/assets/elitesy-team.jpg";
 import propreteImg from "@/assets/proprete.jpg";
 import softImg from "@/assets/soft-facility.jpg";
 import amoImg from "@/assets/amo.jpg";
-import servicesTrioImg from "@/assets/services-trio.jpg";
+import prBureauxVitrerieImg from "@/assets/pr-bureaux-vitrerie.jpg";
 import santeChambreImg from "@/assets/sante-chambre.jpg";
 import pharmaCleanroomImg from "@/assets/pharma-cleanroom.jpg";
 
