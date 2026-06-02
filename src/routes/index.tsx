@@ -11,11 +11,6 @@ import propreteImg from "@/assets/proprete.jpg";
 import softImg from "@/assets/soft-facility.jpg";
 import amoImg from "@/assets/amo.jpg";
 import servicesTrioImg from "@/assets/services-trio.jpg";
-import prBureauxAccueilImg from "@/assets/pr-bureaux-accueil.jpg";
-import prBureauxMeetingImg from "@/assets/pr-bureaux-meeting.jpg";
-import prBureauxVitrerieImg from "@/assets/pr-bureaux-vitrerie.jpg";
-import sfPilotageImg from "@/assets/sf-pilotage.jpg";
-import sfMaintenanceImg from "@/assets/sf-maintenance.jpg";
 import santeChambreImg from "@/assets/sante-chambre.jpg";
 import pharmaCleanroomImg from "@/assets/pharma-cleanroom.jpg";
 
@@ -105,12 +100,6 @@ const advantages = [
   { icon: Target, title: "Résultats mesurables", desc: "Reporting, indicateurs de satisfaction et plans d'amélioration continue." },
 ];
 
-const process = [
-  { step: "01", title: "Audit & écoute", desc: "Visite de site, analyse de vos contraintes, identification des points critiques.", img: prBureauxAccueilImg },
-  { step: "02", title: "Proposition sur-mesure", desc: "Cahier des charges, fréquences, équipes dédiées et chiffrage transparent.", img: prBureauxMeetingImg },
-  { step: "03", title: "Mise en place", desc: "Formation des équipes, protocoles, matériel et démarrage encadré.", img: sfMaintenanceImg },
-  { step: "04", title: "Pilotage & amélioration", desc: "Contrôles qualité, reporting et ajustements continus avec votre interlocuteur unique.", img: sfPilotageImg },
-];
 
 const testimonials = [
   {
