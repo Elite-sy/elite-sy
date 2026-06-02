@@ -1,0 +1,15 @@
+import { existsSync, mkdirSync, statSync } from "node:fs";
+import { resolve } from "node:path";
+import AdmZip from "adm-zip";
+const src = "/dev-server/dist/client";
+const out = "/mnt/documents/elitesy-o2switch.zip";
+mkdirSync("/mnt/documents", { recursive: true });
+const zip = new AdmZip();
+zip.addLocalFolder(src);
+zip.writeZip(out);
+console.log("OK", out, (statSync(out).size/1024/1024).toFixed(2), "MB");
+const entries = zip.getEntries().map(e=>e.entryName);
+console.log("entries:", entries.length);
+console.log("has .htaccess:", entries.includes(".htaccess"));
+console.log("has index.html:", entries.includes("index.html"));
+console.log("sample:", entries.slice(0,5));
