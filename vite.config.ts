@@ -83,8 +83,6 @@ const staticRoutes = [
 
 export default defineConfig({
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
   },
   // Export 100% statique pour hébergement mutualisé (O2switch).
