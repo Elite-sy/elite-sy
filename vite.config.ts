@@ -82,15 +82,7 @@ const staticRoutes = [
 ];
 
 export default defineConfig({
-  nitro: {
-    preset: "static",
-  },
   tanstackStart: {
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-    },
-    pages: staticRoutes.map((path) => ({ path })),
   },
   plugins: [
     // Auto-convert imported images to WebP (smaller files, near-universal browser support).
