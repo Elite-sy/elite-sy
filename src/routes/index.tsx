@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory, CheckCircle2, Clock, Leaf, Sparkles, Quote, Phone, Mail, MapPin, Target, HeartHandshake, BadgeCheck } from "lucide-react";
+import { ArrowRight, SprayCan, Building2, Users2, Shield, Award, Users, Briefcase, Hotel, Landmark, Stethoscope, GraduationCap, Factory, CheckCircle2, Clock, Leaf, Sparkles, Phone, Mail, MapPin, Target, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { Picture } from "@/components/site/Picture";
 import { LazyImage } from "@/components/site/LazyImage";
