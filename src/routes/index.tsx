@@ -227,11 +227,20 @@ function Index() {
           <div>
             <p className="font-semibold uppercase tracking-[0.3em] text-primary mb-6 text-lg">Pourquoi ELITESY</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Une signature reconnue par les directions exigeantes.</h2>
-            <p className="text-muted-foreground leading-relaxed mb-10">
-              Depuis plus de quinze ans, nous accompagnons des sièges sociaux, des hôtels haut de gamme,
-              des cabinets d'avocats et des institutions publiques. Notre différence : une exigence
-              opérationnelle au quotidien, sans jamais déléguer le contrôle qualité.
-            </p>
+            <div className="text-muted-foreground leading-relaxed mb-10 space-y-4">
+              <p>
+                Depuis plus de quinze ans, nous accompagnons avec exigence les environnements les plus exigeants :
+                sièges sociaux, hôtels, cabinets d’avocats, institutions publiques, établissements scolaires, sites industriels...
+              </p>
+              <p>
+                Nos clients ? Des décideurs engagés : gestionnaires d’actifs (asset & property managers),
+                directeurs immobiliers, syndics de copropriété, entreprises du bâtiment, foncières. etc...
+              </p>
+              <p>
+                Notre différence : une exécution irréprochable, pilotée en interne, avec un seul engagement —
+                un contrôle qualité permanent, sans compromis.
+              </p>
+            </div>
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 { icon: Shield, label: "Conformité totale" },
