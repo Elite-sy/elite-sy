@@ -263,11 +263,12 @@ export const Route = createFileRoute("/proprete/$slug")({
   loader: ({ params }) => {
     const client = clients[params.slug];
     if (!client) throw notFound();
-    return { client, slug: params.slug };
+    return { slug: params.slug };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [] };
-    const { client } = loaderData;
+    const client = clients[loaderData.slug];
+    if (!client) return { meta: [] };
     const url = `https://elite-sy.lovable.app/proprete/${loaderData.slug}`;
     return {
       meta: [
@@ -309,7 +310,8 @@ export const Route = createFileRoute("/proprete/$slug")({
 });
 
 function ClientPage() {
-  const { client, slug } = Route.useLoaderData() as { client: ClientDetail; slug: string };
+  const { slug } = Route.useLoaderData() as { slug: string };
+  const client = clients[slug] as ClientDetail;
   const Icon = client.icon;
   const others = Object.entries(clients).filter(([s]) => s !== slug);
 
