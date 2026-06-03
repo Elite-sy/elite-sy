@@ -197,11 +197,12 @@ export const Route = createFileRoute("/secteur/$slug")({
   loader: ({ params }) => {
     const sector = sectors.find((s) => s.slug === params.slug);
     if (!sector || !details[params.slug]) throw notFound();
-    return { sector, detail: details[params.slug] };
+    return { slug: params.slug };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [] };
-    const { sector } = loaderData;
+    const sector = sectors.find((s) => s.slug === loaderData.slug);
+    if (!sector) return { meta: [] };
     const url = `https://elite-sy.lovable.app/secteur/${sector.slug}`;
     return {
       meta: [
@@ -243,7 +244,9 @@ export const Route = createFileRoute("/secteur/$slug")({
 });
 
 function SectorPage() {
-  const { sector, detail } = Route.useLoaderData();
+  const { slug } = Route.useLoaderData() as { slug: string };
+  const sector = sectors.find((s) => s.slug === slug)!;
+  const detail = details[slug];
   const Icon = sector.icon;
 
   return (
